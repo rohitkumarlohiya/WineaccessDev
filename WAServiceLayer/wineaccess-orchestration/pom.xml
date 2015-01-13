@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<parent>
+		<artifactId>wineaccess-build</artifactId>
+		<groupId>com.wineaccess</groupId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../wineaccess/pom.xml</relativePath>		
+	</parent>
+	
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>wineaccess-orchestration</artifactId>
+	<name>Wine Access Orchestration</name>
+	<packaging>jar</packaging>
+		
+	<dependencies>	
+	
+		<dependency>
+    		<groupId>com.wineaccess</groupId>
+    		<artifactId>wineaccess-util</artifactId>
+    		<version>${project.version}</version>
+		</dependency>
+	
+		<dependency>
+    		<groupId>commons-logging</groupId>
+    		<artifactId>commons-logging</artifactId>
+    		<version>1.1.3</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>javax.jms</groupId>
+    		<artifactId>jms-api</artifactId>
+   			<version>1.1-rev-1</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>javax.servlet</groupId>
+    		<artifactId>servlet-api</artifactId>
+    		<version>2.5</version>
+    		<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.xmlbeans</groupId>
+			<artifactId>xmlbeans-xpath</artifactId>
+			<version>2.3.0</version>
+		</dependency>	
+		<dependency>
+			<groupId>xmlbeans</groupId>
+			<artifactId>xmlbeans</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.wineaccess</groupId>
+			<artifactId>wineaccess-service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+	<build>		
+		<plugins>
+			<plugin>
+    			<groupId>org.codehaus.mojo</groupId>
+    			<artifactId>xmlbeans-maven-plugin</artifactId>
+    			<version>2.3.3</version>
+    			<executions>
+			       <execution>
+						<goals>
+			             	<goal>xmlbeans</goal>
+			          	</goals>
+			       </execution>
+    			</executions>
+    			<inherited>true</inherited>
+    			<configuration>
+       				<schemaDirectory>${basedir}/src/main/xsd</schemaDirectory>
+    			</configuration>
+  			</plugin>
+		</plugins>
+	</build>
+</project>

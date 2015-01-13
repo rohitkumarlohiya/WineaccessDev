@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="ContactDetailsProcessDefinition" version="v1" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="ContactDetailsTaskTransition" to="ContactDetailsAdapter" />		
+	</start-state>
+	
+	<task name="ContactDetailsAdapter">					
+		<action class="com.wineaccess.application.contact.ContactDetailsAdapter"/>
+		<orch:transition name="END" to="END-STATE"/>
+	</task>	
+	
+	<end-state name="END-STATE"/>
+</orch:process-definition>

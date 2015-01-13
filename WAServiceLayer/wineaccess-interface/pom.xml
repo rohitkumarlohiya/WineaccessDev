@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<parent>
+		<artifactId>wineaccess-build</artifactId>
+		<groupId>com.wineaccess</groupId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../wineaccess/pom.xml</relativePath>		
+	</parent>
+	
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>wineaccess-interface</artifactId>
+	<name>Wine Access Interface</name>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>war</packaging>
+		
+	<dependencies>  	 
+		
+		<dependency>
+	        <groupId>net.bull.javamelody</groupId>
+	        <artifactId>javamelody-core</artifactId>
+	        <version>1.53.0</version>
+        </dependency>
+        
+        
+		<dependency>
+    		<groupId>com.wineaccess</groupId>
+    		<artifactId>wineaccess-util</artifactId>
+    		<version>${project.version}</version>
+		</dependency>
+	
+		<dependency>
+		    <groupId>javax.validation</groupId>
+		    <artifactId>validation-api</artifactId>
+		    <version>1.0.0.GA</version>
+		    <scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <scope>provided</scope>
+		    <version>4.2.0.Final</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>com.wineaccess</groupId>
+			<artifactId>wineaccess-orchestration</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.wineaccess</groupId>
+			<artifactId>wineaccess-service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.wineaccess</groupId>
+			<artifactId>responsys</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<!-- JERSEY DEPENDENCIES -->
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${version.jersey}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-servlet</artifactId>
+			<version>${version.jersey}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>${version.jersey}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>jersey-multipart</artifactId>
+			<version>${version.jersey}</version>
+		</dependency>
+		
+		<!-- Jersey + Spring -->
+		<dependency>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>jersey-spring</artifactId>
+			<version>1.18.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-web</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-beans</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+ 
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${version.servlet.api}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.29</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.json</groupId>
+		    <artifactId>json</artifactId>
+		    <version>20140107</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.2.4</version>
+		</dependency>
+	
+	</dependencies>
+	
+	<build>
+		<finalName>wineaccess</finalName>
+	</build>
+</project>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="TC_SearchSampler" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8181" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8181</con:endpoint></con:endpoints><con:resource name="Login" path="/wineaccess/apis/v1/invoke/Login"><con:settings/><con:parameters/><con:method name="Login" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:request name="Success_TC_request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-API-KEY" value="XYAVBNNNNNN" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+         "username": "admin@wineaccess.com",
+         "password": "Global@123#",
+         "ipAddress": "1.1.1.1",
+         "browser": "chrome",
+         "operatingSystem": "windows",
+         "platform": "mobile"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="ApiAccess" path="/wineaccess/apis/v1/invoke/ApiAccess"><con:settings/><con:parameters/><con:method name="ApiAccess" method="POST"><con:settings/><con:parameters/><con:request name="Success_TC_request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="WINEACCESS_TOKEN" value="282ccd64dcc8ff409d324a9b048fbd5f29b8aad1"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"email":"gaurav.agarwal1@globallogic.com"
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="SearchSampler" path="/wineaccess/apis/v1/invoke/SearchSampler"><con:settings/><con:parameters/><con:method name="SearchSampler" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:add="http://localhost/wineaccess/apis/v1/invoke/AddRequisition">add:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>failureResponse</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>addRequisition</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Basic_Success_TC_request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="WINEACCESS_TOKEN" value="edd57d0a998c885a341607e3aa94a0a1fa9c2698"/>
+  &lt;con:entry key="API_ACCESS_CODE" value="eTfgteYpF/D79vgQY4fx2OLhUBTOK5To"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"searchType": "B",
+"searchBy": "",
+"limit": "10",
+"offSet": "1",
+"exclusions": [{"id":"13"},{"id":"12"}],
+"sortBy": "activeOffer",
+"sortOrder": "0",
+"keyword": "testsamp"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Basic_Success_TC_request_XML_Response_XML" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="282ccd64dcc8ff409d324a9b048fbd5f29b8aad1"/>
+  <con:entry key="API_ACCESS_CODE" value="9aSQVOy4BG/Ex4hYGOiK33XRWnMtG0LM"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/xml"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<samplerSearch>
+<searchType>B</searchType>
+<searchBy></searchBy>
+<limit>10</limit>
+<offSet>1</offSet>
+<exclusions>
+	<id>13</id>
+</exclusions>
+<exclusions>
+	<id>12</id>
+</exclusions>
+<sortBy>activeOffer</sortBy>
+<sortOrder>0</sortOrder>
+<keyword>testsamp</keyword>
+</samplerSearch>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Advance_Success_TC_request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="WINEACCESS_TOKEN" value="edd57d0a998c885a341607e3aa94a0a1fa9c2698"/>
+  &lt;con:entry key="API_ACCESS_CODE" value="eTfgteYpF/D79vgQY4fx2OLhUBTOK5To"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "searchType": "A",
+    "advanceSearchCriteria": {
+        "searchCriterias": [{
+            "searchCriteriaId": 1,
+            "searchCriteriaKeyword": ""
+        }],     
+        "lastOfferDateRange": {
+            "fromSearchCriteriaKeyword": "2014-09-22 19:54:57",
+            "toSearchCriteriaKeyword": "2014-09-27 19:54:57"
+        }
+    },
+    "keyword": "",
+    "offSet": 1,
+    "limit": 10,
+    "sortBy": "id",
+    "sortOrder": 0
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Advance_Success_TC_request_XML_Response_XML" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="282ccd64dcc8ff409d324a9b048fbd5f29b8aad1"/>
+  <con:entry key="API_ACCESS_CODE" value="9aSQVOy4BG/Ex4hYGOiK33XRWnMtG0LM"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/xml"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<samplerAdvSearchPO>
+<searchType>A</searchType>
+<advanceSearchCriteria>
+	<searchCriterias>
+		<searchCriteriaId>1</searchCriteriaId>
+		<searchCriteriaKeyword></searchCriteriaKeyword>
+	</searchCriterias>
+	<lastOfferDateRange>
+		<fromSearchCriteriaKeyword>2014-09-22 19:54:57</fromSearchCriteriaKeyword>
+		<toSearchCriteriaKeyword>2014-09-27 19:54:57</toSearchCriteriaKeyword>
+	</lastOfferDateRange>
+</advanceSearchCriteria>
+<keyword></keyword>
+<offSet>1</offSet>
+<limit>10</limit>
+<sortBy>id</sortBy>
+<sortOrder>0</sortOrder>
+</samplerAdvSearchPO>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

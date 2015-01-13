@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="REST Project 3" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8181" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8181</con:endpoint></con:endpoints><con:resource name="Login" path="/wineaccess/apis/v1/invoke/Login"><con:settings/><con:parameters/><con:method name="Login" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="df9ed938cc5a7b0ef54a291afd5b20f485e18581"/>
+  <con:entry key="API_ACCESS_CODE" value="hUY0aKvwd4MDNtfOZpwkHbqUUnPz7bDb"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+ "username": "admin@wineaccess.com",
+ "password": "Global@123#"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="AddWine" path="/wineaccess/apis/v1/invoke/AddWine"><con:settings/><con:parameters/><con:method name="AddWine" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>registrationPO</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>successResponse</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="7dcdd05519930dd8af800a32d5cff660de5938c2"/>
+  <con:entry key="API_ACCESS_CODE" value="qnhKcmoX9lgGkhpR1bq8iwnN3bIyLHwD"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"wineName": "test_123_123567899996666_impo12",
+"wineStyleId": "30",
+"vintageId": "5",
+"varietalId": "1",
+"bottleInMlId": "46",
+"wineryId": "3", 
+"wineShortName": "uu",
+"bottlesPerBoxId": "159",
+"alcoholPercentage": "2.5",
+"notes": " ss ",
+"wineLabel": "testwl",
+"privateLabel": "testpl",
+"wineSourcingId": "25",
+"sendToFullfillerOn": "true",
+"usaArrivalDate": "2016-06-06 00:00:00",
+"licenseFFPartnerId": "1",
+"sellInMainStatesOnly": "true",
+"nameIfNotSellInAltStates": "test",
+"status":"true"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_XML" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="4e4d055ac66a44aa4a43168eb0899e792ea8d291"/>
+  <con:entry key="API_ACCESS_CODE" value="x+5/QnBumj+pYgJW1TBcW/0L4pixvlpu"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/xml"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<wine>
+<wineName>ttttet1</wineName>
+	<wineStyleId>1</wineStyleId>
+	<vintageId>1</vintageId>
+	<varietalId>1</varietalId>
+	<bottleInMlId>1</bottleInMlId>
+	<wineryId>11</wineryId>
+	<status>true</status>
+	<wineShortName>TT</wineShortName>
+	<bottlesPerBox>6</bottlesPerBox>
+	<alcoholPercentage>2.5</alcoholPercentage>
+	<notes>notes</notes>
+	<wineLabel>testwl</wineLabel>
+	<privateLabel>testpl</privateLabel>
+	<wineSourcingId>1</wineSourcingId>
+	<sendToFullfillerOn>true</sendToFullfillerOn>
+	<usaArrivalDate>asdf-06-06 00:00:00</usaArrivalDate>
+	<licenseFFPartnerId>1</licenseFFPartnerId>
+	<sellInMainStatesOnly>true</sellInMainStatesOnly>
+	<nameIfNotSellInAltStates>test</nameIfNotSellInAltStates>
+	</wine>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_101_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_102_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_103_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "a",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_104_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_105_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "a",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_106_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_107_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "a",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_108_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_109_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "a",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_110_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_111_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "a",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_112_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_113_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true1",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_114_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "a2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_115_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_116_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_118_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true1",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_120_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "11",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_121_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "11",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_122_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "11",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_123_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "11",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_124_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 3",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "11",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_125_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 1",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "11",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="WINE_ERROR_126_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="66fa5045cdee23acf22b868b705b1d5bd732d197"/>
+  <con:entry key="API_ACCESS_CODE" value="LrtdouUzTLsDKIfqGx6f5SIcpH25aPpI"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "wineName": "test 1",
+    "wineStyleId": "1",
+    "vintageId": "1",
+    "varietalId": "1",
+    "bottleInMlId": "1",
+    "wineryId": "1",
+    "status": "true",
+    "wineShortName": "TT",
+    "bottlesPerBox": "6",
+    "alcoholPercentage": "2.5",
+    "notes": "notes",
+    "wineLabel": "testwl",
+    "privateLabel": "testpl",
+    "wineSourcingId": "1",
+    "sendToFullfillerOn": "true",
+    "usaArrivalDate": "2014-06-06 00:00:00",
+    "licenseFFPartnerId": "1",
+    "sellInMainStatesOnly": "true",
+    "nameIfNotSellInAllStates": "test"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="ApiAccess" path="/wineaccess/apis/v1/invoke/ApiAccess"><con:settings/><con:parameters/><con:method name="ApiAccess" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="d935d82f9e3e825f2e63df212d7f68eb996317e5"/>
+  <con:entry key="API_ACCESS_CODE" value="hUY0aKvwd4MDNtfOZpwkHbqUUnPz7bDb"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+ "email": "rohit.lohiya@globallogic.com"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="AddWinery" path="/wineaccess/apis/v1/invoke/AddWinery"><con:settings/><con:parameters/><con:method name="AddWinery" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>registrationPO</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>successResponse</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="fb03ce54ac079997f3869b2c5a720f2ecbd6a5f3"/>
+  <con:entry key="API_ACCESS_CODE" value="x+5/QnBumj+pYgJW1TBcW/0L4pixvlpu"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+   "wineryName": "abc",
+  
+   "regionId": 1,
+   "accountingCustomerNumber": "1111af",
+   "sourcingStatusId": 1,  
+   "waContact": 1,
+   "freightRegion": 1,
+   "wineryUrl":"winery@wineaccess.com"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_XML" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="e2d5c3ef58e5891b52fe14e1148552ac6f0daf64"/>
+  <con:entry key="API_ACCESS_CODE" value="x+5/QnBumj+pYgJW1TBcW/0L4pixvlpu"/>
+  <con:entry key="Accept" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<winery>
+<wineryName>adbrerc</wineryName>
+	<wineryCode>derredf</wineryCode>
+	<regionId>1</regionId>
+	<accountingCustomerNumber>1111af</accountingCustomerNumber>
+	<sourcingStatusId>1</sourcingStatusId>
+	<waContact>1</waContact>
+	<freightRegion>1</freightRegion>
+	<wineryUrl>winery@wineaccess.com</wineryUrl>
+	</winery>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_JSON_Response_JSON_Advance" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="8de7ec641e841e08b7997f23b862ba3f8fb72217"/>
+  <con:entry key="API_ACCESS_CODE" value="xCei9Y+1A2ZN3ON702oir7rxEbVHiOL+"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+   "searchType": "A",
+   "limit": "10",
+   "offSet": "1",
+   "sortBy": "importerName",
+   "sortOrder": "0",
+   "advanceSearchCriteria": {
+      "searchCriterias": [
+         {
+            "searchCriteriaId": 1,
+            "searchCriteriaKeyword": ""
+         },
+         {
+            "searchCriteriaId": 2,
+            "searchCriteriaKeyword": ""
+         },
+         {
+            "searchCriteriaId": 3,
+            "searchCriteriaKeyword": ""
+         },
+         {
+            "searchCriteriaId": 4,
+            "searchCriteriaKeyword": ""
+         }
+      ],
+      "wineRange": {
+         "fromSearchCriteriaKeyword": "0",
+         "toSearchCriteriaKeyword": "100"
+      },
+      "activeWineRange": {
+         "fromSearchCriteriaKeyword": "0",
+         "toSearchCriteriaKeyword": "100"
+      },
+      "revenueRange": {
+         "fromSearchCriteriaKeyword": "0",
+         "toSearchCriteriaKeyword": "122.5"
+      }
+   }
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

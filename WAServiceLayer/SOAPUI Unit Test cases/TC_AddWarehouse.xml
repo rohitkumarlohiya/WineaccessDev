@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="AddWarehouse" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8181" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8181</con:endpoint></con:endpoints><con:resource name="AddWarehouse" path="/wineaccess/apis/v1/invoke/AddWarehouse"><con:settings/><con:parameters/><con:method name="AddWarehouse" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:add="http://localhost/wineaccess/apis/v1/invoke/AddWarehouse">add:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>failureResponse</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>warehouse</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ea8f010cfafb5b4293cadfd1dd959401a18a9fe2"/>
+  <con:entry key="API_ACCESS_CODE" value="jXOtE7Es94h6YEDfHIvNlqphjmIxjI7+"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+             "warehouseName":"SMC Warehouse1234",
+             "addressLine1":"Street 3, NY",
+             "addressLine2":"Street 3, NY",
+             "cityId":"1",
+             "stateId":"1",
+             "zipcode":"11111",
+             "firstName":"Sam",
+             "lastName":"McKlien",
+             "emailId":"sam@wineaccess.com",
+             "phone":"123-123-1234",
+             "faxNumber":"123-123-1234",
+             "freightRegion":"47",
+             "isNonWSTransportCarrier":"true",
+             "carrierId":"69"
+         }</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWarehouse</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_JSON_Response_XML" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ea8f010cfafb5b4293cadfd1dd959401a18a9fe2"/>
+  <con:entry key="API_ACCESS_CODE" value="jXOtE7Es94h6YEDfHIvNlqphjmIxjI7+"/>
+  <con:entry key="Accept" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+             "warehouseName":"SMT Warehouse",
+             "addressLine1":"Street 3, NY",
+             "addressLine2":"Street 3, NY",
+             "cityId":"1",
+             "stateId":"1",
+             "zipcode":"11111",
+             "firstName":"Sam",
+             "lastName":"McKlien",
+             "emailId":"sam@wineaccess.com",
+             "phone":"123-123-1234",
+             "faxNumber":"123-123-1234",
+             "freightRegion":"47"
+         }</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWarehouse</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_JSON" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ea8f010cfafb5b4293cadfd1dd959401a18a9fe2"/>
+  <con:entry key="API_ACCESS_CODE" value="jXOtE7Es94h6YEDfHIvNlqphjmIxjI7+"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<warehouse>
+           <warehouseName>SMC Warehouse123456</warehouseName>
+	<addressLine1>Street 3, NY</addressLine1>
+	<addressLine2>Street 3, NY</addressLine2>
+	<cityId>1</cityId>
+	<stateId>1</stateId>
+	<zipcode>11111</zipcode>
+	<firstName>Sam</firstName>
+	<lastName>McKlien</lastName>
+	<emailId>sam@wineaccess.com</emailId>
+	<phone>123-123-1234</phone>
+	<faxNumber>123-123-1234</faxNumber>
+	<freightRegion>47</freightRegion>
+	<isNonWSTransportCarrier>true</isNonWSTransportCarrier>
+	<carrierId>69</carrierId>
+            </warehouse>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWarehouse</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_XML" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ea8f010cfafb5b4293cadfd1dd959401a18a9fe2"/>
+  <con:entry key="API_ACCESS_CODE" value="jXOtE7Es94h6YEDfHIvNlqphjmIxjI7+"/>
+  <con:entry key="Accept" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<warehouse>
+           <warehouseName>SMC Warehouse1239</warehouseName>
+	<addressLine1>Street 3, NY</addressLine1>
+	<addressLine2>Street 3, NY</addressLine2>
+	<cityId>1</cityId>
+	<stateId>1</stateId>
+	<zipcode>11111</zipcode>
+	<firstName>Sam</firstName>
+	<lastName>McKlien</lastName>
+	<emailId>sam@wineaccess.com</emailId>
+	<phone>123-123-1234</phone>
+	<faxNumber>123-123-1234</faxNumber>
+	<freightRegion>47</freightRegion>
+	<isNonWSTransportCarrier>true</isNonWSTransportCarrier>
+	<carrierId>69</carrierId>
+            </warehouse>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWarehouse</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

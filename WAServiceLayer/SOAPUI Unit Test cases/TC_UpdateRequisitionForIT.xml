@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="UpdateRequisitionForIT" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints/><con:resource name="UpdateRequisitionForIT" path="/wineaccess/apis/v1/invoke/UpdateRequisitionForIT"><con:settings/><con:parameters/><con:method name="UpdateRequisitionForIT" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:upd="http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT">upd:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>successResponse</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="f29ba38aa955e550e3eab6edec4503841d773f9b"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"requisitionId":"11",
+"requisitionType":"2",
+"sourceDCId":"1",
+"desitinationDCId":"1",
+"requisitionStatus":"0",
+"sourceRequisitionType":"PO"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_JSON_Response_XML" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="f29ba38aa955e550e3eab6edec4503841d773f9b"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/xml"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"requisitionId":"11",
+"requisitionType":"2",
+"sourceDCId":"1",
+"desitinationDCId":"1",
+"requisitionStatus":"0",
+"sourceRequisitionType":"PO"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_XML" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="f29ba38aa955e550e3eab6edec4503841d773f9b"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/xml"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+</editRequisition>	
+]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="f29ba38aa955e550e3eab6edec4503841d773f9b"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_101" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="f29ba38aa955e550e3eab6edec4503841d773f9b"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_102" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>1</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_104" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>aaa</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_127" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+</editRequisition>	
+]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_128" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<sourceRequisitionType>PO</sourceRequisitionType>
+</editRequisition>	
+]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_129" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<sourceRequisitionType>PO</sourceRequisitionType>
+<requisitionStatus>aaq</requisitionStatus>
+</editRequisition>	
+]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_102" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="c179a6278a3fe77d543e0f968ce9168aac020a75"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>12</requisitionType>
+<wineryId>1</wineryId>
+<sourceAddressType>WH</sourceAddressType>
+<sourceAddressId>1</sourceAddressId>
+<inboundTransportId>73</inboundTransportId>
+<desitinationDCId>1</desitinationDCId>
+<requisitionStatus>0</requisitionStatus>
+</editRequisition>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_130" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>1111</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+</editRequisition>	
+]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_117" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>111</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_134" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+<expectedPickupDate>06/07/2014</expectedPickupDate>
+<expectedShippingDate>06/06/2014</expectedShippingDate>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_132" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+<expectedArrivalDate>06/06/2014</expectedArrivalDate>
+<expectedPickupDate>06/07/2014</expectedPickupDate>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_133" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+<expectedArrivalDate>06/08/2014</expectedArrivalDate>
+<expectedShippingDate>06/07/2014</expectedShippingDate>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_135" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+<actualArrivalDate>06/07/2014</actualArrivalDate>
+<actualPickupDate>06/08/2014</actualPickupDate>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_136" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+<actualArrivalDate>06/09/2014</actualArrivalDate>
+<actualShippingDate>06/08/2014</actualShippingDate>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_137" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+<actualPickupDate>06/09/2014</actualPickupDate>
+<actualShippingDate>06/08/2014</actualShippingDate>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_138" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>aaaa</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_103" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_113" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_114" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>aa</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>PO</sourceRequisitionType>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_115" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_REQUISITION_ERROR_116" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="ac257405c3dacc78a680587b0830f03852e831e2"/>
+  <con:entry key="API_ACCESS_CODE" value="Q+JoGaPy4AJTYfUQNrfvJf2QNfQK8r3y"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<editRequisition>
+<requisitionId>11</requisitionId>
+<requisitionType>2</requisitionType>
+<desitinationDCId>1</desitinationDCId>
+<sourceDCId>1</sourceDCId>
+<requisitionStatus>0</requisitionStatus>
+<sourceRequisitionType>111</sourceRequisitionType>
+</editRequisition>	]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/UpdateRequisitionForPOWT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

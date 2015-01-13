@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	
+	
+	<bean id="defaultPropertyHolder" class="com.wineaccess.property.store.manager.util.DefaultPropertyStoreManager"/>
+	
+	<bean id="propertyConfigurator" class="com.wineaccess.property.utils.PropertyholderUtils">
+		<property name="locations">
+			<list>
+				<value>file:///${WINEACCESS_HOME}/SystemProperty/${WINEACCESS_ENV}.app.properties</value>
+				<value>file:///${WINEACCESS_HOME}/Database/${WINEACCESS_ENV}.db.properties</value>
+	       </list>
+	    </property>      
+	    
+	    <property name="systemPropertiesModeName">
+			<value>SYSTEM_PROPERTIES_MODE_OVERRIDE</value>
+		</property>     		
+	</bean>
+	
+	
+	<bean id="errorCodePropertyConfigurator" class="com.wineaccess.property.utils.ErrorPropertyHolderUtil">
+		<property name="locations">
+			<list>
+				<value>file:///${WINEACCESS_HOME}/ErrorCodes/errorCodeLabels.properties</value>
+	       </list>
+	    </property>      
+	    
+	    <property name="systemPropertiesModeName">
+			<value>SYSTEM_PROPERTIES_MODE_OVERRIDE</value>
+		</property>     		
+	</bean>
+	
+	<bean id="webServicesProperties" class="com.wineaccess.property.utils.WebServicesPropertyHolderUtils">
+		<property name="locations">
+			<list>
+				<value>file:///${WINEACCESS_HOME}/ExternalWebServices/${WINEACCESS_ENV}.webservices.properties</value>
+	       </list>
+	    </property>      
+	    
+	    <property name="systemPropertiesModeName">
+			<value>SYSTEM_PROPERTIES_MODE_OVERRIDE</value>
+		</property>     		
+	</bean>
+	
+	
+	
+</beans>

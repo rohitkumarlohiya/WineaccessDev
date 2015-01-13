@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="PerformanceCentreLocationProcessDefinition" version="v1" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="PerformanceCentreLocationTaskTransition" to="PerformanceCentreLocationAdapter" />		
+	</start-state>
+	
+	<task name="PerformanceCentreLocationAdapter">					
+		<action class="com.wineaccess.performanceCentre.location.PerformanceCentreLocationAdapter"/>
+		<orch:transition name="END" to="END-STATE"/>
+	</task>	
+	
+	<end-state name="END-STATE"/>
+</orch:process-definition>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:orch="http://globallogic.com/orch" targetNamespace="http://globallogic.com/orch" elementFormDefault="unqualified">
+	<xs:include schemaLocation="CommonUtilities.xsd"/> 
+	<xs:element name="process-definition">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="start-state">
+					<xs:complexType>
+						<xs:sequence> 
+							<xs:element ref="orch:transition" maxOccurs="unbounded" minOccurs="1"/> 
+						</xs:sequence>
+						<xs:attribute name="name" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>unique (with in the process definition) name for this task</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="task" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="configuration" type="orch:task-config" minOccurs="0"/>
+							<xs:element name="action">
+								<xs:complexType>
+									<xs:attribute name="class" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element ref="orch:transition" maxOccurs="unbounded" minOccurs="1"/>
+						</xs:sequence>
+						<xs:attribute name="name" use="required">
+							<xs:annotation>
+								<xs:documentation>unique (with in the process definition) name for this task</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="end-state">
+					<xs:complexType>
+						<xs:attribute name="name" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>unique (with in the process definition) name for this task</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="version" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>String - version of xml parser to use - 1.0</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="name" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>User friendly name of the process</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

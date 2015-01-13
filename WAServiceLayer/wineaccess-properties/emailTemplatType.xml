@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<emailTemplateType>
+    <addUpdateEmailTemplateType>
+        <description>Template to send activation code on customer signup</description>
+        <name>SEND_ACTIVATION</name>
+        <status>true</status>
+        <label>Customer SignUp Activation</label>
+        <addUpdateEmailTemplate>
+            <name>Customer SignUp Activation</name>
+            <isDefault>true</isDefault>
+            <subject>Regarding activation code</subject>
+            <body><![CDATA[<p>Dear, {user.salutation} {user.firstName} {user.lastName} </p><br/><p>This is your activation code {user.userActivationCode}</p><br/><p>If you have any questions or trouble please contact a site administrator.</p><br/><p>Thank you!</p>]]></body>
+        </addUpdateEmailTemplate>
+    </addUpdateEmailTemplateType>
+    <addUpdateEmailTemplateType>
+        <description>Template to resend the customer signup activation code</description>
+        <name>RESEND_ACTIVATION</name>
+        <status>true</status>
+        <label>Customer Signup Resend Activation</label>
+        <addUpdateEmailTemplate>
+            <name>Customer Signup Resend Activation</name>
+            <isDefault>true</isDefault>
+            <subject>Regarding activation code</subject>
+            <body><![CDATA[<p>Dear, {user.salutation} {user.firstName} {user.lastName} </p><br/><p>This is your activation code {user.userActivationCode}</p><br/><p>If you have any questions or trouble please contact a site administrator.</p><br/><p>Thank you!</p>]]></body>
+        </addUpdateEmailTemplate>
+    </addUpdateEmailTemplateType>
+	<addUpdateEmailTemplateType>
+        <description>Template to send resetCode and email code while registering the user.</description>
+        <name>CREATE_USER_PASSWORD</name>
+        <status>true</status>
+        <label>User Signup from Admin</label>
+        <addUpdateEmailTemplate>
+            <name>Create User Password</name>
+            <isDefault>true</isDefault>
+            <subject>Regarding User Registration</subject>
+            <body><![CDATA[<p>Dear, {user.salutation} {user.firstName} {user.lastName} </p><br/><p>You have successfully registered. Please use the below link to login in to the system.</p><br/><p>If you have any questions or trouble please contact a site administrator.</p><br/><p>Thank you!</p>]]></body>
+        </addUpdateEmailTemplate>
+    </addUpdateEmailTemplateType>
+    <addUpdateEmailTemplateType>
+        <description>Template to send activation code while creating user from admin</description>
+        <name>REGISTRATION_USING_ADMIN_SEND_PASSWORD</name>
+        <status>true</status>
+        <label>User Signup from Admin</label>
+        <addUpdateEmailTemplate>
+            <name>User Signup from Admin</name>
+            <isDefault>true</isDefault>
+            <subject>Regarding Activation Code and Password</subject>
+            <body><![CDATA[<p>Dear, {user.salutation} {user.firstName} {user.lastName} </p><br/><p>You have successfully registered .please use this password {user.password} to login in the system.</p><br/><p>If you have any questions or trouble please contact a site administrator.</p><br/><p>Thank you!</p>]]></body>
+        </addUpdateEmailTemplate>
+    </addUpdateEmailTemplateType>
+    <addUpdateEmailTemplateType>
+        <description>Template to send email when user gets enabled in system.</description>
+        <name>ENABLE_USER</name>
+        <status>true</status>
+        <label>Enable User</label>
+        <addUpdateEmailTemplate>
+            <name>Enable User</name>
+            <isDefault>true</isDefault>
+            <subject>Regarding Enabling User</subject>
+            <body><![CDATA[<p>Dear, {user.salutation} {user.firstName} {user.lastName} </p><br/><p>You have successfully enabled .</p><br/><p>If you have any questions or trouble please contact a site administrator.</p><br/><p>Thank you!</p>]]></body>
+        </addUpdateEmailTemplate>
+    </addUpdateEmailTemplateType>
+    <addUpdateEmailTemplateType>
+        <description>Template to send email when admin reset any user password.</description>
+        <name>RESET_PASSWORD</name>
+        <status>true</status>
+        <label>User Reset Password</label>
+        <addUpdateEmailTemplate>
+            <name>User Reset Password</name>
+            <isDefault>true</isDefault>
+            <subject>Regarding Reset Password</subject>
+            <body><![CDATA[<p>Dear, {user.salutation} {user.firstName} {user.lastName} </p><br/><p>Please reset your password by click on the below url .</p><br/><p>If you have any questions or trouble please contact a site administrator.</p><br/><p>Thank you!</p>]]></body>
+        </addUpdateEmailTemplate>
+    </addUpdateEmailTemplateType>
+    <addUpdateEmailTemplateType>
+        <description>Template to send email once user successfully changed his password on reset password change request.</description>
+        <name>RESET_PASSWORD_SUCCESS</name>
+        <status>true</status>
+        <label>User Reset Password Success</label>
+        <addUpdateEmailTemplate>
+            <name>User Reset Password Success</name>
+            <isDefault>true</isDefault>
+            <subject>Regarding Reset Password</subject>
+            <body><![CDATA[<p>Dear, {user.salutation} {user.firstName} {user.lastName} </p><br/><p>Your password has been reset successfully .</p><br/><p>If you have any questions or trouble please contact a site administrator.</p><br/><p>Thank you!</p>]]></body>
+        </addUpdateEmailTemplate>
+    </addUpdateEmailTemplateType>
+    <addUpdateEmailTemplateType>
+        <description>Template to resend activation code and password from admin</description>
+        <name>RESEND_ACTIVATION_URL_PASSWORD</name>
+        <status>true</status>
+        <label>Resend activation code from admin</label>
+        <addUpdateEmailTemplate>
+            <name>Resend activation code from admin</name>
+            <isDefault>true</isDefault>
+            <subject>Regarding Resend Activation URL and Password</subject>
+             <body><![CDATA[<p>Dear, {user.salutation} {user.firstName} {user.lastName} </p><br/><p>You have successfully registered. Please use the below link to login in to the system.</p><br/><p>If you have any questions or trouble please contact a site administrator.</p><br/><p>Thank you!</p>]]></body>
+        </addUpdateEmailTemplate>
+    </addUpdateEmailTemplateType>
+    <addUpdateEmailTemplateType>
+        <description>Template to send email when user request for forget password.</description>
+        <name>FORGOT_PASSWORD_MAIL</name>
+        <status>true</status>
+        <label>User Forget Password</label>
+        <addUpdateEmailTemplate>
+            <name>User Forget Password</name>
+            <isDefault>true</isDefault>
+            <subject>Regarding reset the forgot password</subject>
+            <body><![CDATA[<p>Dear, {user.salutation} {user.firstName} {user.lastName} </p><br/><p>Please reset your password by click on the below url .</p><br/><p>If you have any questions or trouble please contact a site administrator.</p><br/><p>Thank you!</p>]]></body>
+        </addUpdateEmailTemplate>
+    </addUpdateEmailTemplateType>
+    <addUpdateEmailTemplateType>
+        <description>Template to send email once user successfully changed his password on forget password change request.</description>
+        <name>UPDATE_FORGOT_PASSWORD_SUCCESS</name>
+        <status>true</status>
+        <label>User Forget Password Success</label>
+        <addUpdateEmailTemplate>
+            <name>User Forget Password Success</name>
+            <isDefault>true</isDefault>
+            <subject>Regarding Update Forgot Password</subject>
+            <body><![CDATA[<p>Dear, {user.salutation} {user.firstName} {user.lastName} </p><br/><p>Your password has been updated successfully .</p><br/><p>If you have any questions or trouble please contact a site administrator.</p><br/><p>Thank you!</p>]]></body>
+        </addUpdateEmailTemplate>
+    </addUpdateEmailTemplateType>
+    <addUpdateEmailTemplateType>
+        <description>Template to send API access code mail to requested user.</description>
+        <name>REGISTRATION_MAIL</name>
+        <status>true</status>
+        <label>API Access Code registration</label>
+        <addUpdateEmailTemplate>
+            <name>API Access Code registration</name>
+            <isDefault>true</isDefault>
+            <subject>Registration Mail Regarding Api Access</subject>
+            <body><![CDATA[<p>Dear, {apiAccess.emailId}</p><br/><p>Site ID = {apiAccess.siteId} ,Private Key = {apiAccess.privateKey}, API Access Code = </p><br/><p>Thank you!</p>]]></body>
+        </addUpdateEmailTemplate>
+    </addUpdateEmailTemplateType>   
+	
+	 <addUpdateEmailTemplateType>
+        <description>Template to resend activation code email to user.</description>
+        <name>CREATE_USER_PASSWORD_SUCCESS</name>
+        <status>true</status>
+        <label>Create User Password Success</label>
+        <addUpdateEmailTemplate>
+            <name>Create User Password Success</name>
+            <isDefault>true</isDefault>
+            <subject>Regarding Create User Password</subject>
+            <body><![CDATA[<p>Dear, {user.salutation} {user.firstName} {user.lastName} </p><br/><p>Your password has been created successfully .</p><br/><p>If you have any questions or trouble please contact a site administrator.</p><br/><p>Thank you!</p>]]></body>
+        </addUpdateEmailTemplate>
+    </addUpdateEmailTemplateType>
+</emailTemplateType>

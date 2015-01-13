@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="LoginHistoryProcessDefinition" version="v1" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="LoginHistoryTaskTransition" to="LoginHistoryAdapter" />		
+	</start-state>
+	
+	<task name="LoginHistoryAdapter">					
+		<action class="com.wineaccess.security.login.history.LoginHistoryAdapter"/>
+		<orch:transition name="END" to="END-STATE"/>
+	</task>	
+	
+	<end-state name="END-STATE"/>
+</orch:process-definition>

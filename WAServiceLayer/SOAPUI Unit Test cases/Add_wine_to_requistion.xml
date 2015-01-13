@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="REST Project 5" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints/><con:resource name="http://localhost:8181" path="/wineaccess/apis/v1/invoke/AddWineToRequisition"><con:settings/><con:parameters/><con:method name="AddWineToRequistion" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:add="http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition">add:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>successResponse</con:element></con:representation><con:request name="ADD_WINE_REQUISITION_ERROR_101" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+    "productId":"2", 
+    "qtyOfBottles":"4",
+	"bottlePerBox":"59",
+	"unitPriceInDollar":"10.00"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="ADD_WINE_REQUISITION_ERROR_102" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":" ll",
+    "productId":"2", 
+    "qtyOfBottles":"4",
+	"bottlePerBox":"59",
+	"unitPriceInDollar":"10.00"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="ADD_WINE_REQUISITION_ERROR_103" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":"1",
+    "qtyOfBottles":"4",
+	"bottlePerBox":"59",
+	"unitPriceInDollar":"10.00"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="ADD_WINE_REQUISITION_ERROR_104" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":"1",
+"productId":"2khjkh ",
+    "qtyOfBottles":"4",
+	"bottlePerBox":"59",
+	"unitPriceInDollar":"10.00"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="ADD_WINE_REQUISITION_ERROR_105" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":"1",
+"productId":"2",
+	"bottlePerBox":"59",
+	"unitPriceInDollar":"10.00"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="ADD_WINE_REQUISITION_ERROR_106" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":"1",
+"productId":"2",
+  "qtyOfBottles":"4sdf",
+	"bottlePerBox":"59",
+	"unitPriceInDollar":"10.00"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="ADD_WINE_REQUISITION_ERROR_107" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":"1",
+"productId":"2",
+  "qtyOfBottles":"4",
+	"unitPriceInDollar":"10.00"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="ADD_WINE_REQUISITION_ERROR_108" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":"1",
+"productId":"2",
+  "qtyOfBottles":"4",
+	"bottlePerBox":"59+",
+	"unitPriceInDollar":"10.00"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="ADD_WINE_REQUISITION_ERROR_117" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":"1",
+"productId":"2",
+  "qtyOfBottles":"4",
+	"bottlePerBox":"599",
+	"unitPriceInDollar":"10.00"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="ADD_WINE_REQUISITION_ERROR_109" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":"1",
+"productId":"2",
+  "qtyOfBottles":"4",
+	"bottlePerBox":"59"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="ADD_WINE_REQUISITION_ERROR_110" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":"1",
+"productId":"2",
+  "qtyOfBottles":"4",
+	"bottlePerBox":"59",
+	"unitPriceInDollar":"1000"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="ADD_WINE_REQUISITION_ERROR_111" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":"1234324",
+"productId":"2",
+  "qtyOfBottles":"4",
+	"bottlePerBox":"59",
+	"unitPriceInDollar":"10.00"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="ADD_WINE_REQUISITION_ERROR_112" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":"2",
+"productId":"345435",
+  "qtyOfBottles":"4",
+	"bottlePerBox":"59",
+	"unitPriceInDollar":"10.00"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="ADD_WINE_REQUISITION_ERROR_114" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":"2",
+"productId":"345435",
+  "qtyOfBottles":"4",
+	"bottlePerBox":"59",
+	"unitPriceInDollar":"10.00"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="ADD_WINE_REQUISITION_ERROR_116" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":"2",
+"productId":"2",
+  "qtyOfBottles":"4",
+	"bottlePerBox":"59",
+	"unitPriceInDollar":"10.00"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="SUCCESS" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="accept" value="application/xml"/>
+  &lt;con:entry key="API_ACCESS_CODE" value="0FYHkb0951pas8OOGMwMBN1IyAeL8P1o"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"poId":"2",
+"productId":"2",
+  "qtyOfBottles":"4",
+	"bottlePerBox":"59",
+	"unitPriceInDollar":"10.00"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddWineToRequisition</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

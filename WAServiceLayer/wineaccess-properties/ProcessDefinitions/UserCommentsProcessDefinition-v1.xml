@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="UserCommentsProcessDefinition" version="v1" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="UserCommentsTaskTransition" to="UserCommentsAdapter" />		
+	</start-state>
+	
+	<task name="UserCommentsAdapter">					
+		<action class="com.wineaccess.user.comments.UserCommentsAdapter"/>
+		<orch:transition name="END" to="END-STATE"/>
+	</task>	
+	
+	<end-state name="END-STATE"/>
+</orch:process-definition>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+    
+    <persistence-unit name="WineAccessPersistentUnit" transaction-type="RESOURCE_LOCAL">
+		
+		<class>com.wineaccess.orchestration.workflow.model.ProcessDefinitionModel</class>
+		<class>com.wineaccess.orchestration.workflow.model.TaskExecutionModel</class>
+		<class>com.wineaccess.data.model.system.ApplicationKeyVersion</class>
+		<class>com.wineaccess.data.model.user.UserModel</class>
+		<class>com.wineaccess.data.model.security.TokenModel</class>
+	
+		<class>com.wineaccess.data.model.user.UserRoles</class>
+		<class>com.wineaccess.data.model.user.UserLegecyData</class>
+		<class>com.wineaccess.data.model.user.UserActivityLogs</class>
+		<class>com.wineaccess.data.model.user.UserCredit</class>
+		<class>com.wineaccess.data.model.user.AddressPreference</class>
+		<class>com.wineaccess.data.model.user.UserAddress</class>
+		<class>com.wineaccess.data.model.user.UserEmailLog</class>
+		<class>com.wineaccess.data.model.user.UserCreditCard</class>
+		<class>com.wineaccess.data.model.user.UserComments</class>
+		<class>com.wineaccess.data.model.user.UserSSO</class>
+		<class>com.wineaccess.data.model.user.UserGroup</class>
+		<class>com.wineaccess.data.model.user.NewsLetter</class>
+		
+		<class>com.wineaccess.data.model.common.MasterDataType</class>
+		<class>com.wineaccess.data.model.common.MasterData</class>
+		<class>com.wineaccess.data.model.user.CityModel</class>
+		<class>com.wineaccess.data.model.user.StateModel</class>
+		<class>com.wineaccess.data.model.user.CountryModel</class>
+		<!-- <class>com.wineaccess.data.model.user.UserRoleMapping</class> -->
+		<class>com.wineaccess.data.model.security.APIAccessCode</class>
+	    <class>com.wineaccess.data.model.common.EmailTemplateType</class>
+		<class>com.wineaccess.data.model.common.EmailTemplate</class>
+		
+		<class>com.wineaccess.data.model.catalog.WineryModel</class>
+		<class>com.wineaccess.data.model.catalog.ImporterModel</class>
+		<class>com.wineaccess.data.model.catalog.WineyImpoterModel</class>
+		<class>com.wineaccess.data.model.catalog.OfferModel</class>
+		<!-- <class>com.wineaccess.data.model.catalog.WineyImpoterModel</class> -->
+		<class>com.wineaccess.data.model.catalog.WineryImporterContacts</class>
+		<class>com.wineaccess.data.model.catalog.ActiveImporterLogHistoryModel</class>
+		<class>com.wineaccess.data.model.catalog.ImporterWineryWorkflowModel</class>
+		<class>com.wineaccess.data.model.catalog.WineryImporterAddressModel</class>
+		<class>com.wineaccess.warehouse.WarehouseModel</class>
+		
+		<class>com.wineaccess.data.model.catalog.WineryLicenseDetailModel</class>
+		<class>com.wineaccess.data.model.catalog.WineryHistoricalOwsData</class>
+		<class>com.wineaccess.data.model.catalog.WineryLicensePermitAltStates</class>
+		<class>com.wineaccess.data.model.catalog.WineryLicenseFullfillAltStates</class>
+		
+
+		
+		<class>com.wineaccess.data.model.catalog.wine.WineModel</class>
+		<class>com.wineaccess.data.model.catalog.wine.WineLicenseDetailModel</class>
+		<class>com.wineaccess.data.model.catalog.wine.WineHistoricalOWSData</class>
+		<class>com.wineaccess.data.model.catalog.WineLicenseFullfillAltStates</class>
+		<class>com.wineaccess.data.model.catalog.WineLicensePermitAltStates</class>
+		<class>com.wineaccess.data.model.catalog.WineLicenseNoPermit</class>
+		
+		<class>com.wineaccess.data.model.catalog.product.ProductMaster</class>
+		
+		<class>com.wineaccess.data.model.catalog.requisition.REQLineItemsModel</class>
+		<class>com.wineaccess.data.model.catalog.requisition.RequisitionModel</class>
+		
+		<class>com.wineaccess.data.model.catalog.product.ProductItemModel</class>
+		
+		<class>com.wineaccess.distributioncentre.DistributionCentre</class>
+		
+		<class>com.wineaccess.data.model.catalog.sampler.SamplerModel</class>
+		<class>com.wineaccess.data.model.catalog.sampler.ProductSamplerModel</class>
+		
+		<class>com.wineaccess.data.model.catalog.inventory.InventoryModel</class>
+		
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+			<!-- <property name="hibernate.search.default.directory_provider" value="filesystem"/>
+			<property name="hibernate.search.default.indexBase"  value="C:\\Data\\Lucene"/>
+			<property name="hibernate.show_sql" value="true"/> -->
+		</properties>
+		
+    </persistence-unit>
+  
+</persistence>

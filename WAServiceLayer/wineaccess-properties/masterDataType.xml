@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<masterDataType>
+    <addUpdateMasterDataType>
+        <description>Varietal</description>
+        <name>Varietal</name>
+        <status>true</status>
+	    <label>Varietal</label>	
+	    <addUpdateMasterData>
+         <name>Barbera</name>
+        </addUpdateMasterData>
+	    <addUpdateMasterData>
+            <name>Chardonnay</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>Dolcetto</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>Fume Blanc</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+        <description>Vintage</description>
+        <name>Vintage</name>
+        <status>true</status>
+	    <label>Vintage</label>
+	    <addUpdateMasterData>
+            <name>1920</name>
+        </addUpdateMasterData>
+		<addUpdateMasterData>
+            <name>1940</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>1980</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>1975</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+        <description>Credit Card Type</description>
+        <label>Credit Card Type</label>
+        <status>true</status>
+	    <name>CardType</name>
+	    <addUpdateMasterData>
+            <name>VISA</name>
+        </addUpdateMasterData>
+	    <addUpdateMasterData>
+            <name>Master</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>Discovery</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+        <description>Shipping Method</description>
+        <label>Shipping Method</label>
+        <status>true</status>
+	    <name>ShippingMethod</name>
+	    <addUpdateMasterData>
+            <name>Shipping Method 1</name>
+        </addUpdateMasterData>
+	    <addUpdateMasterData>
+            <name>Shipping Method 2</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+        <description>Shipping Carrier</description>
+        <label>Shipping Carrier</label>
+        <status>true</status>
+	    <name>ShippingCarrier</name>
+	    <addUpdateMasterData>
+            <name>FedEx</name>
+        </addUpdateMasterData>
+	    <addUpdateMasterData>
+            <name>UPS</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+        <description>Package Type</description>
+        <label>Package Type</label>
+        <status>true</status>
+	    <name>PackageType</name>
+	    <addUpdateMasterData>
+            <name>Package Type 1</name>
+        </addUpdateMasterData>
+	    <addUpdateMasterData>
+            <name>Package Type 2</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+        <description>Contact Type</description>
+        <label>Contact Type</label>
+        <status>true</status>
+	    <name>ContactType</name>
+	    <addUpdateMasterData>
+            <name>Owner</name>
+        </addUpdateMasterData>
+	    <addUpdateMasterData>
+            <name>Compliance Contact</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>Billing Contact</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>Sales Contact</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+	    <description>Address Type</description>
+	    <label>Address Type</label>
+	    <status>true</status>
+	    <name>AddressType</name>
+	    <addUpdateMasterData>
+            <name>Billing Address</name>
+        </addUpdateMasterData>
+	    <addUpdateMasterData>
+            <name>Warehouse Address</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>Tasting Room Address</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+        <description>Sourcing Status</description>
+        <label>Sourcing Status</label>
+        <status>true</status>
+	    <name>SourcingStatus</name>
+	    <addUpdateMasterData>
+            <name>No Contact History</name>
+        </addUpdateMasterData>
+	    <addUpdateMasterData>
+            <name>Qualified Interest</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>Not Interested</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>Active</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>Dormant</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+        <description>Wine Style</description>
+        <label>WineStyle</label>
+        <status>true</status>
+	    <name>WineStyle</name>
+	    <addUpdateMasterData>
+            <name>Wine Style 1</name>
+        </addUpdateMasterData>
+	    <addUpdateMasterData>
+            <name>Wine Style 2</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+        <description>CA License Type</description>
+        <label>CA License Type</label>
+        <status>true</status>
+	    <name>CALicenseType</name>
+	    <addUpdateMasterData>
+            <name>02</name>
+        </addUpdateMasterData>
+	    <addUpdateMasterData>
+            <name>17/20</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+        <description>Winery Licence Permit Numbers</description>
+        <label>Winery Licence Permit</label>
+        <status>true</status>
+	    <name>WineryLicencePermit</name>
+	    <addUpdateMasterData>
+            <name>Wine Shipping NY</name>
+        </addUpdateMasterData>
+	    <addUpdateMasterData>
+            <name>Wine Shipping TX</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>Wine Shipping MD</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>Wine Shipping NJ</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+        <description>Winery Licence No Permit</description>
+        <label>Winery Licence No Permit</label>
+        <status>true</status>
+	    <name>WineryLicenceNoPermit</name>
+	    <addUpdateMasterData>
+            <name>NY</name>
+        </addUpdateMasterData>
+		<addUpdateMasterData>
+            <name>NJ</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>TX</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+        <description>WA Contact</description>
+        <label>WA Contact</label>
+        <status>true</status>
+	    <name>WAContact</name>
+	    <addUpdateMasterData>
+            <name>Allen Liu</name>
+        </addUpdateMasterData>
+		 <addUpdateMasterData>
+            <name>Paula</name>
+        </addUpdateMasterData>
+        <addUpdateMasterData>
+            <name>Jessica</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+        <description>Freight Region</description>
+        <label>Freight Region</label>
+        <status>true</status>
+	    <name>FreightRegion</name>
+	    <addUpdateMasterData>
+            <name>Freight Region 1</name>
+        </addUpdateMasterData>
+		 <addUpdateMasterData>
+            <name>Freight Region 2</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+    <addUpdateMasterDataType>
+        <description>Wine Size</description>
+        <label>Wine Size</label>
+        <status>true</status>
+   	<name>WineSize</name>
+   	<addUpdateMasterData>
+            <name>750 ml</name>
+        </addUpdateMasterData>
+       <addUpdateMasterData>
+            <name>375 ml</name>
+        </addUpdateMasterData>
+    </addUpdateMasterDataType>
+<addUpdateMasterDataType>
+		<description>ProductType</description>
+		<name>ProductType</name>
+		<status>true</status>
+		<label>Product Type</label>
+		<addUpdateMasterData>
+			<name>Wine</name>
+		</addUpdateMasterData>
+		 <addUpdateMasterData>
+			<name>Glass</name>
+		</addUpdateMasterData>
+</addUpdateMasterDataType>
+<addUpdateMasterDataType>
+		<description>Bottle Per Box</description>
+		<name>BottlePerBox</name>
+		<status>true</status>
+		<label>Bottle Per Box</label>
+		<addUpdateMasterData>
+			<name>Bottle Per Box</name>
+		</addUpdateMasterData>
+	
+</addUpdateMasterDataType>
+<addUpdateMasterDataType>
+		<description>ProductSamplerQuantity</description>
+		<name>ProductSamplerQuantity</name>
+		<status>true</status>
+		<label>Product Sampler Quantity</label>
+		<addUpdateMasterData>
+			<name>1</name>
+		</addUpdateMasterData>
+		<addUpdateMasterData>
+			<name>2</name>
+		</addUpdateMasterData>
+		<addUpdateMasterData>
+			<name>3</name>
+		</addUpdateMasterData>
+		<addUpdateMasterData>
+			<name>4</name>
+		</addUpdateMasterData>
+		<addUpdateMasterData>
+			<name>5</name>
+		</addUpdateMasterData>
+</addUpdateMasterDataType>
+<addUpdateMasterDataType>
+		<description>Carrier</description>
+		<name>Carrier</name>
+		<status>true</status>
+		<label>Carrier</label>
+		<addUpdateMasterData>
+			<name>FedEx Ground</name>
+		</addUpdateMasterData>
+		<addUpdateMasterData>
+			<name>FedEx Overnight</name>
+		</addUpdateMasterData>
+		<addUpdateMasterData>
+			<name>UPS Ground</name>
+		</addUpdateMasterData>
+		<addUpdateMasterData>
+			<name>UPS Overnight</name>
+		</addUpdateMasterData>
+</addUpdateMasterDataType>
+</masterDataType>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="LogoutProcessDefinition" version="v1" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="LogoutTaskTransition" to="LogoutAdapter" />		
+	</start-state>
+	
+	<task name="LogoutAdapter">					
+		<action class="com.wineaccess.security.logout.LogoutAdapter"/>
+		<orch:transition name="END" to="END-STATE"/>
+	</task>	
+	
+	<end-state name="END-STATE"/>
+</orch:process-definition>

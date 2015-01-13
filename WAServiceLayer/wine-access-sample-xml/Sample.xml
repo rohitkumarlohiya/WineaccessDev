@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="ProcessDefinition" version="1.0" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="T1" to="SampleTaskOne" />
+		<orch:transition name="T2" to="SampleTaskTwo" />		
+	</start-state>
+	
+	<task name="SampleTaskOne">
+		<configuration>
+			<orch:on-error action="AAAA"/>
+			<orch:property name="P" value="V"/>
+		</configuration>			
+		<action class="com.wineaccess.orchestration.workflow.process.task.sample.SampleTaskOne"/>
+		<orch:transition name="END1" to="END-STATE"/>
+	</task>
+	
+	
+	<task name="SampleTaskTwo">
+		<configuration>
+			<orch:on-error action="AAAA"/>
+			<orch:property name="P" value="V"/>
+		</configuration>			
+		<action class="com.wineaccess.orchestration.workflow.process.task.sample.SampleTaskTwo"/>
+		<orch:transition name="END2" to="END-STATE"/>
+	</task>
+	
+	<end-state name="END-STATE"/>
+</orch:process-definition>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="ImporterProcessDefinition" version="v1" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="ImporterTaskTransition" to="ImporterAdapter" />		
+	</start-state>
+	
+	<task name="ImporterAdapter">					
+		<action class="com.wineaccess.importer.ImporterAdapter"/>
+		<orch:transition name="END" to="END-STATE"/>
+	</task>	
+	
+	<end-state name="END-STATE"/>
+</orch:process-definition>

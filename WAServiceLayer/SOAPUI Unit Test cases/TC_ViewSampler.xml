@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="TC_ViewSampler" resourceRoot="" soapui-version="5.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8181" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8181</con:endpoint></con:endpoints><con:resource name="Login" path="/wineaccess/apis/v1/invoke/Login"><con:settings/><con:parameters/><con:method name="" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Success_TC_request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="X-API-KEY" value="XYAVBNNNNNN" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+         "username": "admin@wineaccess.com",
+         "password": "Global@123#",
+         "ipAddress": "1.1.1.1",
+         "browser": "chrome",
+         "operatingSystem": "windows",
+         "platform": "mobile"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="ApiAccess" path="/wineaccess/apis/v1/invoke/ApiAccess"><con:settings/><con:parameters/><con:method name="Method 1" method="POST"><con:settings/><con:parameters/><con:request name="Success_TC_request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="WINEACCESS_TOKEN" value="31f2d20a098851f93a6a667fc2425bd7a1d0dcf2"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"email":"gaurav.agarwal1@globallogic.com"
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="ViewSampler" path="/wineaccess/apis/v1/invoke/ViewSampler"><con:settings/><con:parameters/><con:method name="Method 1" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:add="http://localhost/wineaccess/apis/v1/invoke/AddSampler">add:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>failureResponse</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>addSampler</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Success_TC_request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="WINEACCESS_TOKEN" value="4a2d4d6057eb825ae18aed0ccd18b68028c92a7b"/>
+  &lt;con:entry key="API_ACCESS_CODE" value="x+y+Dc3/zdZrQSQg/85ZA4QDMf2STfT1"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"id":"2"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddSampler</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_request_XML_Response_XML" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="4a2d4d6057eb825ae18aed0ccd18b68028c92a7b"/>
+  <con:entry key="API_ACCESS_CODE" value="x+y+Dc3/zdZrQSQg/85ZA4QDMf2STfT1"/>
+  <con:entry key="Accept" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>&lt;viewSampler>
+&lt;id>2&lt;/id>
+&lt;/viewSampler></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddSampler</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_request1_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="WINEACCESS_TOKEN" value="4a2d4d6057eb825ae18aed0ccd18b68028c92a7b"/>
+  &lt;con:entry key="API_ACCESS_CODE" value="x+y+Dc3/zdZrQSQg/85ZA4QDMf2STfT1"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"id":"1"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddSampler</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_request2_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="WINEACCESS_TOKEN" value="4a2d4d6057eb825ae18aed0ccd18b68028c92a7b"/>
+  &lt;con:entry key="API_ACCESS_CODE" value="x+y+Dc3/zdZrQSQg/85ZA4QDMf2STfT1"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddSampler</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_request3_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="WINEACCESS_TOKEN" value="4a2d4d6057eb825ae18aed0ccd18b68028c92a7b"/>
+  &lt;con:entry key="API_ACCESS_CODE" value="x+y+Dc3/zdZrQSQg/85ZA4QDMf2STfT1"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"id":" "
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/AddSampler</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

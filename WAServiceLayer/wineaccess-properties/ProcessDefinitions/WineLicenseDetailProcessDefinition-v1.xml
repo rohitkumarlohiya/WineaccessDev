@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="WineLicenseDetailProcessDefinition" version="v1" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="WineLicenseDetailTaskTransition" to="WineLicenseDetailAdapter" />		
+	</start-state>
+	
+	<task name="WineLicenseDetailAdapter">					
+		<action class="com.wineaccess.winelicensedetail.WineLicenseDetailAdapter"/>
+		<orch:transition name="END" to="END-STATE"/>
+	</task>	
+	
+	<end-state name="END-STATE"/>
+</orch:process-definition>

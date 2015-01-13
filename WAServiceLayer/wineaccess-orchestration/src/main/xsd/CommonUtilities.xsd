@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:orch="http://globallogic.com/orch" targetNamespace="http://globallogic.com/orch" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="transition">
+		<xs:complexType>
+			<xs:attribute name="name" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						name of this transition
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="to" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						The next task to which this transition goes to
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="propertyType">
+		<xs:annotation>
+			<xs:documentation>
+				a generic unit of data used in configuration
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>
+					name of the property
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="value" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>
+					value of the property
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="on-errorType">
+		<xs:annotation>
+			<xs:documentation>
+				on-error behaviour for a component
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="action" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>
+					what action should be taken by this component
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="task-config">
+		<xs:sequence>
+			<xs:element name="on-error" type="orch:on-errorType" minOccurs="0" />
+			<xs:element name="property" type="orch:propertyType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

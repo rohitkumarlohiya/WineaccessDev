@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<orch:server-configuration xmlns:orch="http://globallogic.com/orch">
+	<orch:properties>		
+		<!-- ERROR DATA DIRECTORY PATH RELATIVE TO ROOT INPUT DIR-->
+		<orch:prop>
+			<name>ERROR_DIR</name>
+			<value>/cigerror</value>
+		</orch:prop>
+   	<!-- ******************** -->
+	</orch:properties>
+
+	<!-- Task Completion Queue Configuration Detail -->
+	<orch:component name="TaskCompletionQueue">
+		<orch:properties>
+			<!-- Jndi Of The Queue -->
+			<orch:prop>
+				<name>QueueJndi</name>
+				<value>java:/TaskCompletionQueue</value>
+			</orch:prop>
+			<!-- Initial ThreadPool Size Worker Threads -->
+			<orch:prop>
+				<name>CorePoolSize</name>
+				<value>5</value>
+			</orch:prop>
+			<!-- Maximum number of Worker Threads -->
+			<orch:prop>
+				<name>TotalPoolSize</name>
+				<value>15</value>
+			</orch:prop>
+			<!-- Queue Size for worker thread pool -->
+			<orch:prop>
+				<name>MaxQueueSize</name>
+				<value>1</value>
+			</orch:prop>
+			<!-- ThreadPool increment size-->
+			<orch:prop>
+				<name>PoolIncrementSize</name>
+				<value>5</value>
+			</orch:prop>
+		</orch:properties>
+	</orch:component>
+	
+	<orch:component name="ApiCompletionQueue">
+		<orch:properties>
+			<!-- Jndi Of The Queue -->
+			<orch:prop>
+				<name>QueueJndi</name>
+				<value>java:/ApiCompletionQueue</value>
+			</orch:prop>
+			<!-- Initial ThreadPool Size Worker Threads -->
+			<orch:prop>
+				<name>CorePoolSize</name>
+				<value>5</value>
+			</orch:prop>
+			<!-- Maximum number of Worker Threads -->
+			<orch:prop>
+				<name>TotalPoolSize</name>
+				<value>15</value>
+			</orch:prop>
+			<!-- Queue Size for worker thread pool -->
+			<orch:prop>
+				<name>MaxQueueSize</name>
+				<value>1</value>
+			</orch:prop>
+			<!-- ThreadPool increment size-->
+			<orch:prop>
+				<name>PoolIncrementSize</name>
+				<value>5</value>
+			</orch:prop>
+		</orch:properties>
+	</orch:component>
+	
+	<!-- MonitoringService - configuration of xtap-queue monitoring service-->
+	<orch:component name="ApiRequestQueue">
+		<orch:properties>
+			<!-- Jndi Of The Queue -->
+			<orch:prop>
+				<name>QueueJndi</name>
+				<value>java:/ApiRequestQueue</value>
+			</orch:prop>
+			<!-- Initial ThreadPool Size Worker Threads -->
+			<orch:prop>
+				<name>CorePoolSize</name>
+				<value>5</value>
+			</orch:prop>
+			<!-- Maximum number of Worker Threads -->
+			<orch:prop>
+				<name>TotalPoolSize</name>
+				<value>15</value>
+			</orch:prop>
+			<!-- Queue Size for worker thread pool -->
+			<orch:prop>
+				<name>MaxQueueSize</name>
+				<value>1</value>
+			</orch:prop>
+			<!-- ThreadPool increment size-->
+			<orch:prop>
+				<name>PoolIncrementSize</name>
+				<value>5</value>
+			</orch:prop>
+		</orch:properties>
+	</orch:component>
+	
+	
+	<!-- MonitoringService - configuration of xtap-queue monitoring service-->
+	<orch:component name="DefaultTaskExecutionQueue">
+		<orch:properties>
+			<!-- Jndi Of The Queue -->
+			<orch:prop>
+				<name>QueueJndi</name>
+				<value>java:/DefaultTaskExecutionQueue</value>
+			</orch:prop>
+			<!-- Initial ThreadPool Size Worker Threads -->
+			<orch:prop>
+				<name>CorePoolSize</name>
+				<value>5</value>
+			</orch:prop>
+			<!-- Maximum number of Worker Threads -->
+			<orch:prop>
+				<name>TotalPoolSize</name>
+				<value>15</value>
+			</orch:prop>
+			<!-- Queue Size for worker thread pool -->
+			<orch:prop>
+				<name>MaxQueueSize</name>
+				<value>1</value>
+			</orch:prop>
+			<!-- ThreadPool increment size-->
+			<orch:prop>
+				<name>PoolIncrementSize</name>
+				<value>5</value>
+			</orch:prop>
+		</orch:properties>
+	</orch:component>
+</orch:server-configuration>

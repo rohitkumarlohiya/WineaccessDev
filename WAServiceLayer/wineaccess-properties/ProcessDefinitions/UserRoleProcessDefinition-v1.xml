@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="UserRoleProcessDefinition" version="v1" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="UserRoleTaskTransition" to="UserRoleAdapter" />		
+	</start-state>
+	
+	<task name="UserRoleAdapter">					
+		<action class="com.wineaccess.security.user.role.UserRoleAdapter"/>
+		<orch:transition name="END" to="END-STATE"/>
+	</task>	
+	
+	<end-state name="END-STATE"/>
+</orch:process-definition>

@@ -1,0 +1,137 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<groupId>com.wineaccess</groupId>
+	<artifactId>wineaccess-build</artifactId>	
+	<modelVersion>4.0.0</modelVersion> 		
+	<packaging>pom</packaging>
+	<name>Wine Access Build</name>
+	<version>1.0-SNAPSHOT</version>
+	<description>
+		Root Project For Wine Access
+	</description>	
+	
+	<repositories>
+		<!--<repository>
+		  <id>spy</id>
+		  <name>Spy Repository</name>
+		  <layout>default</layout>
+		  <url>http://files.couchbase.com/maven2/</url>
+		  <snapshots>
+			<enabled>false</enabled>
+		  </snapshots>
+		</repository>
+		<repository>
+            <id>SimpleCaptchaRepository</id>
+            <url>https://raw.github.com/0x0000-dot-ru/simplecaptcha/master/repository/releases</url>
+        </repository>-->
+	</repositories>
+	
+	<!--Core Modules-->
+	<modules>
+		<module>../wineaccess-util</module>
+		<module>../wineaccess-cmd</module>
+		<module>../wineaccess-service</module>
+		<module>../wineaccess-orchestration</module>				
+		<module>../wineaccess-interface</module>
+		<!--<module>../Responsys</module>		-->
+				
+	</modules>	
+
+	<!-- Distribution Configration Settings -->
+	<distributionManagement>
+		<site>
+			<id>website</id>
+			<url>file:////root/jboss/webapps/</url>
+		</site>
+	</distributionManagement>
+	
+	<!-- Reporting Configration Settings -->
+	<reporting>
+	</reporting>
+
+	<!-- Build Configration Settings -->
+	<build>
+		<plugins>									
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>			
+		</plugins>
+	</build>	
+
+	<!-- ****************************************************** -->
+	<!-- DEFINE PROJECT RELATED COMMONLY USED DEPENDENCIES HERE -->
+	<!-- ****************************************************** -->
+	<dependencyManagement>
+		<dependencies>						
+		</dependencies>
+	</dependencyManagement>
+	
+	<properties>		
+		<version.activiti>5.14</version.activiti>
+		<version.couchbase.client>1.3.1</version.couchbase.client>
+		<version.release>RELEASE</version.release>
+		<version.spring>3.1.2.RELEASE</version.spring>		
+		<version.commons-io>1.3.2</version.commons-io>
+		<version.commons.configuration>1.6</version.commons.configuration>
+		<version.oscache>2.4.1</version.oscache>
+		<version.json>1.9.8</version.json>
+		<version.jersey>1.18.1</version.jersey>
+		<version.ibatis>2.3.4.726</version.ibatis>
+		<version.jsr331>1.1.1</version.jsr331>
+		<version.oscache>2.4.1</version.oscache>
+		<kettle.version>4.3.0-stable</kettle.version>
+		<version.quartz>2.1.5</version.quartz>
+		<version.xmlbeans.maven.plugin>2.3.3</version.xmlbeans.maven.plugin>
+		<version.xmlbeans.xpath>2.3.0</version.xmlbeans.xpath>
+		
+		<version.jsp.api>2.0</version.jsp.api>
+		<version.servlet.api>2.5</version.servlet.api>
+		<version.sitemesh>2.4.2</version.sitemesh>
+		<version.struts2.sitemesh.plugin>2.3.4</version.struts2.sitemesh.plugin>
+		<version.struts2.spring.plugin>2.3.4</version.struts2.spring.plugin>
+		<version.httpclient>4.2.1</version.httpclient>
+		<version.commons-io>1.3.2</version.commons-io>
+		<version.commons.configuration>1.6</version.commons.configuration>
+		<version.oscache>2.4.1</version.oscache>
+		<version.struts2.json>2.3.4</version.struts2.json>
+		<version.display.tag>1.2.GL-SNAPSHOT</version.display.tag>
+		<version.birt>4.2.0</version.birt>
+		<version.axis>1.4</version.axis>
+		<version.axis.ant>1.4</version.axis.ant>
+		<version.json>20090211</version.json>		
+	</properties>
+
+	<!-- ****************************************************** -->
+	<!-- PROJECT MANAGEMENT SECTION (OPTIONAL, BUT GOOD TO HAVE)-->
+	<!-- ****************************************************** -->
+
+	<developers>
+		<developer>
+			<name>Piyush Jha</name>
+			<id>piyush</id>
+			<email>piyush.jha@GlobalLogic.com</email>
+			<organization>GlobalLogic</organization>
+			<organizationUrl>http://globallogic.com</organizationUrl>
+			<roles>
+				<role>Director Technology</role>
+			</roles>
+			<timezone>5.30</timezone>
+		</developer>
+		<developer>
+			<name>Jyoti Yadav</name>
+			<id>jyoti</id>
+			<email>jyoti.yadav@GlobalLogic.com</email>
+			<organization>GlobalLogic</organization>
+			<organizationUrl>http://globallogic.com</organizationUrl>
+			<roles>
+				<role>Solution Architect</role>
+			</roles>
+			<timezone>5.30</timezone>
+		</developer>		
+	</developers>
+</project>

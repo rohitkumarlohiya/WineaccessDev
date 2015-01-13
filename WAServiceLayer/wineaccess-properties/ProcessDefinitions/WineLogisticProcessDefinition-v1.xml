@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="WineLogisticProcessDefinition"
+	version="v1" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="WineTaskTransition" to="WineAdapter" />
+	</start-state>
+
+	<task name="WineAdapter">
+		<action class="com.wineaccess.wine.WineAdapter" />
+		<orch:transition name="END" to="END-STATE" />
+	</task>
+
+	<end-state name="END-STATE" />
+</orch:process-definition>

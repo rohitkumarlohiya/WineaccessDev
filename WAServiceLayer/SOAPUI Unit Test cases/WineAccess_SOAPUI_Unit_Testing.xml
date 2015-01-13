@@ -1,0 +1,1459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="REST Project 3" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8181" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8181</con:endpoint></con:endpoints><con:resource name="Login" path="/wineaccess/apis/v1/invoke/Login"><con:settings/><con:parameters/><con:method name="Login" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:request name="Request 1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Accept" value="application/json"/>
+  &lt;con:entry key="Content-Type" value="application/json"/>
+  &lt;con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<mergeUser>
+ <userInWhichTobeMerged>1</userInWhichTobeMerged>
+ <toBeMergedUser>2</toBeMergedUser>
+</mergeUser>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="ListCity" path="/wineaccess/apis/v1/invoke/ListCity"><con:settings/><con:parameters/><con:method name="ListCity" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:request name="Request 1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="df9ed938cc5a7b0ef54a291afd5b20f485e18581"/>
+  <con:entry key="API_ACCESS_CODE" value="hUY0aKvwd4MDNtfOZpwkHbqUUnPz7bDb"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="SearchImporter" path="/wineaccess/apis/v1/invoke/SearchImporter"><con:settings/><con:parameters/><con:method name="SearchImporter" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="9e66217b2fafde34421343f65e9cf5f8e35443cf"/>
+  <con:entry key="API_ACCESS_CODE" value="hUY0aKvwd4MDNtfOZpwkHbqUUnPz7bDb"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{"searchType":"B","searchBy":"importerName","limit":"10","offSet":"1","typeOfImporter":"AL","sortBy":"importerName","sortOrder":"0","keyword":""}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="SSOLogin" path="/wineaccess/apis/v1/invoke/SSOLogin"><con:settings/><con:parameters/><con:method name="SSOLogin" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>registrationPO</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>successResponse</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="9e66217b2fafde34421343f65e9cf5f8e35443cf"/>
+  <con:entry key="API_ACCESS_CODE" value="hUY0aKvwd4MDNtfOZpwkHbqUUnPz7bDb"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+   "email": "finaltest@globallogic.com",
+   "firstName": "firstname",
+   "lastName": "lastname",
+   "gender": "gender",
+   "zipcode": "23443",
+   "state": "state",
+   "ssoSource": "adfgasdg",
+   "ssoId": "dd",
+   "accessToken": "",
+   "ipAddress": "1.1.1.1",
+   "browser": "chrome",
+   "operatingSystem": "windows",
+   "platform": "mobile"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_JSON" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="9e66217b2fafde34421343f65e9cf5f8e35443cf"/>
+  <con:entry key="API_ACCESS_CODE" value="hUY0aKvwd4MDNtfOZpwkHbqUUnPz7bDb"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<registrationPO>
+ <email>finaltest1@globallogic.com</email>
+ <firstName>firstname</firstName>
+ <lastName>lastname</lastName>
+ <gender>gender</gender>
+ <zipcode>23443</zipcode>
+ <state>state</state>
+ <ssoSource>ssosource</ssoSource>
+ <ssoId>23423434</ssoId>
+ <accessToken>234234</accessToken>
+ <ipAddress>1.1.1.1</ipAddress>
+ <browser>chrome</browser>
+ <operatingSystem>windows</operatingSystem>
+ <platform>mobile</platform>
+</registrationPO>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="ResendActivationMail" path="/wineaccess/apis/v1/invoke/ResendActivationMail"><con:settings/><con:parameters/><con:method name="ResendActivationMail" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>registrationPO</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>successResponse</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="9e66217b2fafde34421343f65e9cf5f8e35443cf"/>
+  <con:entry key="API_ACCESS_CODE" value="hUY0aKvwd4MDNtfOZpwkHbqUUnPz7bDb"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+ "email": "finaltest@globallogic.com"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_JSON" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="9e66217b2fafde34421343f65e9cf5f8e35443cf"/>
+  <con:entry key="API_ACCESS_CODE" value="hUY0aKvwd4MDNtfOZpwkHbqUUnPz7bDb"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>&lt;resendActivationMail>
+ &lt;email>finaltest@globallogic.com&lt;/email>>
+&lt;/resendActivationMail></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="ListMasterDataTypes" path="/wineaccess/apis/v1/ListMasterDataTypes"><con:settings/><con:parameters/><con:method name="ListMasterDataTypes" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>registrationPO</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>successResponse</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="c18e9e69b3b89ceface283b46944c48f1c3e7aea"/>
+  <con:entry key="API_ACCESS_CODE" value="hUY0aKvwd4MDNtfOZpwkHbqUUnPz7bDb"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+   "status": "inactive"   
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_JSON" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="9e66217b2fafde34421343f65e9cf5f8e35443cf"/>
+  <con:entry key="API_ACCESS_CODE" value="hUY0aKvwd4MDNtfOZpwkHbqUUnPz7bDb"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>&lt;onlyactive>true&lt;/onlyactive></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="CreateUser" path="/wineaccess/apis/v1/invoke/CreateUser"><con:settings/><con:parameters/><con:method name="CreateUser" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>userManagementPO</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>failureResponse</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+ "email": "abhishek-create@globallogic.com",
+ "firstName": "Abhishek",
+ "lastName": "Sharma",
+ "isReceivedNewsletter": "true",
+ "salutation": "Mr.",
+ "gender": "Male",
+ "zipCode": "2342343",
+ "stateId": "12",
+ "countryId": "12",
+ "phone": "123-123-1234",
+ "regStatus":"1",
+ "regSource":"Web",
+ "emailType":"1",
+ "address": [
+ {
+ "addressLine1": "Noida1",
+ "addressLine2": "Noida2",
+ "cityId": "12",
+ "stateId": "12",
+ "countryId": "12",
+ "zipCode": "2342343",
+ "phone": "123-123-1234",
+ "firstName": "address-firstname",
+ "lastName": "address-lastname",
+ "businessName": "address-businessname",
+ "birthDate": "01-01-2001",
+ "isDefault": "1",
+ "addressType": "1"
+ },
+ {
+ "addressLine1": "India1",
+ "addressLine2": "India2",
+ "cityId": "13",
+ "stateId": "13",
+ "countryId": "13",
+ "zipCode": "2342343",
+ "phone": "123-123-1234",
+ "firstName": "address-firstname1",
+ "lastName": "address-lastname1",
+ "businessName": "address-businessname1",
+ "birthDate": "01-01-1991",
+ "addressType": "1",
+ "addressPref": {
+ "prefCarrierId": "1",
+ "prefShippingMethodId": "2",
+ "prefPackageTypeId": "3",
+ "combineShipmentWhenAppropriate": "true",
+ "deliveryStarting": "10:12",
+ "deliveryEnding": "10:12",
+ "desiredDeliveryDays": ["0","1","2"]
+ }
+ }
+ ],
+ "creditCard": [
+ {
+ "creditCartTypeId": "23",
+ "expirationDate": "07/2019",
+ "cardHolderName": "Abhishek",
+ "isDefault": "false",
+ "address": {
+ "addressLine1": "USA1",
+ "addressLine2": "USA2",
+ "cityId": "14",
+ "stateId": "14",
+ "countryId": "14",
+ "zipCode": "2342343",
+ "phone": "123-123-1234",
+ "firstName": "address-firstname3",
+ "lastName": "address-lastname3",
+ "businessName": "address-businessname3",
+ "birthDate": "01-01-2001",
+ "isDefault": "0",
+ "addressType": "0",
+ "addressPref": {
+ "prefCarrierId": "1",
+ "prefShippingMethodId": "2",
+ "prefPackageTypeId": "3",
+ "combineShipmentWhenAppropriate": "true",
+ "deliveryStarting": "23:10",
+ "deliveryEnding": "13:59",
+ "desiredDeliveryDays": ["0","1","2","4"]
+ }
+ }
+ },
+ {
+ "creditCartTypeId": "4",
+ "expirationDate": "07/2019",
+ "cardHolderName": "Abhishek",
+ "isDefault": "true",
+ "address": {
+ "addressLine1": "Canada1",
+ "addressLine2": "Canada2",
+ "cityId": "15",
+ "stateId": "15",
+ "countryId": "15",
+ "zipCode": "2342343",
+ "phone": "123-123-1234",
+ "firstName": "address-firstname4",
+ "lastName": "address-lastname4",
+ "businessName": "address-businessname4",
+ "birthDate": "01-01-2001",
+ "addressType": "0"
+ }
+ }
+ ],
+ "newsletterList":[{"newsletterId":["1","2"]}]
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_JSON" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<userManagementPO>
+ <newsletterList>
+ <newsletterId>1</newsletterId>
+ <newsletterId>1</newsletterId>
+ </newsletterList>
+ <address>
+ <addressLine1>Noida1</addressLine1>
+ <addressLine2>Noida2</addressLine2>
+ <cityId>12</cityId>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname</firstName>
+ <lastName>address-lastname</lastName>
+ <businessName>address-businessname</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>1</addressType>
+ <isDefault>1</isDefault>
+ </address>
+ <address>
+ <addressLine1>India1</addressLine1>
+ <addressLine2>India2</addressLine2>
+ <cityId>13</cityId>
+ <stateId>13</stateId>
+ <countryId>13</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname1</firstName>
+ <lastName>address-lastname1</lastName>
+ <businessName>address-businessname1</businessName>
+ <birthDate>01-01-1991</birthDate>
+ <addressType>1</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true</combineShipmentWhenAppropriate>
+ <deliveryStarting>10:12</deliveryStarting>
+ <deliveryEnding>10:12 </deliveryEnding>
+ <desiredDeliveryDays>1</desiredDeliveryDays>
+ <desiredDeliveryDays>2</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCard>
+ <address>
+ <addressLine1>USA1</addressLine1>
+ <addressLine2>USA2</addressLine2>
+ <cityId>14</cityId>
+ <stateId>14</stateId>
+ <countryId>14</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname3</firstName>
+ <lastName>address-lastname3</lastName>
+ <businessName>address-businessname3</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true
+ </combineShipmentWhenAppropriate>
+ <deliveryStarting>12:00</deliveryStarting>
+ <deliveryEnding>12:10</deliveryEnding>
+ <desiredDeliveryDays>0</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCartNumber>232198798799</creditCartNumber>
+ <creditCartTypeId>23</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>false</isDefault>
+ </creditCard>
+ <creditCard>
+ <address>
+ <addressLine1>Canada1</addressLine1>
+ <addressLine2>Canada2</addressLine2>
+ <cityId>15</cityId>
+ <stateId>15</stateId>
+ <countryId>15</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname4</firstName>
+ <lastName>address-lastname4</lastName>
+ <businessName>address-businessname4</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <isDefault>0</isDefault>
+ </address>
+ <cardHolderName>Abhishek</cardHolderName>
+ <creditCartTypeId>4</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>true</isDefault>
+ </creditCard>
+ <firstName>Abhishek</firstName>
+ <lastName>Sharma</lastName>
+ <email>abhishek4@globallogic.com</email>
+ <phone>123-123-1234</phone>
+ <salutation>Mr.</salutation>
+ <gender>Male</gender>
+ <zipCode>2342343</zipCode>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <isReceivedNewsletter>true</isReceivedNewsletter>
+ <regStatus>1</regStatus>
+ <regSource>1</regSource>
+ <emailType>1</emailType>
+</userManagementPO>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_XML" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/xml"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<userManagementPO>
+ <newsletterList>
+ <newsletterId>1</newsletterId>
+ <newsletterId>1</newsletterId>
+ </newsletterList>
+ <address>
+ <addressLine1>Noida1</addressLine1>
+ <addressLine2>Noida2</addressLine2>
+ <cityId>12</cityId>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname</firstName>
+ <lastName>address-lastname</lastName>
+ <businessName>address-businessname</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>1</addressType>
+ <isDefault>1</isDefault>
+ </address>
+ <address>
+ <addressLine1>India1</addressLine1>
+ <addressLine2>India2</addressLine2>
+ <cityId>13</cityId>
+ <stateId>13</stateId>
+ <countryId>13</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname1</firstName>
+ <lastName>address-lastname1</lastName>
+ <businessName>address-businessname1</businessName>
+ <birthDate>01-01-1991</birthDate>
+ <addressType>1</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true</combineShipmentWhenAppropriate>
+ <deliveryStarting>10:12</deliveryStarting>
+ <deliveryEnding>10:12 </deliveryEnding>
+ <desiredDeliveryDays>1</desiredDeliveryDays>
+ <desiredDeliveryDays>2</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCard>
+ <address>
+ <addressLine1>USA1</addressLine1>
+ <addressLine2>USA2</addressLine2>
+ <cityId>14</cityId>
+ <stateId>14</stateId>
+ <countryId>14</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname3</firstName>
+ <lastName>address-lastname3</lastName>
+ <businessName>address-businessname3</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true
+ </combineShipmentWhenAppropriate>
+ <deliveryStarting>12:00</deliveryStarting>
+ <deliveryEnding>12:10</deliveryEnding>
+ <desiredDeliveryDays>0</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCartNumber>232198798799</creditCartNumber>
+ <creditCartTypeId>23</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>false</isDefault>
+ </creditCard>
+ <creditCard>
+ <address>
+ <addressLine1>Canada1</addressLine1>
+ <addressLine2>Canada2</addressLine2>
+ <cityId>15</cityId>
+ <stateId>15</stateId>
+ <countryId>15</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname4</firstName>
+ <lastName>address-lastname4</lastName>
+ <businessName>address-businessname4</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <isDefault>0</isDefault>
+ </address>
+ <cardHolderName>Abhishek</cardHolderName>
+ <creditCartTypeId>4</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>true</isDefault>
+ </creditCard>
+ <firstName>Abhishek</firstName>
+ <lastName>Sharma</lastName>
+ <email>abhishek4@globallogic.com</email>
+ <phone>123-123-1234</phone>
+ <salutation>Mr.</salutation>
+ <gender>Male</gender>
+ <zipCode>2342343</zipCode>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <isReceivedNewsletter>true</isReceivedNewsletter>
+ <regStatus>1</regStatus>
+ <regSource>1</regSource>
+ <emailType>1</emailType>
+</userManagementPO>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_Request_XML_Response_XML" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/xml"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<userManagementPO>
+ <newsletterList>
+ <newsletterId>1</newsletterId>
+ <newsletterId>1</newsletterId>
+ </newsletterList>
+ <address>
+ <addressLine1>Noida1</addressLine1>
+ <addressLine2>Noida2</addressLine2>
+ <cityId>12</cityId>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname</firstName>
+ <lastName>address-lastname</lastName>
+ <businessName>address-businessname</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>1</addressType>
+ <isDefault>1</isDefault>
+ </address>
+ <address>
+ <addressLine1>India1</addressLine1>
+ <addressLine2>India2</addressLine2>
+ <cityId>13</cityId>
+ <stateId>13</stateId>
+ <countryId>13</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname1</firstName>
+ <lastName>address-lastname1</lastName>
+ <businessName>address-businessname1</businessName>
+ <birthDate>01-01-1991</birthDate>
+ <addressType>1</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true</combineShipmentWhenAppropriate>
+ <deliveryStarting>10:12</deliveryStarting>
+ <deliveryEnding>10:12 </deliveryEnding>
+ <desiredDeliveryDays>1</desiredDeliveryDays>
+ <desiredDeliveryDays>2</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCard>
+ <address>
+ <addressLine1>USA1</addressLine1>
+ <addressLine2>USA2</addressLine2>
+ <cityId>14</cityId>
+ <stateId>14</stateId>
+ <countryId>14</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname3</firstName>
+ <lastName>address-lastname3</lastName>
+ <businessName>address-businessname3</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true
+ </combineShipmentWhenAppropriate>
+ <deliveryStarting>12:00</deliveryStarting>
+ <deliveryEnding>12:10</deliveryEnding>
+ <desiredDeliveryDays>0</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCartNumber>232198798799</creditCartNumber>
+ <creditCartTypeId>23</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>false</isDefault>
+ </creditCard>
+ <creditCard>
+ <address>
+ <addressLine1>Canada1</addressLine1>
+ <addressLine2>Canada2</addressLine2>
+ <cityId>15</cityId>
+ <stateId>15</stateId>
+ <countryId>15</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname4</firstName>
+ <lastName>address-lastname4</lastName>
+ <businessName>address-businessname4</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <isDefault>0</isDefault>
+ </address>
+ <cardHolderName>Abhishek</cardHolderName>
+ <creditCartTypeId>4</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>true</isDefault>
+ </creditCard>
+ <firstName>Abhishek</firstName>
+ <lastName>Sharma</lastName>
+ <email>abhishek4@globallogic.com</email>
+ <phone>123-123-1234</phone>
+ <salutation>Mr.</salutation>
+ <gender>Male</gender>
+ <zipCode>2342343</zipCode>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <isReceivedNewsletter>true</isReceivedNewsletter>
+ <regStatus>1</regStatus>
+ <regSource>1</regSource>
+ <emailType>1</emailType>
+</userManagementPO>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="UpdateUser" path="/wineaccess/apis/v1/invoke/UpdateUser"><con:settings/><con:parameters/><con:method name="UpdateUser" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>userManagementPO</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>failureResponse</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+ "email": "abhishek-create@globallogic.com",
+ "userId": "3",
+ "firstName": "Abhishek",
+ "lastName": "Sharma",
+ "isReceivedNewsletter": "true",
+ "salutation": "Mr.",
+ "gender": "Male",
+ "zipCode": "2342343",
+ "stateId": "12",
+ "countryId": "12",
+ "phone": "123-123-1234",
+ "regStatus":"1",
+ "regSource":"Web",
+ "emailType":"1",
+ "address": [
+ {
+ "addressId": "4",
+ "addressLine1": "Noida1",
+ "addressLine2": "Noida2",
+ "cityId": "12",
+ "stateId": "12",
+ "countryId": "12",
+ "zipCode": "2342343",
+ "phone": "123-123-1234",
+ "firstName": "address-firstname",
+ "lastName": "address-lastname",
+ "businessName": "address-businessname",
+ "birthDate": "01-01-2001",
+ "isDefault": "1",
+ "addressType": "1"
+ },
+ {
+ "addressLine1": "India1",
+ "addressLine2": "India2",
+ "cityId": "13",
+ "stateId": "13",
+ "countryId": "13",
+ "zipCode": "2342343",
+ "phone": "123-123-1234",
+ "firstName": "address-firstname1",
+ "lastName": "address-lastname1",
+ "businessName": "address-businessname1",
+ "birthDate": "01-01-1991",
+ "addressType": "1",
+ "addressPref": {
+ "addrPrefId": "3",
+ "prefCarrierId": "1",
+ "prefShippingMethodId": "2",
+ "prefPackageTypeId": "3",
+ "combineShipmentWhenAppropriate": "true",
+ "deliveryStarting": "10:12",
+ "deliveryEnding": "10:12",
+ "desiredDeliveryDays": ["0","1","2"]
+ }
+ }
+ ],
+ "creditCard": [
+ {
+ "creditCardId": "4",
+ "creditCartTypeId": "23",
+ "expirationDate": "07/2019",
+ "cardHolderName": "Abhishek",
+ "isDefault": "false",
+ "address": {
+ "addressLine1": "USA1",
+ "addressLine2": "USA2",
+ "cityId": "14",
+ "stateId": "14",
+ "countryId": "14",
+ "zipCode": "2342343",
+ "phone": "123-123-1234",
+ "firstName": "address-firstname3",
+ "lastName": "address-lastname3",
+ "businessName": "address-businessname3",
+ "birthDate": "01-01-2001",
+ "isDefault": "0",
+ "addressType": "0",
+ "addressPref": {
+ "prefCarrierId": "1",
+ "prefShippingMethodId": "2",
+ "prefPackageTypeId": "3",
+ "combineShipmentWhenAppropriate": "true",
+ "deliveryStarting": "23:10",
+ "deliveryEnding": "13:59",
+ "desiredDeliveryDays": ["0","1","2","4"]
+ }
+ }
+ },
+ {
+ "creditCartTypeId": "24",
+ "expirationDate": "07/2019",
+ "cardHolderName": "Abhishek",
+ "isDefault": "true",
+ "address": {
+ "addressLine1": "Canada1",
+ "addressLine2": "Canada2",
+ "cityId": "15",
+ "stateId": "15",
+ "countryId": "15",
+ "zipCode": "2342343",
+ "phone": "123-123-1234",
+ "firstName": "address-firstname4",
+ "lastName": "address-lastname4",
+ "businessName": "address-businessname4",
+ "birthDate": "01-01-2001",
+ "addressType": "0"
+ }
+ }
+ ],
+ "newsletterList":[{"newsletterId":["1","2"]}]
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_JSON" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<userManagementPO>
+ <newsletterList>
+ <newsletterId>1</newsletterId>
+ <newsletterId>1</newsletterId>
+ </newsletterList>
+ <address>
+ <addressLine1>Noida1</addressLine1>
+ <addressLine2>Noida2</addressLine2>
+ <cityId>12</cityId>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname</firstName>
+ <lastName>address-lastname</lastName>
+ <businessName>address-businessname</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>1</addressType>
+ <isDefault>1</isDefault>
+ </address>
+ <address>
+ <addressLine1>India1</addressLine1>
+ <addressLine2>India2</addressLine2>
+ <cityId>13</cityId>
+ <stateId>13</stateId>
+ <countryId>13</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname1</firstName>
+ <lastName>address-lastname1</lastName>
+ <businessName>address-businessname1</businessName>
+ <birthDate>01-01-1991</birthDate>
+ <addressType>1</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true</combineShipmentWhenAppropriate>
+ <deliveryStarting>10:12</deliveryStarting>
+ <deliveryEnding>10:12 </deliveryEnding>
+ <desiredDeliveryDays>1</desiredDeliveryDays>
+ <desiredDeliveryDays>2</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCard>
+ <address>
+ <addressLine1>USA1</addressLine1>
+ <addressLine2>USA2</addressLine2>
+ <cityId>14</cityId>
+ <stateId>14</stateId>
+ <countryId>14</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname3</firstName>
+ <lastName>address-lastname3</lastName>
+ <businessName>address-businessname3</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true
+ </combineShipmentWhenAppropriate>
+ <deliveryStarting>12:00</deliveryStarting>
+ <deliveryEnding>12:10</deliveryEnding>
+ <desiredDeliveryDays>0</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCartNumber>232198798799</creditCartNumber>
+ <creditCartTypeId>23</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>false</isDefault>
+ </creditCard>
+ <creditCard>
+ <address>
+ <addressLine1>Canada1</addressLine1>
+ <addressLine2>Canada2</addressLine2>
+ <cityId>15</cityId>
+ <stateId>15</stateId>
+ <countryId>15</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname4</firstName>
+ <lastName>address-lastname4</lastName>
+ <businessName>address-businessname4</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <isDefault>0</isDefault>
+ </address>
+ <cardHolderName>Abhishek</cardHolderName>
+ <creditCartTypeId>4</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>true</isDefault>
+ </creditCard>
+ <firstName>Abhishek</firstName>
+ <lastName>Sharma</lastName>
+ <email>abhishek-create@globallogic.com</email>
+ <userId>3</userId>userId>
+ <phone>123-123-1234</phone>
+ <salutation>Mr.</salutation>
+ <gender>Male</gender>
+ <zipCode>2342343</zipCode>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <isReceivedNewsletter>true</isReceivedNewsletter>
+ <regStatus>1</regStatus>
+ <regSource>1</regSource>
+ <emailType>1</emailType>
+</userManagementPO>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_XML" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/xml"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<userManagementPO>
+ <newsletterList>
+ <newsletterId>1</newsletterId>
+ <newsletterId>1</newsletterId>
+ </newsletterList>
+ <address>
+ <addressLine1>Noida1</addressLine1>
+ <addressLine2>Noida2</addressLine2>
+ <cityId>12</cityId>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname</firstName>
+ <lastName>address-lastname</lastName>
+ <businessName>address-businessname</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>1</addressType>
+ <isDefault>1</isDefault>
+ </address>
+ <address>
+ <addressLine1>India1</addressLine1>
+ <addressLine2>India2</addressLine2>
+ <cityId>13</cityId>
+ <stateId>13</stateId>
+ <countryId>13</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname1</firstName>
+ <lastName>address-lastname1</lastName>
+ <businessName>address-businessname1</businessName>
+ <birthDate>01-01-1991</birthDate>
+ <addressType>1</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true</combineShipmentWhenAppropriate>
+ <deliveryStarting>10:12</deliveryStarting>
+ <deliveryEnding>10:12 </deliveryEnding>
+ <desiredDeliveryDays>1</desiredDeliveryDays>
+ <desiredDeliveryDays>2</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCard>
+ <address>
+ <addressLine1>USA1</addressLine1>
+ <addressLine2>USA2</addressLine2>
+ <cityId>14</cityId>
+ <stateId>14</stateId>
+ <countryId>14</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname3</firstName>
+ <lastName>address-lastname3</lastName>
+ <businessName>address-businessname3</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true
+ </combineShipmentWhenAppropriate>
+ <deliveryStarting>12:00</deliveryStarting>
+ <deliveryEnding>12:10</deliveryEnding>
+ <desiredDeliveryDays>0</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCartNumber>232198798799</creditCartNumber>
+ <creditCartTypeId>23</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>false</isDefault>
+ </creditCard>
+ <creditCard>
+ <address>
+ <addressLine1>Canada1</addressLine1>
+ <addressLine2>Canada2</addressLine2>
+ <cityId>15</cityId>
+ <stateId>15</stateId>
+ <countryId>15</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname4</firstName>
+ <lastName>address-lastname4</lastName>
+ <businessName>address-businessname4</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <isDefault>0</isDefault>
+ </address>
+ <cardHolderName>Abhishek</cardHolderName>
+ <creditCartTypeId>4</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>true</isDefault>
+ </creditCard>
+ <firstName>Abhishek</firstName>
+ <lastName>Sharma</lastName>
+ <email>abhishek-create@globallogic.com</email>
+ <userId>3</userId>userId>
+ <phone>123-123-1234</phone>
+ <salutation>Mr.</salutation>
+ <gender>Male</gender>
+ <zipCode>2342343</zipCode>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <isReceivedNewsletter>true</isReceivedNewsletter>
+ <regStatus>1</regStatus>
+ <regSource>1</regSource>
+ <emailType>1</emailType>
+</userManagementPO>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Failure_TC_Request_XML_Response_XML" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="Accept" value="application/xml"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<userManagementPO>
+ <newsletterList>
+ <newsletterId>1</newsletterId>
+ <newsletterId>1</newsletterId>
+ </newsletterList>
+ <address>
+ <addressLine1>Noida1</addressLine1>
+ <addressLine2>Noida2</addressLine2>
+ <cityId>12</cityId>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname</firstName>
+ <lastName>address-lastname</lastName>
+ <businessName>address-businessname</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>1</addressType>
+ <isDefault>1</isDefault>
+ </address>
+ <address>
+ <addressLine1>India1</addressLine1>
+ <addressLine2>India2</addressLine2>
+ <cityId>13</cityId>
+ <stateId>13</stateId>
+ <countryId>13</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname1</firstName>
+ <lastName>address-lastname1</lastName>
+ <businessName>address-businessname1</businessName>
+ <birthDate>01-01-1991</birthDate>
+ <addressType>1</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true</combineShipmentWhenAppropriate>
+ <deliveryStarting>10:12</deliveryStarting>
+ <deliveryEnding>10:12 </deliveryEnding>
+ <desiredDeliveryDays>1</desiredDeliveryDays>
+ <desiredDeliveryDays>2</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCard>
+ <address>
+ <addressLine1>USA1</addressLine1>
+ <addressLine2>USA2</addressLine2>
+ <cityId>14</cityId>
+ <stateId>14</stateId>
+ <countryId>14</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname3</firstName>
+ <lastName>address-lastname3</lastName>
+ <businessName>address-businessname3</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true
+ </combineShipmentWhenAppropriate>
+ <deliveryStarting>12:00</deliveryStarting>
+ <deliveryEnding>12:10</deliveryEnding>
+ <desiredDeliveryDays>0</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCartNumber>232198798799</creditCartNumber>
+ <creditCartTypeId>23</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>false</isDefault>
+ </creditCard>
+ <creditCard>
+ <address>
+ <addressLine1>Canada1</addressLine1>
+ <addressLine2>Canada2</addressLine2>
+ <cityId>15</cityId>
+ <stateId>15</stateId>
+ <countryId>15</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname4</firstName>
+ <lastName>address-lastname4</lastName>
+ <businessName>address-businessname4</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <isDefault>0</isDefault>
+ </address>
+ <cardHolderName>Abhishek</cardHolderName>
+ <creditCartTypeId>4</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>true</isDefault>
+ </creditCard>
+ <firstName>Abhishek</firstName>
+ <lastName>Sharma</lastName>
+ <email>abhishek-create@globallogic.com</email>
+ <userId>3345</userId>userId>
+ <phone>123-123-1234</phone>
+ <salutation>Mr.</salutation>
+ <gender>Male</gender>
+ <zipCode>2342343</zipCode>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <isReceivedNewsletter>true</isReceivedNewsletter>
+ <regStatus>1</regStatus>
+ <regSource>1</regSource>
+ <emailType>1</emailType>
+</userManagementPO>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="EnableUser" path="/wineaccess/apis/v1/invoke/EnableUser"><con:settings/><con:parameters/><con:method name="EnableUser" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>userManagementPO</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>failureResponse</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+   "enableUsersList": [
+      1,
+      2,
+      123
+   ]
+,
+"isforceDelete":"true"
+
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_JSON" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<modifyStatus>
+<enableUsersList>
+<userId>4</userId>
+<userId>5</userId>
+</enableUsersList>
+</modifyStatus>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_XML" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="Accept" value="application/xml"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<modifyStatus>
+<enableUsersList>
+<userId>4</userId>
+<userId>5</userId>
+</enableUsersList>
+</modifyStatus>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="DisableUser" path="/wineaccess/apis/v1/invoke/DisableUser"><con:settings/><con:parameters/><con:method name="DisableUser" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>userManagementPO</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>failureResponse</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="Accept" value="application/xml"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+   "disableUsersList": [
+      1,
+      2,
+      123
+   ]
+,
+"isforceDelete":"true"
+
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_JSON" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<modifyStatus>
+<disableUsersList>
+<userId>4</userId>
+<userId>5</userId>
+</disableUsersList>
+</modifyStatus>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_XML" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/xml"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<modifyStatus>
+<disableUsersList>
+<userId>4</userId>
+<userId>5</userId>
+</disableUsersList>
+</modifyStatus>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="UserDetail" path="/wineaccess/apis/v1/invoke/DeleteUser"><con:settings/><con:parameters/><con:method name="GetUserDetailById" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>userManagementPO</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>failureResponse</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="942c77a074feb14a9675c2bd498be27a91524eb6"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="Accept" value="application/xml"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"id":"1"
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_JSON" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>&lt;requestParameter>
+&lt;id>2&lt;/id>
+&lt;/requestParameter></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_XML" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="Accept" value="application/xml"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>&lt;requestParameter>
+&lt;id>2345&lt;/id>
+&lt;/requestParameter></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="DeleteUser" path="/wineaccess/apis/v1/invoke/MergeUser"><con:settings/><con:parameters/><con:method name="MergeUser" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>userManagementPO</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>failureResponse</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/XML</con:mediaType><con:params/><con:element>mergeUser</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="8ad34628e006ea812908aaa9e83996d51c7bc17b"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="Accept" value="application/xml"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+"userInWhichTobeMerged":1,
+"toBeMergedUser":2
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_JSON" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="WINEACCESS_TOKEN" value="8ad34628e006ea812908aaa9e83996d51c7bc17b"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<mergeUser>
+ <userInWhichTobeMerged>1</userInWhichTobeMerged>
+ <toBeMergedUser>2</toBeMergedUser>
+</mergeUser>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="MergeUser" path="/wineaccess/apis/v1/invoke/MergeUser"><con:settings/><con:parameters/><con:method name="DeleteUser" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/wineaccess/apis/v1/invoke/Login">log:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element>userManagementPO</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>failureResponse</con:element></con:representation><con:request name="Success_TC_Request_JSON_Response_JSON" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/json"/>
+  <con:entry key="Accept" value="application/xml"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request>{
+ "email": "abhishek-create@globallogic.com",
+ "firstName": "Abhishek",
+ "lastName": "Sharma",
+ "isReceivedNewsletter": "true",
+ "salutation": "Mr.",
+ "gender": "Male",
+ "zipCode": "2342343",
+ "stateId": "12",
+ "countryId": "12",
+ "phone": "123-123-1234",
+ "regStatus":"1",
+ "regSource":"Web",
+ "emailType":"1",
+ "address": [
+ {
+ "addressLine1": "Noida1",
+ "addressLine2": "Noida2",
+ "cityId": "12",
+ "stateId": "12",
+ "countryId": "12",
+ "zipCode": "2342343",
+ "phone": "123-123-1234",
+ "firstName": "address-firstname",
+ "lastName": "address-lastname",
+ "businessName": "address-businessname",
+ "birthDate": "01-01-2001",
+ "isDefault": "1",
+ "addressType": "1"
+ },
+ {
+ "addressLine1": "India1",
+ "addressLine2": "India2",
+ "cityId": "13",
+ "stateId": "13",
+ "countryId": "13",
+ "zipCode": "2342343",
+ "phone": "123-123-1234",
+ "firstName": "address-firstname1",
+ "lastName": "address-lastname1",
+ "businessName": "address-businessname1",
+ "birthDate": "01-01-1991",
+ "addressType": "1",
+ "addressPref": {
+ "prefCarrierId": "1",
+ "prefShippingMethodId": "2",
+ "prefPackageTypeId": "3",
+ "combineShipmentWhenAppropriate": "true",
+ "deliveryStarting": "10:12",
+ "deliveryEnding": "10:12",
+ "desiredDeliveryDays": ["0","1","2"]
+ }
+ }
+ ],
+ "creditCard": [
+ {
+ "creditCartTypeId": "23",
+ "expirationDate": "07/2019",
+ "cardHolderName": "Abhishek",
+ "isDefault": "false",
+ "address": {
+ "addressLine1": "USA1",
+ "addressLine2": "USA2",
+ "cityId": "14",
+ "stateId": "14",
+ "countryId": "14",
+ "zipCode": "2342343",
+ "phone": "123-123-1234",
+ "firstName": "address-firstname3",
+ "lastName": "address-lastname3",
+ "businessName": "address-businessname3",
+ "birthDate": "01-01-2001",
+ "isDefault": "0",
+ "addressType": "0",
+ "addressPref": {
+ "prefCarrierId": "1",
+ "prefShippingMethodId": "2",
+ "prefPackageTypeId": "3",
+ "combineShipmentWhenAppropriate": "true",
+ "deliveryStarting": "23:10",
+ "deliveryEnding": "13:59",
+ "desiredDeliveryDays": ["0","1","2","4"]
+ }
+ }
+ },
+ {
+ "creditCartTypeId": "4",
+ "expirationDate": "07/2019",
+ "cardHolderName": "Abhishek",
+ "isDefault": "true",
+ "address": {
+ "addressLine1": "Canada1",
+ "addressLine2": "Canada2",
+ "cityId": "15",
+ "stateId": "15",
+ "countryId": "15",
+ "zipCode": "2342343",
+ "phone": "123-123-1234",
+ "firstName": "address-firstname4",
+ "lastName": "address-lastname4",
+ "businessName": "address-businessname4",
+ "birthDate": "01-01-2001",
+ "addressType": "0"
+ }
+ }
+ ],
+ "newsletterList":[{"newsletterId":["1","2"]}]
+}</con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_JSON" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/json"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<userManagementPO>
+ <newsletterList>
+ <newsletterId>1</newsletterId>
+ <newsletterId>1</newsletterId>
+ </newsletterList>
+ <address>
+ <addressLine1>Noida1</addressLine1>
+ <addressLine2>Noida2</addressLine2>
+ <cityId>12</cityId>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname</firstName>
+ <lastName>address-lastname</lastName>
+ <businessName>address-businessname</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>1</addressType>
+ <isDefault>1</isDefault>
+ </address>
+ <address>
+ <addressLine1>India1</addressLine1>
+ <addressLine2>India2</addressLine2>
+ <cityId>13</cityId>
+ <stateId>13</stateId>
+ <countryId>13</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname1</firstName>
+ <lastName>address-lastname1</lastName>
+ <businessName>address-businessname1</businessName>
+ <birthDate>01-01-1991</birthDate>
+ <addressType>1</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true</combineShipmentWhenAppropriate>
+ <deliveryStarting>10:12</deliveryStarting>
+ <deliveryEnding>10:12 </deliveryEnding>
+ <desiredDeliveryDays>1</desiredDeliveryDays>
+ <desiredDeliveryDays>2</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCard>
+ <address>
+ <addressLine1>USA1</addressLine1>
+ <addressLine2>USA2</addressLine2>
+ <cityId>14</cityId>
+ <stateId>14</stateId>
+ <countryId>14</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname3</firstName>
+ <lastName>address-lastname3</lastName>
+ <businessName>address-businessname3</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true
+ </combineShipmentWhenAppropriate>
+ <deliveryStarting>12:00</deliveryStarting>
+ <deliveryEnding>12:10</deliveryEnding>
+ <desiredDeliveryDays>0</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCartNumber>232198798799</creditCartNumber>
+ <creditCartTypeId>23</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>false</isDefault>
+ </creditCard>
+ <creditCard>
+ <address>
+ <addressLine1>Canada1</addressLine1>
+ <addressLine2>Canada2</addressLine2>
+ <cityId>15</cityId>
+ <stateId>15</stateId>
+ <countryId>15</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname4</firstName>
+ <lastName>address-lastname4</lastName>
+ <businessName>address-businessname4</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <isDefault>0</isDefault>
+ </address>
+ <cardHolderName>Abhishek</cardHolderName>
+ <creditCartTypeId>4</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>true</isDefault>
+ </creditCard>
+ <firstName>Abhishek</firstName>
+ <lastName>Sharma</lastName>
+ <email>abhishek4@globallogic.com</email>
+ <phone>123-123-1234</phone>
+ <salutation>Mr.</salutation>
+ <gender>Male</gender>
+ <zipCode>2342343</zipCode>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <isReceivedNewsletter>true</isReceivedNewsletter>
+ <regStatus>1</regStatus>
+ <regSource>1</regSource>
+ <emailType>1</emailType>
+</userManagementPO>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Success_TC_Request_XML_Response_XML" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="8abce60ddff18bb770818d7c6ab9e68a5368a210" value="8abce60ddff18bb770818d7c6ab9e68a5368a210"/>
+  <con:entry key="API_ACCESS_CODE" value="RcZqE1KZGWCTKU3TuUf02x6sNVIS+XTX"/>
+  <con:entry key="X-API-KEY" value="XYAVBNNNNNN"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+  <con:entry key="Accept" value="application/xml"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request><![CDATA[<userManagementPO>
+ <newsletterList>
+ <newsletterId>1</newsletterId>
+ <newsletterId>1</newsletterId>
+ </newsletterList>
+ <address>
+ <addressLine1>Noida1</addressLine1>
+ <addressLine2>Noida2</addressLine2>
+ <cityId>12</cityId>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname</firstName>
+ <lastName>address-lastname</lastName>
+ <businessName>address-businessname</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>1</addressType>
+ <isDefault>1</isDefault>
+ </address>
+ <address>
+ <addressLine1>India1</addressLine1>
+ <addressLine2>India2</addressLine2>
+ <cityId>13</cityId>
+ <stateId>13</stateId>
+ <countryId>13</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname1</firstName>
+ <lastName>address-lastname1</lastName>
+ <businessName>address-businessname1</businessName>
+ <birthDate>01-01-1991</birthDate>
+ <addressType>1</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true</combineShipmentWhenAppropriate>
+ <deliveryStarting>10:12</deliveryStarting>
+ <deliveryEnding>10:12 </deliveryEnding>
+ <desiredDeliveryDays>1</desiredDeliveryDays>
+ <desiredDeliveryDays>2</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCard>
+ <address>
+ <addressLine1>USA1</addressLine1>
+ <addressLine2>USA2</addressLine2>
+ <cityId>14</cityId>
+ <stateId>14</stateId>
+ <countryId>14</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname3</firstName>
+ <lastName>address-lastname3</lastName>
+ <businessName>address-businessname3</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <addressPref>
+ <prefCarrierId>1</prefCarrierId>
+ <prefShippingMethodId>2</prefShippingMethodId>
+ <prefPackageTypeId>3</prefPackageTypeId>
+ <combineShipmentWhenAppropriate>true
+ </combineShipmentWhenAppropriate>
+ <deliveryStarting>12:00</deliveryStarting>
+ <deliveryEnding>12:10</deliveryEnding>
+ <desiredDeliveryDays>0</desiredDeliveryDays>
+ </addressPref>
+ </address>
+ <creditCartNumber>232198798799</creditCartNumber>
+ <creditCartTypeId>23</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>false</isDefault>
+ </creditCard>
+ <creditCard>
+ <address>
+ <addressLine1>Canada1</addressLine1>
+ <addressLine2>Canada2</addressLine2>
+ <cityId>15</cityId>
+ <stateId>15</stateId>
+ <countryId>15</countryId>
+ <zipCode>2342343</zipCode>
+ <phone>123-123-1234</phone>
+ <firstName>address-firstname4</firstName>
+ <lastName>address-lastname4</lastName>
+ <businessName>address-businessname4</businessName>
+ <birthDate>01-01-2001</birthDate>
+ <addressType>0</addressType>
+ <isDefault>0</isDefault>
+ </address>
+ <cardHolderName>Abhishek</cardHolderName>
+ <creditCartTypeId>4</creditCartTypeId>
+ <expirationDate>07/2019</expirationDate>
+ <isDefault>true</isDefault>
+ </creditCard>
+ <firstName>Abhishek</firstName>
+ <lastName>Sharma</lastName>
+ <email>abhishek4@globallogic.com</email>
+ <phone>123-123-1234</phone>
+ <salutation>Mr.</salutation>
+ <gender>Male</gender>
+ <zipCode>2342343</zipCode>
+ <stateId>12</stateId>
+ <countryId>12</countryId>
+ <isReceivedNewsletter>true</isReceivedNewsletter>
+ <regStatus>1</regStatus>
+ <regSource>1</regSource>
+ <emailType>1</emailType>
+</userManagementPO>]]></con:request><con:originalUri>http://localhost/wineaccess/apis/v1/invoke/Login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

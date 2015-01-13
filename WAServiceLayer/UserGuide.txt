@@ -1,0 +1,125 @@
+Software Requirement for build execution
+
+
+1. JDK 1.7
+2. Maven 3.0.4 (http://apache.techartifact.com/mirror/maven/binaries/)
+3. JBoss Application Server 7.1.1.Final (http://www.jboss.org/jbossas/downloads/)
+4. Eclipse
+
+Installing/Configuring JDK 1.7
+
+Please use the following URL for configuring JDK 1.7 on your system: http://wiki.indivohealth.org/index.php/Installing_And_Configuring_Java_-_Windows.
+
+Installing/Configuring Maven 3
+
+1. Unzip apache-maven-3.0.4-bin.zip to the folder C:\maven.
+2. Right-click on the My Computer on the desktop or start menu, and select the Properties menu item.
+3. Select the “Advanced” tab and click on the “Environment Variables” button.
+4. Click on the “New” button in the User variables section and add a variable named M2_HOME, with a value of the top level directory of where maven was installed e.g.
+C:\maven. Press the “OK” button to save.
+5. Next, highlight the Path variable in the System variables section of this screen and press the “Edit” button.
+6. At the end of the variable value displayed for the "Path" variable name, append a semi-colon (“;”) and then add the full path of the 'bin' subdirectory in your
+maven directory e.g. C:\maven\bin. Then press the “OK” button on the Edit System Variable window and then press the “OK” button on the System Properties windows.
+7. Open a new command window. At the command prompt type mvn --version. You should see the response.
+
+Installing JBoss
+
+1. Unzip the downloaded file into the folder C:\jboss-as-7.1.1.Final
+
+Git Hub URL
+
+Checkout the project from the trunk using url https://github.com/WineAccess/WAServiceLayer
+
+
+Mongo DB
+
+http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/
+
+
+Building Project
+
+1. Checkout the project from the SVN URL https://github.com/WineAccess/WAServiceLayer in the folder C:/WineAccess
+2. The folder WineAccess will have the following sub foloders
+	a. jboss-configuration-container
+	b. wineaccess
+	c. wineaccess-util
+	d. wineaccess-service
+	e. wineaccess-orchestration
+	f. wineaccess-interface	
+	g. wineaccess-properties
+	h. wine-access-sample-xml
+	
+3. Open a new command window and navigate to the project checkout directory i.e.  C:/WineAccess/wineaccess.
+4. Build the project using command mvn clean install.
+5. Generate the eclipse files using command mvn eclipse:clean eclipse:eclipse.
+
+Configuring Projects on eclipse
+
+1. Download the eclipse from the URL http://www.eclipse.org/downloads/.
+2. Unzip the zip file to a folder e.g. C:\eclipse.
+3. Open the eclipse using eclipse.exe in eclipse folder.
+4. Navigate to Windows -> Preferences. 
+5. Click on Java -> Build Path -> Classpath Variables
+6. Click on New button.
+7. Type M2_REPO against name.
+8. Type C:\Documents and Settings\”UserHome”\.m2\repository against path. E.g. C:\Documents and Settings\jyoti.yadav\.m2\repository
+9. Click OK
+10. Right click on the project explorer window and choose the option import
+11. Choose "Existing Project into the Workspace" and click next
+12. Using browse button to navigate to the folder C:/WineAccess.
+13. Click OK and than Finish.
+14. Finally project will be imported in the eclipse.
+
+Verifying The Build
+
+1. A wineaccess.war file is  created in the folder C:/WineAccess/wineaccess-interface/target.
+2. Set the WINEACCESS_HOME to C:/WineAccess/wineaccess-properties in the enviroment variable.
+3. Set WINEACCESS_ENV to dev in the enviroment variable.
+
+Deploying the webapp to the JBoss AS
+
+1. Copy the portal.war from C:/WineAccess/wineaccess-interface/target to the folder C:\jboss-as-7.1.1.Final\standalone\deployments
+2. Copy file C:/WineAccess/jboss-configuration-container/standalone.xml to C:\jboss-as-7.1.1.Final\jboss-as-7.1.1.Final\standalone\configuration
+3. Open a command line and navigate to the folder C:\jboss-as-7.1.1.Final\bin and click on standalone.bat.
+4. The service will be started in few minutes.
+
+Steps to get AuthenticationToken
+
+1. Open rest client in mozila firefox.
+2. Set custom header "Content-Type" as "application/json".
+3. In the method dropdown select POST.
+4. In the URL placeholder type following URL. Make sure that you replace the tokens {version} with appropiate value.
+http://localhost:8181/wineaccess/apis/{version}/login.
+5.In the request body paste the following json.
+
+{
+	"username":"<your_first_Name>",
+	"password":"<your_employeeId>",
+	"clientKey":"dummyKey"	
+}
+
+6. Hit the request. You will get the response like this
+
+{"status":200,"payload":{"tokenName":"WINEACCESS_TOKEN","tokenValue":"fe72df9e3a0dfe8f94310de60453a956b1eec826","firstName":"Jyoti","lastName":"Yadav"}}
+
+
+MongoDB process creation(Assuming you have valid authententication token)
+
+1. Open rest client in mozila firefox.
+2. Set custom header "Content-Type" as "application/xml".
+3. Set custom header "WINEACCESS_TOKEN" as "<token_value>".
+4. In the method dropdown select POST.
+5. In the URL placeholder type following URL. Make sure that you replace the tokens {ProcessDefinitionName} and {version} with appropiate value.
+http://localhost:8181/wineaccess/apis/process/{ProcessDefinitionName}/{version}
+6.In the request body paste the process definition xml. One such xml is available at C:\wineaccess\WAServiceLayer\wine-access-sample-xml\Sample.xml
+
+Testing Sample Restful API On ep-services(Assuming you have valid authententication token)
+
+1. Open rest client in mozila firefox.
+2. Set custom header "Content-Type" as "application/json".
+3. Set custom header "WINEACCESS_TOKEN" as "<token_value>".
+4. In the method dropdown select GET.
+5. In the URL placeholder type following URL. Make sure that you replace the token {version} with appropiate value.
+http://localhost:8080/wineaccess/apis/{version}/sample
+
+

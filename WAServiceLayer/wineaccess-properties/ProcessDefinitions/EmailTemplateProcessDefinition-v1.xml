@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="EmailTemplateProcessDefinition" version="v1" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="EmailTemplateTaskTransition" to="EmailTemplateAdapter" />		
+	</start-state>
+	
+	<task name="EmailTemplateAdapter">					
+		<action class="com.wineaccess.emailtemplate.EmailTemplateAdapter"/>
+		<orch:transition name="END" to="END-STATE"/>
+	</task>	
+	
+	<end-state name="END-STATE"/>
+</orch:process-definition>

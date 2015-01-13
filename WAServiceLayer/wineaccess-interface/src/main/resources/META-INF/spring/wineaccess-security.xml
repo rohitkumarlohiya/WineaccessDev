@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+          http://www.springframework.org/schema/security
+          http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<security:http realm="Protected API" use-expressions="true"	auto-config="false" create-session="stateless" entry-point-ref="restAuthenticationEntryPoint">
+		<security:access-denied-handler ref="accessDeniedHandler"/>
+		<security:custom-filter ref="authenticationTokenProcessingFilter" position="FORM_LOGIN_FILTER" />
+		
+		
+		
+		<!-- URLs which don't require authentication  -->
+		<security:intercept-url pattern="/**/Login/**" access="permitAll" />
+		<security:intercept-url pattern="/**/SSOLogin" access="permitAll" />
+		<security:intercept-url pattern="/**/Signup" access="permitAll" />
+		<security:intercept-url pattern="/**/UserActivation" access="permitAll" />		
+		<security:intercept-url pattern="/**/ListCity/**" access="permitAll" />
+		<security:intercept-url pattern="/**/ListCityById" access="permitAll" />
+		<security:intercept-url pattern="/**/ListStateById" access="permitAll" />
+		<security:intercept-url pattern="/**/ListCountry" access="permitAll" />		
+		<security:intercept-url pattern="/**/GetCountryById" access="permitAll" />
+		<security:intercept-url pattern="/**/ListState" access="permitAll" />
+		<security:intercept-url pattern="/**/GetStateById" access="permitAll" />
+		<security:intercept-url pattern="/**/GetStateByCountryId" access="permitAll" />
+		<security:intercept-url pattern="/**/lucene/index/**" access="permitAll" />	
+		<security:intercept-url pattern="/**/ResetPasswordByEmail" access="permitAll" />	
+		<security:intercept-url pattern="/**/ForgetPasswordEmail" access="permitAll" />	
+		<security:intercept-url pattern="/**/UpdateForgotPassword" access="permitAll" />			
+		
+		<!--  URLs which  require authentication  -->
+		
+		<security:intercept-url pattern="/**/ApiAccess/**" access="hasAnyRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/**/SearchMasterData" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/SearchMasterDataByTypeId" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/SearchMasterDataType" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/SearchUser" access="isAuthenticated()" /> 		
+		<security:intercept-url pattern="/**/UpdateUserPasswordById" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/UpdateUserPasswordByEmail" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/UserListById" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/UserListByEmail" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/UpdateUserDetailById" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/UpdateUserDetailByEmail" access="isAuthenticated()" /> 		
+		<security:intercept-url pattern="/**/ListEmailTemplate" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/ListEmailTemplateById" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/SearchEmailTemplate" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/AddEmailTemplate" access="isAuthenticated()" /> 		
+		<security:intercept-url pattern="/**/UpdateEmailTemplateById" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/EmailTemplateMultipleDelete" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/CloneEmailTemplateById" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/ListEmailTemplateType" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/EmailTemplateTypeById" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/SearchEmailTemplateType" access="isAuthenticated()" /> 	
+		<security:intercept-url pattern="/**/Responsys" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/LoginHistoryById" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/LoginHistoryByEmail" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/Logout" access="isAuthenticated()" /> 		
+		<security:intercept-url pattern="/**/AddMasterData" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/ListMasterData" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/MasterDataById" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/MasterDataLastUpdated" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/UpdateMasterDataById" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/DeleteMasterDataById" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/MultipleDeleteMasterData" access="isAuthenticated()" />		
+		<security:intercept-url pattern="/**/ListMasterDataTypes" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/MasterDataTypeById" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/SearchNewsLetter" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/ListNewsLetterById" access="isAuthenticated()" /> 		
+		<security:intercept-url pattern="/**/AddNewsLetter" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/UpdateNewsLetter" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/DeleteNewsLetter" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/TemplatePlaceHoldersList" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/GetUserDetailForSession" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/GetSessionDetailForUserBySessionId" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/AddComment" access="isAuthenticated()" />		
+		<security:intercept-url pattern="/**/ViewCommentById" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/EditComment" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/ListCommentByUserId" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/DeleteCommentById" access="isAuthenticated()" /> 		
+		<security:intercept-url pattern="/**/MultiDeleteCommentById" access="isAuthenticated()" /> 		
+		<security:intercept-url pattern="/**/ResendActivationMail" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/ListUserEmailLog" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/ListUserEmailLogSearch" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/CreateUser" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/UpdateUser" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/CloneUser" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/EnableUser" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/DisableUser" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/DeleteUser" access="isAuthenticated()" />		
+		<security:intercept-url pattern="/**/DeleteUserAddress" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/DeleteUserCreditCard" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/GetUserDetailById" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/MergeUser" access="isAuthenticated()" /> 		
+		<security:intercept-url pattern="/**/ResetUserPassword" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/AddUserAddress" access="isAuthenticated()" /> 		
+		<security:intercept-url pattern="/**/UpdateUserAddress" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/UserAddressDetail" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/AddUserCreditCard" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/UpdateUserCreditCard" access="isAuthenticated()" /> 		
+		<security:intercept-url pattern="/**/UserCreditCardDetail" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/AddImporter" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/UpdateImporter" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/DeleteImporter" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/AddWinery" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/UpdateWinery" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/ViewImporter" access="isAuthenticated()" />		
+		<security:intercept-url pattern="/**/AddWineryImporterAddress" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/EditWineryImporterAddress" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/ViewWineryImporterAddress" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/DeleteWineryImporterAddress" access="isAuthenticated()" /> 		
+		<security:intercept-url pattern="/**/ListWineryImporterAddress" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/ViewWinery" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/SearchImporter" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/DeleteWinery" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/SearchWinery" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/AddContact" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/UpdateContact" access="isAuthenticated()" />		
+		<security:intercept-url pattern="/**/ViewContactDetail" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/ViewContacts" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/ListContacts" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/DeleteContacts" access="isAuthenticated()" /> 		
+		<security:intercept-url pattern="/**/UserSessionSummary" access="isAuthenticated()" /> 
+
+		<security:intercept-url pattern="/**/AddWine" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/UpdateWine" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/ViewWine" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/DeleteWine" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/ChangeWineStatus" access="isAuthenticated()" />
+		
+		<security:intercept-url pattern="/**/UpdateWineryLicenseDetail" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/ViewWineryLicenseDetail" access="isAuthenticated()" />
+		
+		<security:intercept-url pattern="/**/ViewWineryOWS" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/CreateWineryOWS" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/UpdateWineryOWS" access="isAuthenticated()" />
+		
+		<security:intercept-url pattern="/**/ViewWineOWS" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/UpdateWineOWS" access="isAuthenticated()" />
+		
+		<security:intercept-url pattern="/**/AddWineLogistic" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/ViewWineLogistic" access="isAuthenticated()" />
+		
+		<security:intercept-url pattern="/**/UpdateWineLicenseDetail" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/ViewWineLicenseDetail" access="isAuthenticated()" />
+		
+		<security:intercept-url pattern="/**/AddRequisition" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/ViewRequisition" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/AddWineToRequisition" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/ListWineInRequisition" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/EnableDisableWinery" access="isAuthenticated()" />			
+		<security:intercept-url pattern="/**/AddWarehouse" access="isAuthenticated()" />
+	    <security:intercept-url pattern="/**/AddWineryPermit" access="isAuthenticated()" />	
+		<security:intercept-url pattern="/**/ViewWineryPermit" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/AddWinePermit" access="isAuthenticated()" />	
+		<security:intercept-url pattern="/**/ViewWinePermit" access="isAuthenticated()" />
+		
+		
+		<security:intercept-url pattern="/**/AddDistributionCentre" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/UpdateDistributionCentre" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/ViewDistributionCentre" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/DeleteDistributionCentre" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/ListDistributionCentre" access="isAuthenticated()" />
+		
+		<security:intercept-url pattern="/**/ListWarehouse" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/SearchRequisition" access="isAuthenticated()" />
+		
+		<security:intercept-url pattern="/**/AddSampler" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/ViewSampler" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/RemoveWineFromRequisition" access="isAuthenticated()" />		
+		<security:intercept-url pattern="/**/ViewSamplerLogisticsDetail" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/**/EditSamplerWine" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/UpdateSampler" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/AddSamplerProduct" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**/SearchSampler" access="isAuthenticated()" />
+    	<security:intercept-url pattern="/**/EnableDisableImporter" access="isAuthenticated()" />
+    	<security:intercept-url pattern="/**/RemoveWineFromSampler" access="isAuthenticated()" />
+    	<security:intercept-url pattern="/**/ListSamplerProduct" access="isAuthenticated()" />
+    	<security:intercept-url pattern="/**/UpdateRequisitionForPOWT" access="isAuthenticated()" />
+    	<security:intercept-url pattern="/**/UpdateRequisitionForIT" access="isAuthenticated()" />
+    	<security:intercept-url pattern="/**/DeleteRequisition" access="isAuthenticated()" />
+        <security:intercept-url pattern="/**/MasterDataTypeByName" access="isAuthenticated()" />
+    	
+    	
+		
+		</security:http>
+
+	<bean class="com.wineaccess.security.AccessDeniedHandler" id="accessDeniedHandler">
+ 	</bean>
+
+	<bean class="com.wineaccess.security.WineaccessTokenProcessingFilter" id="authenticationTokenProcessingFilter">
+		<constructor-arg ref="authenticationManager" />
+		<constructor-arg ref="tokenUtils" />
+	</bean>
+	
+	<bean class="com.wineaccess.security.RestAuthenticationEntryPoint" id="restAuthenticationEntryPoint"></bean>
+	
+	<bean class="com.wineaccess.security.token.WineAccessTokenUtils" id="tokenUtils"></bean>
+	
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider ref="wineaccessAuthenticationManager" />
+	</security:authentication-manager>
+	
+	<!-- <bean id="authenticationManager" class="org.springframework.security.authentication.ProviderManager">
+			<property name="providers">
+				<list>
+					<ref local="wineaccessAuthenticationManager" />
+				</list>
+			</property>
+	</bean> -->
+	
+	<bean id="wineaccessAuthenticationManager" class="com.wineaccess.security.auth.manager.WineaccessAuthenticationManager">
+	</bean>
+	
+	
+	<!-- <security:authentication-manager alias="authenticationManager">
+	    <security:authentication-provider>
+	      <security:user-service>
+	        <security:user name="test" password="test" authorities="ROLE_ADMIN" />
+	      </security:user-service>
+	    </security:authentication-provider>
+  	</security:authentication-manager> -->
+</beans>

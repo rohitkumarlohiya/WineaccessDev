@@ -1,0 +1,3132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-1">
+        <createTable tableName="ADDRESS_PREFERENCE">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="COMBINE_SHIPPMENTS_WHEN_APPROPRIATE" type="TINYINT(1)"/>
+            <column name="DELIVERY_ENDING" type="time"/>
+            <column name="DELIVERY_STARTING" type="time"/>
+            <column name="DESIRED_DELIVERY_DAYS" type="VARCHAR(255)"/>
+            <column name="PREFERED_CARRIER" type="BIGINT(20) UNSIGNED"/>
+            <column name="PREFERED_PACKAGE_TYPE" type="BIGINT(20) UNSIGNED"/>
+            <column name="PREFERRED_SHIPPING_METHOD" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+	
+	<changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-2">
+        <createTable tableName="API_ACCESS_CODE">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="EMAIL_ID" type="VARCHAR(255)"/>
+            <column name="PRIVATE_KEY" type="VARCHAR(255)"/>
+            <column name="SITE_ID" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-3">
+        <createTable tableName="CITY">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="CITY_CODE" type="VARCHAR(45)"/>
+            <column name="NAME" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-4">
+        <createTable tableName="COUNTRY">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="COUNTRY_CODE" type="VARCHAR(45)"/>
+            <column name="NAME" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-5">
+        <createTable tableName="EMAIL_TEMPLATE">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="BODY" type="LONGTEXT"/>
+            <column name="FROM_EMAIL" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="IS_ACTIVE" type="TINYINT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SUBJECT" type="VARCHAR(255)"/>
+            <column name="EMAIL_TEMPLATE_TYPE_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-6">
+        <createTable tableName="EMAIL_TEMPLATE_TYPE">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="DESCRIPTION" type="VARCHAR(255)"/>
+            <column name="NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" type="TINYINT(1)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-7">
+        <createTable tableName="GROUP_USER">
+            <column name="USER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="GROUP_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-8">
+        <createTable tableName="MASTER_DATA">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MASTER_DATA_TYPE_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-9">
+        <createTable tableName="MASTER_DATA_TYPE">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="DESCRIPTION" type="VARCHAR(255)"/>
+            <column name="NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" type="TINYINT(1)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-10">
+        <createTable tableName="NEWS_LETTER">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="EFF_DATE" type="datetime"/>
+            <column name="EMAIL_SUBJECT" type="VARCHAR(45)"/>
+            <column name="END_DATE" type="datetime"/>
+            <column name="FROM_EMAIL" type="VARCHAR(45)"/>
+            <column name="IS_DELETED" type="TINYINT(1)"/>
+            <column name="NAME" type="VARCHAR(45)"/>
+            <column name="SUBMIT_DATE" type="datetime"/>
+            <column name="TITLE" type="VARCHAR(45)"/>
+            <column name="WEB_NAME" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-11">
+        <createTable tableName="ROLE">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="ROLE_NAME" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" type="TINYINT(1)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-12">
+        <createTable tableName="STATE">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="STATE_CODE" type="VARCHAR(45)"/>
+            <column name="NAME" type="VARCHAR(45)"/>
+            <column name="COUNTRY_ID" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-13">
+        <createTable tableName="STATE_CITY">
+            <column name="STATE_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CITY_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-14">
+        <createTable tableName="SYS_API_KEY_VERSION_MAPPING">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="API_KEY" type="VARCHAR(255)"/>
+            <column name="API_VERSION" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-15">
+        <createTable tableName="SYS_PROCESS_DEFINITION">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="NAME" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VERSION" type="VARCHAR(4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="XML" type="LONGTEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-16">
+        <createTable tableName="SYS_TASK_EXECUTION_LOGS">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="CURRENT_TASK" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NEXT_TASK" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REQUEST_ID" type="VARCHAR(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TASK_STATUS" type="VARCHAR(2)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-17">
+        <createTable tableName="USER_ACTIVITY_LOG">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="ACTIVITY" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EVENT_NAME" type="VARCHAR(100)"/>
+            <column name="USER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="USER_SESSION_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-18">
+        <createTable tableName="USER_ADDRESS">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="ADDRESS_LINE1" type="VARCHAR(255)"/>
+            <column name="ADDRESS_LINE2" type="VARCHAR(255)"/>
+            <column name="ADDRESS_PREFERENCE_ID" type="BIGINT(20) UNSIGNED"/>
+            <column name="ADDRESS_TYPE" type="VARCHAR(20)"/>
+            <column name="BIRTH_DATE" type="datetime"/>
+            <column name="BUSINESS_NAME" type="VARCHAR(255)"/>
+            <column name="CITY_ID" type="BIGINT(20) UNSIGNED"/>
+            <column name="COUNTRY_ID" type="BIGINT(20) UNSIGNED"/>
+            <column name="FIRST_NAME" type="VARCHAR(255)"/>
+            <column name="IS_DEFAULT" type="VARCHAR(20)"/>
+            <column name="LAST_NAME" type="VARCHAR(255)"/>
+            <column name="PHONE" type="VARCHAR(20)"/>
+            <column name="STATE_ID" type="BIGINT(20) UNSIGNED"/>
+            <column name="USER_ID" type="BIGINT(20) UNSIGNED"/>
+            <column name="ZIPCODE" type="VARCHAR(15)"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-19">
+        <createTable tableName="USER_COMMENT">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="COMMENT" type="TEXT"/>
+            <column name="USER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-20">
+        <createTable tableName="USER_CREDIT">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="EXPIRATION_DATE" type="datetime"/>
+            <column name="TRANSACTION_AMOUNT" type="DECIMAL(10, 4)"/>
+            <column name="TRANSACTION_REASON" type="VARCHAR(255)"/>
+            <column name="USER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-21">
+        <createTable tableName="USER_CREDIT_CARD">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="CARD_HOLDER_NAME" type="VARCHAR(255)"/>
+            <column name="EXPIRATION_DATE" type="date"/>
+            <column name="IS_DEFAULT" type="TINYINT(1)"/>
+            <column name="PG_PROFILE_ID" type="VARCHAR(45)"/>
+            <column name="USER_ADDRESS_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="USER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREDIT_CARD_TYPE" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-22">
+        <createTable tableName="USER_EMAIL_LOG">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="CONTENT" type="VARCHAR(45)"/>
+            <column name="DELIVERY_STATUS" type="VARCHAR(45)"/>
+            <column name="SUBJECT" type="VARCHAR(45)"/>
+            <column name="USER_ID" type="BIGINT(19)"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-23">
+        <createTable tableName="USER_EMAIL_PREFERENCES">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="NOTIFICATION_FREQUENCY" type="INT(10)"/>
+            <column name="USER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NEWS_LETTER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-24">
+        <createTable tableName="USER_GROUP">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="DESCRIPTION" type="VARCHAR(255)"/>
+            <column name="NAME" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-25">
+        <createTable tableName="USER_LEGACY_DATA">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="LEGACY_DATA2" type="VARCHAR(45)"/>
+            <column name="LEGACY_DATA1" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-26">
+        <createTable tableName="USER_ROLE">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="ROLE_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="USER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-27">
+        <createTable tableName="USER_SESSION">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="BROWSER" type="VARCHAR(255)"/>
+            <column name="IP_ADDRESS" type="VARCHAR(255)"/>
+            <column name="OPERATING_SYSTEM" type="VARCHAR(255)"/>
+            <column name="PLATFORM_DEVICE" type="VARCHAR(255)"/>
+            <column name="SESSION_END_TIME" type="datetime"/>
+            <column name="SESSION_START_TIME" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TOKEN" type="VARCHAR(255)"/>
+            <column name="USER_ID" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-28">
+        <createTable tableName="USER_SSO">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="SSO_ID" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SSO_SOURCE" type="VARCHAR(45)"/>
+            <column name="SSO_TOKEN" type="VARCHAR(255)"/>
+            <column name="USER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-29">
+        <createTable tableName="USERS">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="COUNTRY_ID" type="BIGINT(20) UNSIGNED"/>
+            <column name="EMAIL" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EMAIL_TYPE" type="VARCHAR(20)"/>
+            <column name="FAILURE_COUNT" type="INT(10)"/>
+            <column name="FIRST_NAME" type="VARCHAR(255)"/>
+            <column name="GENDER" type="VARCHAR(45)"/>
+            <column name="IS_DELETED" type="TINYINT(1)"/>
+            <column name="IS_ENABLED" type="TINYINT(1)"/>
+            <column name="IS_RECIEVED_NEWS_LETTER" type="TINYINT(1)"/>
+            <column name="IS_REGISTERED" type="TINYINT(1)"/>
+            <column name="IS_STORE_SIGN_UP_USER" type="TINYINT(1)"/>
+            <column name="LAST_NAME" type="VARCHAR(255)"/>
+            <column name="PASSWORD" type="VARCHAR(100)"/>
+            <column name="PHONE" type="VARCHAR(20)"/>
+            <column name="REG_SOURCE" type="VARCHAR(20)"/>
+            <column name="REG_STATUS" type="VARCHAR(20)"/>
+            <column name="REG_DATE" type="datetime"/>
+            <column defaultValueNumeric="0.00" name="REVENUE" type="DECIMAL(10, 2)"/>
+            <column name="SALUTATION" type="VARCHAR(55)"/>
+            <column name="STATE_ID" type="BIGINT(20) UNSIGNED"/>
+            <column name="USER_ACTIVATION_CODE" type="VARCHAR(50)"/>
+            <column name="USER_LEGACY_DATA_ID" type="BIGINT(19)"/>
+            <column name="USER_REFERRAL_SOURCE_ID" type="BIGINT(20) UNSIGNED"/>
+            <column name="USER_TYPE" type="VARCHAR(20)"/>
+            <column name="ZIPCODE" type="VARCHAR(15)"/>
+            <column name="RESET_CODE" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-30">
+        <addPrimaryKey columnNames="USER_ID, GROUP_ID" constraintName="PRIMARY" tableName="GROUP_USER"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-31">
+        <addPrimaryKey columnNames="STATE_ID, CITY_ID" constraintName="PRIMARY" tableName="STATE_CITY"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-32">
+        <addUniqueConstraint columnNames="NAME" constraintName="NAME" deferrable="false" disabled="false" initiallyDeferred="false" tableName="EMAIL_TEMPLATE"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-33">
+        <addForeignKeyConstraint baseColumnNames="CITY_ID" baseTableName="STATE_CITY" constraintName="FK11149C7924DBDFDF" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="CITY"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-34">
+        <addForeignKeyConstraint baseColumnNames="STATE_ID" baseTableName="STATE_CITY" constraintName="FK11149C79265407EF" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="STATE"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-35">
+        <addForeignKeyConstraint baseColumnNames="COUNTRY_ID" baseTableName="STATE" constraintName="FK4B8CC71B63BC765" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="COUNTRY"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-36">
+        <addForeignKeyConstraint baseColumnNames="USER_ID" baseTableName="GROUP_USER" constraintName="FK6B1EC1AB43721B1F" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="USERS"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-37">
+        <addForeignKeyConstraint baseColumnNames="GROUP_ID" baseTableName="GROUP_USER" constraintName="FK6B1EC1AB6A129F41" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="USER_GROUP"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-38">
+        <addForeignKeyConstraint baseColumnNames="NEWS_LETTER_ID" baseTableName="USER_EMAIL_PREFERENCES" constraintName="FK71B15B2182BDD58F" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="NEWS_LETTER"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-39">
+        <addForeignKeyConstraint baseColumnNames="EMAIL_TEMPLATE_TYPE_ID" baseTableName="EMAIL_TEMPLATE" constraintName="FK7295C5DDA8969620" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="EMAIL_TEMPLATE_TYPE"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-40">
+        <addForeignKeyConstraint baseColumnNames="CREDIT_CARD_TYPE" baseTableName="USER_CREDIT_CARD" constraintName="FK9938EA221FF64CDD" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-41">
+        <addForeignKeyConstraint baseColumnNames="PREFERRED_SHIPPING_METHOD" baseTableName="ADDRESS_PREFERENCE" constraintName="FKC3D06A26508B246E" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-42">
+        <addForeignKeyConstraint baseColumnNames="PREFERED_PACKAGE_TYPE" baseTableName="ADDRESS_PREFERENCE" constraintName="FKC3D06A268746E6BD" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-43">
+        <addForeignKeyConstraint baseColumnNames="PREFERED_CARRIER" baseTableName="ADDRESS_PREFERENCE" constraintName="FKC3D06A26897DF502" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-44">
+        <addForeignKeyConstraint baseColumnNames="MASTER_DATA_TYPE_ID" baseTableName="MASTER_DATA" constraintName="FKCAD82F671A0B955C" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA_TYPE"/>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-45">
+        <createIndex indexName="name" tableName="EMAIL_TEMPLATE_TYPE" unique="true">
+            <column name="NAME"/>
+        </createIndex>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav (generated)" id="1407404880879-46">
+        <createIndex indexName="name" tableName="MASTER_DATA" unique="true">
+            <column name="NAME"/>
+        </createIndex>
+    </changeSet>
+	
+	
+	<changeSet failOnError="false"  id="1" author="Rohit">
+        <modifyDataType tableName="USER_EMAIL_LOG" columnName="USER_ID" newDataType="BIGINT(20) NULL" />
+    </changeSet>
+	
+	<changeSet failOnError="false"  id="2" author="Rohit">
+        <modifyDataType tableName="USER_EMAIL_LOG" columnName="SUBJECT" newDataType="VARCHAR(500) NULL" />
+    </changeSet>
+	
+	<changeSet failOnError="false"  id="3" author="Rohit">
+        <modifyDataType tableName="USER_EMAIL_LOG" columnName="CONTENT" newDataType="VARCHAR(5000) NULL" />
+    </changeSet>
+	
+	<changeSet failOnError="false"  id="4" author="Rohit">
+        <modifyDataType tableName="NEWS_LETTER" columnName="NAME" newDataType="VARCHAR(45) NOT NULL" />
+    </changeSet>
+	
+	<changeSet failOnError="false"  id="5" author="Rohit">
+    <addUniqueConstraint 
+            columnNames="NAME"     
+			constraintName="NAME"		
+			deferrable="false" 
+			disabled="false" 
+			initiallyDeferred="false"	
+            tableName="NEWS_LETTER"
+            />			
+	</changeSet>
+	
+	<changeSet failOnError="false" id="6" author="Rohit">
+    	<addColumn tableName="NEWS_LETTER">
+    		<column name="IS_DEFAULT" type="TINYINT(1) NULL after `NAME`" />   		
+    	</addColumn>
+    </changeSet>
+	
+	<changeSet  failOnError="false" id="7" author="Jyoti">
+    	<modifyDataType tableName="USER_ROLE" columnName="CREATED_DATE" newDataType="datetime" />
+    	<modifyDataType tableName="USER_ROLE" columnName="CREATED_BY" newDataType="BIGINT(20) UNSIGNED" />
+    </changeSet>
+	
+	<changeSet  failOnError="false" id="8" author="Jyoti">    	
+    	<modifyDataType tableName="USER_ROLE" columnName="CREATED_BY" newDataType="BIGINT(22) UNSIGNED" />
+    </changeSet>
+	
+	<changeSet failOnError="false" author="jyoti.yadav" id="9">
+        <createTable tableName="IMPORTER">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="IMPORTER_NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="IMPORTER_CODE" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NOTES" type="TEXT"/>
+            <column name="DEFAULT_CONTACT_ADDRESS_ID" type="BIGINT(20) UNSIGNED"/>
+            <column name="DEFAULT_BILLING_ADDRESS_ID" type="BIGINT(20) UNSIGNED"/>
+            <column name="IMPORTER_URL" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_BY" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="UPDATED_BY" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav" id="10">
+        <createTable tableName="WINERY">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="WINERY_NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <!--<column name="WINERY_CODE" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>-->
+           <!-- <column name="SOURCING_STATUS" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>-->
+            <column name="WA_CONTACT" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CA_LICENSE_TYPE" type="BIGINT(20) UNSIGNED"/>
+            <column name="FULL_FILLER_WINERY_CODE" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="USER_COMPLIANCE" type="TINYINT(1)"/>
+            <column name="COMPLIANCE_ACC_NAME" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="IOA_RECEIVED_DATE" type="datetime"/>
+            <column name="NOTES" type="TEXT"/>
+            <column name="LICENSE_FULL_FILLMENT_PARTNER_ID" type="BIGINT(20) UNSIGNED"/>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_BY" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="UPDATED_BY" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav" id="11">
+        <createTable tableName="WINERY_IMPORTER">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="WINERY_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="IMPORTER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_BY" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="UPDATED_BY" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet failOnError="false" author="jyoti.yadav" id="12">
+        <createTable tableName="WINERY_IMPORTER_CONTACTS">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EMAIL" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PHOME" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONTACT_TYPE" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WINERY_ID" type="BIGINT(20) UNSIGNED"/>
+            <column name="IMPORTER_ID" type="BIGINT(20) UNSIGNED"/>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_BY" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="UPDATED_BY" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="jyoti.yadav" id="13">
+        <addForeignKeyConstraint baseColumnNames="IMPORTER_ID" baseTableName="WINERY_IMPORTER_CONTACTS" constraintName="winery_importer_contacts_ibfk_1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="IMPORTER"/>
+    </changeSet>
+    <changeSet author="jyoti.yadav" id="14">
+        <addForeignKeyConstraint baseColumnNames="WINERY_ID" baseTableName="WINERY_IMPORTER_CONTACTS" constraintName="winery_importer_contacts_ibfk_2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINERY"/>
+    </changeSet>
+    <changeSet author="jyoti.yadav" id="15">
+        <addForeignKeyConstraint baseColumnNames="IMPORTER_ID" baseTableName="WINERY_IMPORTER" constraintName="winery_importer_ibfk_3" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="IMPORTER"/>
+    </changeSet>
+    <changeSet author="jyoti.yadav" id="16">
+        <addForeignKeyConstraint baseColumnNames="WINERY_ID" baseTableName="WINERY_IMPORTER" constraintName="winery_importer_ibfk_4" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINERY"/>
+    </changeSet>    
+	
+     <changeSet author="Abhishek.sharma" id="17" >    	
+    	<modifyDataType tableName="USERS" columnName="USER_ACTIVATION_CODE" newDataType="VARCHAR(100)" />
+    </changeSet>
+
+
+	<changeSet id="18" author="Rohit">
+        <modifyDataType tableName="USER_EMAIL_LOG" columnName="USER_ID" newDataType="BIGINT(20) NULL" />
+    </changeSet>
+	
+		<changeSet failOnError="false"  id="19" author="Rohit">
+        <modifyDataType tableName="NEWS_LETTER" columnName="NAME" newDataType="VARCHAR(45) NOT NULL" />
+    </changeSet>
+	
+	<changeSet failOnError="false"  id="20" author="Rohit">
+    <addUniqueConstraint 
+            columnNames="NAME"     
+			constraintName="NAME"		
+			deferrable="false" 
+			disabled="false" 
+			initiallyDeferred="false"	
+            tableName="NEWS_LETTER"
+            />			
+	</changeSet>
+
+	<changeSet failOnError="false"  id="21" author="Gaurav">
+        <addColumn tableName="USER_CREDIT_CARD">
+			<column name="BRAINTREE_UID" type="VARCHAR(50) NULL"/>
+		</addColumn>
+    </changeSet>
+	
+	<changeSet id="22" author="Gaurav">
+        <modifyDataType tableName="USER_CREDIT_CARD" columnName="EXPIRATION_DATE" newDataType="VARCHAR(45) NULL" />
+    </changeSet>
+    <changeSet failOnError="false" id="23" author="arpit.vijayvargiya">
+    	<addColumn tableName="IMPORTER">
+    		<column name="COUNTRY_ID" type="BIGINT(20) UNSIGNED NOT NULL" />   		
+			<column name="ACCOUNTING_CUSTOMER_NUMBER" type="VARCHAR(32)" />   		
+			<column name="SOURCING_STATUS" type="BIGINT(20) UNSIGNED NOT NULL" />   		
+			<column name="WORKFLOW_STATUS" type="VARCHAR(50)"/>
+			<column name="IS_DELETED" type="TINYINT(1) NOT NULL"/>
+    	</addColumn>
+    </changeSet>
+
+<changeSet author="Rohit" id="24">
+    <addColumn tableName="WINERY">
+        <column name="IS_ENABLED" type="TINYINT(1) NOT NULL"/>
+		<column name="IS_APPROVED" type="TINYINT(1) NOT NULL"/>
+		<column name="IS_DELETED" type="TINYINT(1) NOT NULL"/>
+		<column name="STATE_ID" type="BIGINT(20) UNSIGNED NOT NULL"/>
+		<column name="ACCOUNTING_CUSTOMER_NUMBER" type="VARCHAR(50) NOT NULL"/>
+		<column name="SOURCING_STATUS" type="BIGINT(20) UNSIGNED NOT NULL"/>
+		<column name="ACTIVE_IMPORTER_ID" type="BIGINT(20) UNSIGNED NULL"/>
+		<column name="WINERY_CODE" type="VARCHAR(50) NOT NULL"/>
+    </addColumn>
+</changeSet>
+
+	<changeSet failOnError="false" author="Rohit" id="25">
+        <addForeignKeyConstraint baseColumnNames="SOURCING_STATUS" baseTableName="WINERY" constraintName="fk_sourcing_status" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+    </changeSet>
+	
+	<changeSet failOnError="false" author="Rohit" id="26">
+        <addForeignKeyConstraint baseColumnNames="STATE_ID" baseTableName="WINERY"  constraintName="fk_state_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="STATE"/>
+    </changeSet>
+	
+	<changeSet failOnError="false" author="Rohit" id="27">
+        <addForeignKeyConstraint baseColumnNames="ACTIVE_IMPORTER_ID" baseTableName="WINERY"  constraintName="fk_active_importer_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="IMPORTER"/>
+    </changeSet>
+	
+	<changeSet failOnError="false"  id="28" author="Rohit">
+    <addUniqueConstraint 
+            columnNames="WINERY_NAME"     
+			constraintName="uk_winery_name"		
+			deferrable="false" 
+			disabled="false" 
+			initiallyDeferred="false"	
+            tableName="WINERY"
+            />			
+	</changeSet>
+	
+	<changeSet failOnError="false"  id="29" author="Rohit">
+    <addUniqueConstraint 
+            columnNames="WINERY_CODE"     
+			constraintName="uk_winery_code"		
+			deferrable="false" 
+			disabled="false" 
+			initiallyDeferred="false"	
+            tableName="WINERY"
+            />			
+	</changeSet>
+	
+	<changeSet  failOnError="false" id="30" author="Rohit">
+    	<modifyDataType tableName="WINERY_IMPORTER" columnName="CREATED_DATE" newDataType="datetime" />
+    	<modifyDataType tableName="WINERY_IMPORTER" columnName="CREATED_BY" newDataType="BIGINT(20) UNSIGNED NOT NULL" />
+    </changeSet>
+	
+	<changeSet  failOnError="false" id="31" author="Gaurav">
+    	<addColumn tableName="WINERY_IMPORTER_CONTACTS">
+			<column name="IS_DEFAULT" type="TINYINT(1) NULL"/>
+		</addColumn>
+    </changeSet>
+	<changeSet failOnError="false" author="anurag.jain3" id="32">
+        <createTable tableName="OFFER">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+            
+            <column name="START_DATE" type="datetime"/>
+           
+        </createTable>
+    </changeSet>
+
+	<changeSet failOnError="false" author="anurag.jain3" id="33">
+		<addColumn tableName="IMPORTER">
+			<column name="WINE_COUNT" type="BIGINT(10) UNSIGNED"/>
+			<column name="ACTIVE_WINE_COUNT" type="BIGINT(10) UNSIGNED"/>
+			<column defaultValueNumeric="0.00" name="REVENUE" type="DECIMAL(10, 2)"/>
+		</addColumn>
+    </changeSet>
+
+	<changeSet failOnError="false" author="anurag.jain3" id="34">
+        <createTable tableName="OFFER_IMPORTER">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="OFFER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="IMPORTER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_BY" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="UPDATED_BY" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+
+	<changeSet author="anurag.jain3" id="35">
+        <addForeignKeyConstraint baseColumnNames="IMPORTER_ID" baseTableName="OFFER_IMPORTER" constraintName="offer_importer_ibfk_1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="IMPORTER"/>
+    </changeSet>
+    <changeSet author="anurag.jain3" id="36">
+        <addForeignKeyConstraint baseColumnNames="OFFER_ID" baseTableName="OFFER_IMPORTER" constraintName="offer_importer_ibfk_2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="OFFER"/>
+    </changeSet> 
+	<changeSet failOnError="false" author="arpit.vijayvargiya" id="37">
+        <createTable tableName="ACTIVE_IMPORTER_LOG_HISTORY">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="IMPORTER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WINERY_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DISASSOCIATION_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+			<column name="CREATED_BY" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+			</column>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="UPDATED_BY" type="VARCHAR(100)"/>
+        </createTable>
+		<addForeignKeyConstraint baseColumnNames="IMPORTER_ID" baseTableName="ACTIVE_IMPORTER_LOG_HISTORY" constraintName="active_importer_log_fk_1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="IMPORTER"/>
+		<addForeignKeyConstraint baseColumnNames="WINERY_ID" baseTableName="ACTIVE_IMPORTER_LOG_HISTORY" constraintName="active_importer_log_fk_2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINERY"/>
+    </changeSet>
+	<changeSet failOnError="false" author="arpit.vijayvargiya" id="38">
+        <createTable tableName="IMPORTER_WINERY_WORKFLOW">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="WORKFLOW_NAME" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ENTITY_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+			<column name="SUB_ENTITY_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+			<column name="CREATED_BY" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+			</column>
+            <column name="UPDATED_DATE" type="datetime"/>
+            <column name="UPDATED_BY" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+	<changeSet author="arpit.vijayvargiya" id="39">
+		<renameColumn columnDataType="TINYINT(1) NOT NULL" newColumnName="STATUS" oldColumnName="IS_ENABLED" tableName="WINERY"/>
+		<renameColumn columnDataType="VARCHAR(50)" newColumnName="WORKFLOW_STATUS" oldColumnName="IS_APPROVED" tableName="WINERY"/>
+	</changeSet>
+	<changeSet failOnError="false" author="arpit.vijayvargiya" id="40">
+		<addColumn tableName="WINERY_IMPORTER">
+			<column name="IS_ACTIVE" type="TINYINT(1) NOT NULL"/>
+			<column name="WORKFLOW_STATUS" type="VARCHAR(50)"/>
+		</addColumn>
+    </changeSet>
+
+	<changeSet failOnError="false" author="abhishek.sharma" id="41">
+		<createTable tableName="WINERY_IMPORTER_ADDRESS">
+			<column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="ADDRESS_LINE1" type="VARCHAR(255) ">
+				<constraints nullable="false" />
+			</column>
+			<column name="ADDRESS_LINE2" type="VARCHAR(255) ">
+				<constraints nullable="true" />
+			</column>
+			<column name="CITY_ID" type="BIGINT(20) UNSIGNED">
+				<constraints nullable="false" />
+			</column>
+			<column name="STATE_ID" type="BIGINT(20) UNSIGNED">
+				<constraints nullable="false" />
+			</column>
+			<column name="COUNTRY_ID" type="BIGINT(20) UNSIGNED">
+				<constraints nullable="false" />
+			</column>
+			<column name="WINERY_ID" type="BIGINT(20) UNSIGNED">
+				<constraints nullable="true" />
+			</column>
+			<column name="IMPORTER_ID" type="BIGINT(20) UNSIGNED">
+				<constraints nullable="true" />
+			</column>
+
+			<column name="ZIPCODE" type="VARCHAR(45) ">
+				<constraints nullable="false" />
+			</column>
+			<column name="PHONE" type="VARCHAR(45) ">
+				<constraints nullable="false" />
+			</column>
+			<column name="FIRST_NAME" type="VARCHAR(255) ">
+				<constraints nullable="false" />
+			</column>
+			<column name="LAST_NAME" type="VARCHAR(255) ">
+				<constraints nullable="false" />
+			</column>
+			<column name="IS_DEFAULT" type="TINYINT(1) NOT NULL">
+				<constraints nullable="true" />
+			</column>
+			<column name="IS_DELETED" type="TINYINT(1) NOT NULL">
+				<constraints nullable="true" />
+			</column>
+			
+			<column name="ADDRESS_TYPE" type="BIGINT(20) UNSIGNED ">
+				<constraints nullable="false" />
+			</column>
+
+			<column name="CREATED_DATE" type="datetime">
+				<constraints nullable="false" />
+			</column>
+			<column name="CREATED_BY" type="VARCHAR(100)">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_DATE" type="datetime" >
+			<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="VARCHAR(100)" >
+			<constraints nullable="false" />
+			</column>
+		</createTable>
+		
+		<addForeignKeyConstraint baseColumnNames="IMPORTER_ID"
+			baseTableName="WINERY_IMPORTER_ADDRESS" constraintName="fk_WineryImporterAddress_Importer_idx"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="IMPORTER" />
+		<addForeignKeyConstraint baseColumnNames="WINERY_ID"
+			baseTableName="WINERY_IMPORTER_ADDRESS" constraintName="fk_WineryImporterAddress_Winery_idx"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINERY" />
+		<addForeignKeyConstraint baseColumnNames="STATE_ID" baseTableName="WINERY_IMPORTER_ADDRESS"  constraintName="fk_state_address_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="STATE"/>
+		<addForeignKeyConstraint baseColumnNames="COUNTRY_ID" baseTableName="WINERY_IMPORTER_ADDRESS" constraintName="fk_country_address_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="COUNTRY"/>
+		 <addForeignKeyConstraint baseColumnNames="CITY_ID" baseTableName="WINERY_IMPORTER_ADDRESS" constraintName="fk_city_address_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="CITY"/>
+		 <addForeignKeyConstraint baseColumnNames="ADDRESS_TYPE" baseTableName="WINERY_IMPORTER_ADDRESS" constraintName="fk_address_type" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+			
+
+	</changeSet>
+
+	<changeSet failOnError="false" id="42" author="Jyoti">
+    	<addColumn tableName="USERS">
+    		<column name="CHANNEL_ID" type="BIGINT(20) UNSIGNED" />   		
+    	</addColumn>
+    </changeSet>
+	
+	<changeSet failOnError="false"  id="43" author="Gaurav">
+        <addColumn tableName="WINERY">
+			<column name="WINERY_URL" type="VARCHAR(45) NULL"/>
+		</addColumn>
+    </changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="44">
+		<addColumn tableName="IMPORTER">
+			<column name="IS_ACTIVE" type="TINYINT(1)"/>
+			<column name="LAST_OFFER_DATE" type="DATETIME"/>
+			<column name="WA_CONTACT" type="BIGINT(20) NULL" />   		
+		</addColumn>
+    </changeSet>
+	<changeSet failOnError="true" author="Gaurav" id="45">
+		<addColumn tableName="IMPORTER">
+			<column name="FREIGHT_REGION" type="BIGINT(20) UNSIGNED NULL" />   		
+		</addColumn>
+	</changeSet>
+	
+	<changeSet failOnError="false" author="Gaurav" id="46">
+		<addForeignKeyConstraint baseColumnNames="FREIGHT_REGION" baseTableName="IMPORTER" constraintName="importer_constraint_6" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+	</changeSet>
+	
+	<changeSet failOnError="false" author="Gaurav" id="47">
+		<modifyDataType tableName="WINERY" columnName="WA_CONTACT" newDataType="BIGINT(20) UNSIGNED NULL" />
+    </changeSet>
+	
+	<changeSet failOnError="true" author="Gaurav" id="48">
+		<addForeignKeyConstraint baseColumnNames="WA_CONTACT" baseTableName="WINERY" constraintName="fk_wa_contact" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="Gaurav" id="49">
+		<addColumn tableName="WINERY">
+			<column name="FREIGHT_REGION" type="BIGINT(20) UNSIGNED NULL" />   		
+		</addColumn>
+    </changeSet>
+	
+	<changeSet failOnError="true" author="Gaurav" id="50">
+		<addForeignKeyConstraint baseColumnNames="FREIGHT_REGION" baseTableName="WINERY" constraintName="fk_freight_region" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="51">
+		<modifyDataType tableName="IMPORTER" columnName="STATUS" newDataType="TINYINT(1) NULL" />
+	</changeSet>
+	
+	<changeSet failOnError="false" author="Rohit" id="52">
+		<modifyDataType tableName="IMPORTER" columnName="WA_CONTACT" newDataType="BIGINT(20) UNSIGNED NULL" />
+    </changeSet>
+	
+	<changeSet failOnError="false" author="arpit.vijayvargiya" id="53">
+		<addForeignKeyConstraint baseColumnNames="WA_CONTACT" baseTableName="IMPORTER" constraintName="fk_wa_contact" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+	</changeSet>
+	
+	<!--<changeSet failOnError="true" author="Rohit" id="54">
+    <dropColumn 
+            columnName="WORKFLOW_STATUS"
+            tableName="WINERY_IMPORTER"/>
+	</changeSet>-->
+
+	<changeSet failOnError="true" author="Rohit" id="55">
+		<addColumn tableName="WINERY_IMPORTER">      
+			<column name="IS_DELETED" type="TINYINT(1) NOT NULL"/>		
+		</addColumn>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="56">	
+		<modifyDataType tableName="WINERY" columnName="FULL_FILLER_WINERY_CODE" newDataType="VARCHAR(50) NULL" />
+		<modifyDataType tableName="WINERY" columnName="COMPLIANCE_ACC_NAME" newDataType="VARCHAR(50) NULL" />		
+	</changeSet>	
+
+	<changeSet failOnError="false" author="anurag.jain3" id="57">
+		<addColumn tableName="WINERY">
+			<column name="WINE_COUNT" type="BIGINT(10) UNSIGNED"/>
+			<column name="ACTIVE_WINE_COUNT" type="BIGINT(10) UNSIGNED"/>
+			<column defaultValueNumeric="0.00" name="REVENUE" type="DECIMAL(10, 2)"/>
+			<column name="LAST_OFFER_DATE" type="DATETIME"/>
+		</addColumn>
+    </changeSet>
+	
+	<changeSet failOnError="false" author="arpit.vijayvargiya" id="58">
+		<renameColumn columnDataType="VARCHAR(50) NOT NULL" newColumnName="PHONE" oldColumnName="PHOME" tableName="WINERY_IMPORTER_CONTACTS"/>
+    </changeSet>
+	<changeSet failOnError="false" author="arpit.vijayvargiya" id="59">
+		<addColumn tableName="WINERY_IMPORTER_CONTACTS">
+			<column name="IS_DELETED" type="TINYINT(1) NOT NULL"/>
+		</addColumn>
+    </changeSet>
+	<changeSet failOnError="false" author="arpit.vijayvargiya" id="60">
+		<modifyDataType tableName="IMPORTER" columnName="IS_ACTIVE" newDataType="TINYINT(1) UNSIGNED NOT NULL" />
+		<modifyDataType tableName="IMPORTER" columnName="WA_CONTACT" newDataType="BIGINT(20) UNSIGNED NOT NULL" />
+    </changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="61">
+		<modifyDataType tableName="IMPORTER" columnName="STATUS" newDataType="TINYINT(1) NULL" />
+    </changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="62">
+		<addForeignKeyConstraint baseColumnNames="WA_CONTACT" baseTableName="IMPORTER" constraintName="importer_constraint_5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+    </changeSet>	
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="63">
+		<addForeignKeyConstraint baseColumnNames="COUNTRY_ID" baseTableName="IMPORTER" constraintName="importer_constraint_1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="COUNTRY"/>
+    </changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="64">
+		<addForeignKeyConstraint baseColumnNames="SOURCING_STATUS" baseTableName="IMPORTER" constraintName="importer_constraint_2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+    </changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="65">
+		<addUniqueConstraint columnNames="IMPORTER_NAME" constraintName="importer_constraint_3" deferrable="false" disabled="false" initiallyDeferred="false" tableName="IMPORTER"/>
+    </changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="66">
+		<addUniqueConstraint columnNames="IMPORTER_CODE" constraintName="importer_constraint_4" deferrable="false" disabled="false" initiallyDeferred="false" tableName="IMPORTER"/>
+    </changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="67">
+		<modifyDataType tableName="IMPORTER" columnName="IMPORTER_CODE" newDataType="VARCHAR(50) NOT NULL" />
+    </changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="68">
+		<modifyDataType tableName="IMPORTER" columnName="STATUS" newDataType="TINYINT(1) NULL" />
+    </changeSet>	
+	<changeSet failOnError="false"  id="23" author="Anurag">
+     		<dropUniqueConstraint constraintName="NAME" uniqueColumns="NAME" tableName="EMAIL_TEMPLATE"/>		
+	</changeSet>
+	<changeSet failOnError="false"  id="24" author="Anurag">
+     		<dropUniqueConstraint constraintName="NAME" uniqueColumns="NAME" tableName="MASTER_DATA"/>		
+	</changeSet>	
+	<changeSet failOnError="false" author="arpit.vijayvargiya" id="69">
+		<modifyDataType tableName="IMPORTER" columnName="REVENUE" newDataType="DECIMAL(10, 2) UNSIGNED NOT NULL" />
+ </changeSet>
+	<changeSet failOnError="false" author="anurag.jain3" id="70">
+		<modifyDataType tableName="IMPORTER" columnName="WA_CONTACT" newDataType="BIGINT(20) UNSIGNED NULL" />
+    </changeSet>
+	
+	<changeSet failOnError="true" author="anurag.jain3" id="71">
+		<addColumn tableName="WINERY">
+			<column name="SELL_IN_MAIN_STATES" type="TINYINT(1)"/>
+			<column name="NAME_IF_SELL_IN_ALT_STATE" type="VARCHAR(250)"/>			
+		</addColumn>
+    </changeSet>
+	
+	<changeSet author="jyoti.yadav (generated)" id="72">
+        <createTable tableName="PRODUCT">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="PRODUCT_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WINE_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="datetime"/>
+            <column name="INSERTED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+	
+    <changeSet author="jyoti.yadav (generated)" id="73">
+        <createTable tableName="PRODUCT_MASTER">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="NAME" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PRODUCT_TYPE" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="datetime"/>
+            <column name="INSERTED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+	
+    <changeSet author="jyoti.yadav (generated)" id="74">
+        <createTable tableName="WINERY_LICENSE_DETAIL">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="WINERY_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CA_LICENSE_TYPE" type="VARCHAR(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONTRACT_EXECUTED" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SHIP_COMPLIANT" type="TINYINT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SHIP_ESCROW_NO" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="datetime"/>
+            <column name="INSERTED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+	
+    <changeSet author="jyoti.yadav (generated)" id="75">
+        <createTable tableName="WINERY_LICENSE_PERMIT_ALT_STATES">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+			<column name="WINERY_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WINERY_PERMIT" type="VARCHAR(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DTC_PERMIT_NUMBER" type="VARCHAR(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DTC_PERMISSION_DURATION" type="INT(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DTC_PERMIT_START_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DTC_PERMIT_END_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="datetime"/>
+            <column name="INSERTED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+	
+    <changeSet author="jyoti.yadav (generated)" id="76">
+        <createTable tableName="WINERY_LICENSE_PERMIT_ALT_STATES_FULLFILL">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+			<column name="WINERY_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WA_WILL_FULLFILL" type="TINYINT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WINERY_STORAGE_CONTRACT" type="TINYINT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WA_PALTE_CONTRACT" type="TINYINT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ESCROW_CONTRACT" type="TINYINT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="datetime"/>
+            <column name="INSERTED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+	
+    <changeSet author="jyoti.yadav (generated)" id="77">
+        <createTable tableName="WINE">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="WINE_FULL_NAME" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WINE_NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VERIETAL" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VINTAGE" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WINE_SHORT_NAME" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BOTTOL_IN_ML" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BOTTOL_PER_BOX" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ALCHOL_PERCENTAGE" type="DECIMAL(5, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NOTES" type="TEXT"/>
+            <column name="WINE_LABEL" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PRIVATE_LABEL" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WINE_TYPE" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WINERY_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WINE_SOURCING_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SEND_TO_FULL_FILLER_ON" type="TINYINT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="USA_ARRIVAL_DATE" type="datetime"/>
+            <column name="LICENSE_FULL_FILLMENT_PARTNER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>	
+			<column name="SELL_IN_MAIN_STATES" type="TINYINT(1)"/>
+			
+			<column name="NAME_IF_SELL_IN_ALT_STATE" type="VARCHAR(250)"/>
+			
+            <column name="INSERT_TIME" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="datetime"/>
+            <column name="INSERTED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+	
+	 <changeSet author="jyoti.yadav (generated)" id="78">
+        <createTable tableName="WINERY_HISTORICAL_OWS_DATA">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="WIENRY_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CERA_LICENSE_NUMBER" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CERA_CERTIFICATE_NUMBER" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CERA_START_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CERA_EXPIRATION_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FULLFILLER_WINERY_NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FULLFILLER_WINERY_CODE" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="datetime"/>
+            <column name="INSERTED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+	
+	<changeSet author="jyoti.yadav (generated)" id="79">
+		<createTable tableName="WINE_HOSTORICAL_OWS_DATA">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="WINE_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CERA_LICENSE_NUMBER" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CERA_CERTIFICATE_NUMBER" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CERA_START_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CERA_EXPIRATION_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FULLFILLER_WINERY_NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FULLFILLER_WINERY_CODE" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="datetime"/>
+            <column name="INSERTED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+	
+    <changeSet author="jyoti.yadav (generated)" id="80">
+        <createTable tableName="WINE_LICENSE_DETAIL">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="WINE_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CA_LICENSE_TYPE" type="VARCHAR(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONTRACT_EXECUTED" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SHIP_COMPLIANT" type="BIT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SHIP_ESCROW_NO" type="VARCHAR(100)" />               
+            		
+			<column name="SHIP_COMPLIANT_PRODUCT_KEY" type="VARCHAR(100)" />                
+            			
+			<column name="COLA_NUMBER" type="VARCHAR(100)" />                
+            			
+			<column name="SC_3T_PRICE_TO_RETAILER" type="DECIMAL(5, 2)">
+                <constraints nullable="false"/>
+            </column>
+			
+            <column name="INSERT_TIME" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="datetime"/>
+            <column name="INSERTED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+	
+    <changeSet author="jyoti.yadav (generated)" id="81">
+        <createTable tableName="WINE_LICENSE_PERMIT_ALT_STATES">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="WINE_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WINERY_PERMIT" type="VARCHAR(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DTC_PERMIT_NUMBER" type="VARCHAR(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DTC_PERMISSION_DURATION" type="INT(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DTC_PERMIT_START_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DTC_PERMIT_END_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="datetime"/>
+            <column name="INSERTED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+	
+    <changeSet author="jyoti.yadav (generated)" id="82">
+        <createTable tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="WINE_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WA_WILL_FULLFILL" type="BIT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WINERY_STORAGE_CONTRACT" type="BIT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WA_PALTE_CONTRACT" type="BIT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ESCROW_CONTRACT" type="BIT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="datetime"/>
+            <column name="INSERTED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+        </createTable>
+    </changeSet>
+	
+	<changeSet failOnError="false" author="anurag.jain3" id="83">
+		<modifyDataType tableName="USER_EMAIL_PREFERENCES" columnName="CREATED_DATE" newDataType="datetime NULL" />
+		
+	</changeSet>
+	
+	<changeSet failOnError="false" author="anurag.jain3" id="84">
+		<modifyDataType tableName="USER_EMAIL_PREFERENCES" columnName="CREATED_BY" newDataType="BIGINT(20) UNSIGNED NULL" />
+	</changeSet>
+	<changeSet author="arpit.vijayvargiya" id="85">
+		<dropNotNullConstraint columnDataType="VARCHAR(45)" columnName="IMPORTER_URL" tableName="IMPORTER"/>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="86">	
+		<modifyDataType tableName="WINE" columnName="WINE_SHORT_NAME" newDataType="VARCHAR(45) NULL" />
+		<modifyDataType tableName="WINE" columnName="BOTTOL_PER_BOX" newDataType="VARCHAR(255) NULL" />	
+		<modifyDataType tableName="WINE" columnName="ALCHOL_PERCENTAGE" newDataType="DECIMAL(5, 2) NULL" />	
+		<modifyDataType tableName="WINE" columnName="WINE_LABEL" newDataType="VARCHAR(45) NULL" />	
+		<modifyDataType tableName="WINE" columnName="PRIVATE_LABEL" newDataType="VARCHAR(45) NULL" />	
+		<modifyDataType tableName="WINE" columnName="WINE_SOURCING_ID" newDataType="BIGINT(20) UNSIGNED NULL" />	
+		<modifyDataType tableName="WINE" columnName="SEND_TO_FULL_FILLER_ON" newDataType="TINYINT(1) NULL" />	
+		<modifyDataType tableName="WINE" columnName="USA_ARRIVAL_DATE" newDataType="datetime NULL" />	
+		<modifyDataType tableName="WINE" columnName="LICENSE_FULL_FILLMENT_PARTNER_ID" newDataType="BIGINT(20) UNSIGNED NULL" />	
+		<modifyDataType tableName="WINE" columnName="STATUS" newDataType="TINYINT(1)" />
+		<modifyDataType tableName="WINE" columnName="NAME_IF_SELL_IN_ALT_STATE" newDataType="VARCHAR(250) NULL" />			
+	</changeSet>
+
+	<changeSet failOnError="true" author="Rohit" id="87">	
+		<renameColumn columnDataType="datetime" newColumnName="CREATED_DATE" oldColumnName="INSERT_TIME" tableName="WINE"/>
+		<renameColumn columnDataType="VARCHAR(100)" newColumnName="CREATED_BY" oldColumnName="INSERTED_BY" tableName="WINE"/>		
+	</changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="88">			
+		<renameColumn columnDataType="datetime" newColumnName="UPDATED_DATE" oldColumnName="UPDATE_TIME" tableName="WINE"/>
+	</changeSet>
+
+	<changeSet failOnError="false" id="89" author="arpit.vijayvargiya">
+    	<addColumn tableName="WINE">
+    		<column name="ACTIVE_OFFER" type="BIGINT(20) UNSIGNED NULL" />   		
+			<column defaultValueNumeric="0.00" name="TOTAL_REVENUE" type="DECIMAL(10, 2)"/>			
+			<column name="USER_REVIEW" type="BIGINT(20) UNSIGNED NULL" />   		
+			<column defaultValueNumeric="0.00" name="USER_RATINGS" type="DECIMAL(10, 2)"/>
+			<column name="EXPERT_SCORE" type="BIGINT(20) UNSIGNED NULL" />   		
+			<column name="EXPERT_RATING" type="BIGINT(20) UNSIGNED NULL" />   		
+			<column name="LAST_OFFER_DATE" type="DATETIME" />   		
+    	</addColumn>
+    </changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="90">
+        <addUniqueConstraint columnNames="WINE_NAME" constraintName="uk_wine_name" deferrable="false" disabled="false" initiallyDeferred="false" tableName="WINE"/>
+    </changeSet>
+
+<changeSet failOnError="true" id="91" author="jyoti.yadav">
+    	<addColumn tableName="MASTER_DATA_TYPE">
+    		<column name="LABEL" type="VARCHAR(255) NOT NULL"  defaultValue="Sample" />   					 		
+    	</addColumn>
+    </changeSet>
+	
+	<changeSet failOnError="true" id="92" author="jyoti.yadav">
+    	<addColumn tableName="EMAIL_TEMPLATE_TYPE">
+    		<column name="LABEL" type="VARCHAR(255) NOT NULL"  defaultValue="EmailLabel" />   					 		
+    	</addColumn>
+    </changeSet>
+	<changeSet failOnError="true" id="93" author="arpit.vijayvargiya">
+    	<dropNotNullConstraint columnDataType="VARCHAR(50)" columnName="IMPORTER_CODE" tableName="IMPORTER"/>			
+    </changeSet>
+	<changeSet failOnError="true" id="94" author="arpit.vijayvargiya">
+    	<dropNotNullConstraint columnDataType="VARCHAR(50)" columnName="WINERY_CODE" tableName="WINERY"/>			
+    </changeSet>
+
+<changeSet failOnError="true" author="Rohit" id="95">
+	
+		<modifyDataType tableName="WINE" columnName="WINE_SHORT_NAME" newDataType="VARCHAR(50) NULL" />
+		
+		<renameColumn columnDataType="BIGINT(20) UNSIGNED" newColumnName="BOTTLE_IN_ML" oldColumnName="BOTTOL_IN_ML" tableName="WINE"/>
+		<renameColumn columnDataType="int" newColumnName="BOTTLE_PER_BOX" oldColumnName="BOTTOL_PER_BOX" tableName="WINE"/>
+		<renameColumn columnDataType="DECIMAL(5,2) NULL" newColumnName="ALCOHOL_PERCENTAGE" oldColumnName="ALCHOL_PERCENTAGE" tableName="WINE"/>
+		
+		<modifyDataType tableName="WINE" columnName="WINE_LABEL" newDataType="VARCHAR(50) NULL" />
+		<modifyDataType tableName="WINE" columnName="PRIVATE_LABEL" newDataType="VARCHAR(50) NULL" />
+		
+		<modifyDataType tableName="WINE" columnName="CREATED_BY" newDataType="BIGINT(20) UNSIGNED NOT NULL" />		
+		<modifyDataType tableName="WINE" columnName="UPDATED_BY" newDataType="BIGINT(20) UNSIGNED" />
+		
+		
+		<modifyDataType tableName="WINE" columnName="TOTAL_REVENUE" newDataType="BIGINT(20) UNSIGNED" />
+		<modifyDataType tableName="WINE" columnName="USER_RATINGS" newDataType="BIGINT(20) UNSIGNED" />
+	
+	</changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="96">
+		<addForeignKeyConstraint baseColumnNames="VERIETAL" baseTableName="WINE" constraintName="fk_verietal" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+		
+		<addForeignKeyConstraint baseColumnNames="VINTAGE" baseTableName="WINE" constraintName="fk_vintage" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+		
+		<addForeignKeyConstraint baseColumnNames="BOTTLE_IN_ML" baseTableName="WINE" constraintName="fk_bottle_in_ml" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+		
+		<addForeignKeyConstraint baseColumnNames="WINE_TYPE" baseTableName="WINE" constraintName="fk_wine_type" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+		
+		<addForeignKeyConstraint baseColumnNames="WINERY_ID" baseTableName="WINE" constraintName="fk_winery_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINERY"/>
+		
+		<addForeignKeyConstraint baseColumnNames="WINE_SOURCING_ID" baseTableName="WINE" constraintName="fk_wine_sourcing_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+		
+		
+		
+    </changeSet>
+	
+	<changeSet failOnError="true" author="Abhishek" id="97">
+		<addColumn tableName="WINE">
+			<column name="ADDRESS_ID" type="BIGINT(20) UNSIGNED NULL" />
+			<column name="CONTACT_ID" type="BIGINT(20) UNSIGNED NULL" />
+			<column name="IS_FULL_CASE_ONLY" type="TINYINT(1) NULL" />
+			<column name="BOTTLE_WEIGHT_IN_LBS" type="BIGINT(20) UNSIGNED NULL" />
+		</addColumn>
+		<addForeignKeyConstraint baseColumnNames="ADDRESS_ID"
+			baseTableName="WINE" constraintName="wine_address" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="ID" referencedTableName="WINERY_IMPORTER_ADDRESS" />
+		<addForeignKeyConstraint baseColumnNames="CONTACT_ID"
+			baseTableName="WINE" constraintName="wine_contact" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="ID" referencedTableName="WINERY_IMPORTER_CONTACTS" />
+	</changeSet>
+<changeSet failOnError="true" author="Gaurav" id="98">
+		<addColumn tableName="WINE">
+			<column name="IS_DELETED" type="TINYINT(1) NOT NULL" />
+		</addColumn>
+	</changeSet>
+
+<changeSet failOnError="true" author="arpit.vijayvargiya" id="99">
+		<modifyDataType tableName="WINE" columnName="EXPERT_SCORE" newDataType="VARCHAR(50) NULL" />		
+		<modifyDataType tableName="WINE" columnName="EXPERT_RATING" newDataType="VARCHAR(50) NULL" />	
+		<modifyDataType tableName="WINE" columnName="USER_RATINGS" newDataType="DECIMAL(10,2) NULL" />	
+	</changeSet>
+<changeSet failOnError="true" author="anurag.jain3" id="100">
+	
+		<modifyDataType tableName="NEWS_LETTER" columnName="EMAIL_SUBJECT" newDataType="VARCHAR(50) NULL" />
+</changeSet>
+
+<changeSet author="abhishek" id="101">
+	<renameColumn columnDataType="BIGINT(20) UNSIGNED"
+		newColumnName="WINERY_ID" oldColumnName="WIENRY_ID" tableName="WINERY_HISTORICAL_OWS_DATA" />
+</changeSet>
+
+<changeSet failOnError="true" author="abhishek" id="103">
+	<renameTable newTableName="WINE_HISTORICAL_OWS_DATA"
+		oldTableName="WINE_HOSTORICAL_OWS_DATA" />
+</changeSet>
+
+<changeSet failOnError="true" author="abhishek" id="102">
+	<addForeignKeyConstraint baseColumnNames="WINERY_ID"
+		baseTableName="WINERY_LICENSE_DETAIL" constraintName="fk_winery_licence_detail"
+		deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+		onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINERY" />
+	<addForeignKeyConstraint baseColumnNames="WINE_ID"
+		baseTableName="WINE_LICENSE_DETAIL" constraintName="fk_wine_licence_detail"
+		deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+		onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINE" />
+	<addForeignKeyConstraint baseColumnNames="WINERY_ID"
+		baseTableName="WINERY_HISTORICAL_OWS_DATA" constraintName="fk_winery_ows"
+		deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+		onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINERY" />
+	<addForeignKeyConstraint baseColumnNames="WINE_ID"
+		baseTableName="WINE_HISTORICAL_OWS_DATA" constraintName="fk_wine_ows"
+		deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+		onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINE" />
+</changeSet>
+<changeSet failOnError="true" author="anurag.jain3" id="104">
+	
+		<modifyDataType tableName="NEWS_LETTER" columnName="EMAIL_SUBJECT" newDataType="VARCHAR(255) NULL" />
+</changeSet>
+
+<changeSet failOnError="true" author="anurag.jain3" id="105">
+	
+		<modifyDataType tableName="IMPORTER" columnName="ACCOUNTING_CUSTOMER_NUMBER" newDataType="VARCHAR(50) NOT NULL" />
+		<modifyDataType tableName="IMPORTER" columnName="IMPORTER_URL" newDataType="TEXT NULL" />
+                <modifyDataType tableName="WINERY" columnName="WINERY_URL" newDataType="TEXT NULL" />
+
+
+</changeSet>
+
+<changeSet failOnError="true" author="anurag.jain3" id="106">
+	
+		<addColumn tableName="WINERY_IMPORTER_CONTACTS">
+			<column name="FAX_NUMBER" type="VARCHAR(50) NULL"/>
+		</addColumn>
+
+
+</changeSet>
+
+<changeSet failOnError="false" author="anurag.jain3" id="107">
+        <update tableName="USERS">
+            <column name="STATE_ID" value="1" />
+            <where>STATE_ID NOT IN (SELECT ID FROM STATE) OR STATE_ID IS NULL</where>
+        </update>
+        <rollback>
+        </rollback>
+    </changeSet>
+<changeSet failOnError="false" author="anurag.jain3" id="108">
+        <update tableName="USERS">
+            <column name="COUNTRY_ID" value="1" />
+            <where>COUNTRY_ID NOT IN (SELECT ID FROM COUNTRY) OR COUNTRY_ID IS NULL</where>
+        </update>
+        <rollback>
+        </rollback>
+    </changeSet>
+
+<changeSet failOnError="true" author="anurag.jain3" id="109">
+	<addForeignKeyConstraint baseColumnNames="STATE_ID"
+		baseTableName="USERS" constraintName="fk_user_state"
+		deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+		onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="STATE" />
+	<addForeignKeyConstraint baseColumnNames="COUNTRY_ID"
+		baseTableName="USERS" constraintName="fk_user_country"
+		deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+		onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="COUNTRY" />
+</changeSet>
+<changeSet failOnError="true" author="Gaurav" id="110">
+	<dropNotNullConstraint columnName="CERA_LICENSE_NUMBER" columnDataType="VARCHAR(255)" tableName="WINERY_HISTORICAL_OWS_DATA"/>
+	<dropNotNullConstraint columnName="CERA_CERTIFICATE_NUMBER" columnDataType="VARCHAR(255)" tableName="WINERY_HISTORICAL_OWS_DATA"/>
+	<dropNotNullConstraint columnName="CERA_START_DATE" columnDataType="datetime" tableName="WINERY_HISTORICAL_OWS_DATA"/>
+	<dropNotNullConstraint columnName="CERA_EXPIRATION_DATE" columnDataType="datetime" tableName="WINERY_HISTORICAL_OWS_DATA"/>
+	<dropNotNullConstraint columnName="FULLFILLER_WINERY_NAME" columnDataType="VARCHAR(255)" tableName="WINERY_HISTORICAL_OWS_DATA"/>
+	<dropNotNullConstraint columnName="FULLFILLER_WINERY_CODE" columnDataType="VARCHAR(255)" tableName="WINERY_HISTORICAL_OWS_DATA"/>
+</changeSet>
+<changeSet failOnError="true" author="Gaurav" id="111">
+	<renameColumn columnDataType="BIGINT(20) UNSIGNED" newColumnName="CREATED_BY" oldColumnName="INSERTED_BY" tableName="WINERY_HISTORICAL_OWS_DATA" />
+	<renameColumn columnDataType="datetime" newColumnName="CREATED_DATE" oldColumnName="INSERT_TIME" tableName="WINERY_HISTORICAL_OWS_DATA" />
+	<renameColumn columnDataType="datetime" newColumnName="UPDATED_DATE" oldColumnName="UPDATE_TIME" tableName="WINERY_HISTORICAL_OWS_DATA" />
+</changeSet>
+
+	<changeSet failOnError="true" author="Rohit" id="112">	
+		<modifyDataType tableName="WINERY_LICENSE_DETAIL" columnName="CA_LICENSE_TYPE" newDataType="BIGINT(20) UNSIGNED" />		
+		<modifyDataType tableName="WINERY_LICENSE_DETAIL" columnName="CONTRACT_EXECUTED" newDataType="TINYINT(1) NOT NULL" />		
+	</changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="113">	
+		<renameColumn columnDataType="datetime" newColumnName="CREATED_DATE" oldColumnName="INSERT_TIME" tableName="WINERY_LICENSE_DETAIL"/>
+		<renameColumn columnDataType="datetime" newColumnName="UPDATED_DATE" oldColumnName="UPDATE_TIME" tableName="WINERY_LICENSE_DETAIL"/>
+		<renameColumn columnDataType="BIGINT(20) UNSIGNED NOT NULL" newColumnName="CREATED_BY" oldColumnName="INSERTED_BY" tableName="WINERY_LICENSE_DETAIL"/>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="114">
+		<addForeignKeyConstraint baseColumnNames="CA_LICENSE_TYPE" baseTableName="WINERY_LICENSE_DETAIL" constraintName="fk_ca_license_type" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>		
+    </changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="115">	
+		<modifyDataType tableName="WINERY_LICENSE_DETAIL" columnName="CA_LICENSE_TYPE" newDataType="BIGINT(20) UNSIGNED NOT NULL" />				
+	</changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="116">	
+		<modifyDataType tableName="WINERY_LICENSE_DETAIL" columnName="CA_LICENSE_TYPE" newDataType="BIGINT(20) UNSIGNED NULL" />				
+		<modifyDataType tableName="WINERY_LICENSE_DETAIL" columnName="SHIP_ESCROW_NO" newDataType="VARCHAR(100) NULL" />				
+	</changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="110">
+		<addColumn tableName="WINE">
+			<column name="IS_IMPORTED" type="TINYINT(1) NOT NULL" />
+			<column name="IMPORTER_ID" type="BIGINT(20) UNSIGNED" />		
+		</addColumn>
+	</changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="117">
+		<addForeignKeyConstraint baseColumnNames="IMPORTER_ID"
+		baseTableName="WINE" constraintName="fk_wine_importer_id"
+		deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+		onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="IMPORTER" />
+	</changeSet>
+<changeSet failOnError="true" author="Gaurav" id="118">
+	<dropNotNullConstraint columnName="CERA_LICENSE_NUMBER" columnDataType="VARCHAR(255)" tableName="WINE_HISTORICAL_OWS_DATA"/>
+	<dropNotNullConstraint columnName="CERA_CERTIFICATE_NUMBER" columnDataType="VARCHAR(255)" tableName="WINE_HISTORICAL_OWS_DATA"/>
+	<dropNotNullConstraint columnName="CERA_START_DATE" columnDataType="datetime" tableName="WINE_HISTORICAL_OWS_DATA"/>
+	<dropNotNullConstraint columnName="CERA_EXPIRATION_DATE" columnDataType="datetime" tableName="WINE_HISTORICAL_OWS_DATA"/>
+	<dropNotNullConstraint columnName="FULLFILLER_WINERY_NAME" columnDataType="VARCHAR(255)" tableName="WINE_HISTORICAL_OWS_DATA"/>
+	<dropNotNullConstraint columnName="FULLFILLER_WINERY_CODE" columnDataType="VARCHAR(255)" tableName="WINE_HISTORICAL_OWS_DATA"/>
+</changeSet>
+<changeSet failOnError="true" author="Gaurav" id="119">
+	<renameColumn columnDataType="BIGINT(20) UNSIGNED" newColumnName="CREATED_BY" oldColumnName="INSERTED_BY" tableName="WINE_HISTORICAL_OWS_DATA" />
+	<renameColumn columnDataType="datetime" newColumnName="CREATED_DATE" oldColumnName="INSERT_TIME" tableName="WINE_HISTORICAL_OWS_DATA" />
+	<renameColumn columnDataType="datetime" newColumnName="UPDATED_DATE" oldColumnName="UPDATE_TIME" tableName="WINE_HISTORICAL_OWS_DATA" />
+</changeSet>
+
+<changeSet failOnError="true" author="abhishek" id="114">
+	<modifyDataType tableName="WINE_LICENSE_PERMIT_ALT_STATES"
+		columnName="WINERY_PERMIT" newDataType="BIGINT(20) UNSIGNED NOT NULL" />
+
+	<modifyDataType tableName="WINE_LICENSE_PERMIT_ALT_STATES"
+		columnName="DTC_PERMIT_NUMBER" newDataType="VARCHAR(250) NULL" />
+
+	<modifyDataType tableName="WINE_LICENSE_PERMIT_ALT_STATES"
+		columnName="DTC_PERMISSION_DURATION" newDataType="INT(1) NULL" />
+
+	<modifyDataType tableName="WINE_LICENSE_PERMIT_ALT_STATES"
+		columnName="DTC_PERMIT_START_DATE" newDataType="datetime NULL" />
+
+	<modifyDataType tableName="WINE_LICENSE_PERMIT_ALT_STATES"
+		columnName="DTC_PERMIT_END_DATE" newDataType="datetime NULL" />
+
+	<renameColumn columnDataType="BIT(1)" newColumnName="WA_PLATFORM_CONTRACT"
+		oldColumnName="WA_PALTE_CONTRACT" tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL" />
+
+	<modifyDataType tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL"
+		columnName="WA_WILL_FULLFILL" newDataType="BIT(1) NULL" />
+
+	<modifyDataType tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL"
+		columnName="WINERY_STORAGE_CONTRACT" newDataType="BIT(1) NULL" />
+
+	<modifyDataType tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL"
+		columnName="WA_PLATFORM_CONTRACT" newDataType="BIT(1) NULL" />
+
+	<modifyDataType tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL"
+		columnName="ESCROW_CONTRACT" newDataType="BIT(1) NULL" />
+
+	<addForeignKeyConstraint baseColumnNames="WINERY_PERMIT"
+		baseTableName="WINE_LICENSE_PERMIT_ALT_STATES" constraintName="fk_permit_alt_states"
+		deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+		onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA" />
+
+	<dropColumn columnName="NAME_IF_SELL_IN_ALT_STATE"
+		tableName="WINERY" />
+		
+	<dropColumn columnName="NAME_IF_SELL_IN_ALT_STATE"
+		tableName="WINE" />
+
+	<addColumn tableName="WINERY">
+		<column name="SELL_IN_ALT_STATES" type="TINYINT(1) NULL" />
+	</addColumn>
+	
+	<addColumn tableName="WINERY">
+		<column name="OPTION_SELECTED_ALT_STATES" type="TINYINT(1) NULL" />
+	</addColumn>
+
+	<addColumn tableName="WINE">
+		<column name="SELL_IN_ALT_STATES" type="TINYINT(1) NULL" />
+	</addColumn>
+	
+	<addColumn tableName="WINE">
+		<column name="OPTION_SELECTED_ALT_STATES" type="TINYINT(1) NULL" />
+	</addColumn>
+
+</changeSet>
+
+	<changeSet failOnError="true" author="Rohit" id="120">
+        <addUniqueConstraint columnNames="WINERY_ID" constraintName="uk_winery_id" deferrable="false" disabled="false" initiallyDeferred="false" tableName="WINERY_LICENSE_DETAIL"/>
+    </changeSet>
+	
+<changeSet failOnError="true" author="Abhishek" id="121">
+	<renameColumn columnDataType="datetime" newColumnName="CREATED_DATE"
+		oldColumnName="INSERT_TIME" tableName="WINE_LICENSE_PERMIT_ALT_STATES" />
+	<renameColumn columnDataType="VARCHAR(100)" newColumnName="CREATED_BY"
+		oldColumnName="INSERTED_BY" tableName="WINE_LICENSE_PERMIT_ALT_STATES" />
+	<renameColumn columnDataType="datetime" newColumnName="UPDATED_DATE"
+		oldColumnName="UPDATE_TIME" tableName="WINE_LICENSE_PERMIT_ALT_STATES" />
+	<renameColumn columnDataType="datetime" newColumnName="CREATED_DATE"
+		oldColumnName="INSERT_TIME" tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL" />
+	<renameColumn columnDataType="VARCHAR(100)" newColumnName="CREATED_BY"
+		oldColumnName="INSERTED_BY" tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL" />
+	<renameColumn columnDataType="datetime" newColumnName="UPDATED_DATE"
+		oldColumnName="UPDATE_TIME" tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL" />
+	<renameColumn columnDataType="datetime" newColumnName="CREATED_DATE"
+		oldColumnName="INSERT_TIME" tableName="WINERY_LICENSE_PERMIT_ALT_STATES" />
+	<renameColumn columnDataType="VARCHAR(100)" newColumnName="CREATED_BY"
+		oldColumnName="INSERTED_BY" tableName="WINERY_LICENSE_PERMIT_ALT_STATES" />
+	<renameColumn columnDataType="datetime" newColumnName="UPDATED_DATE"
+		oldColumnName="UPDATE_TIME" tableName="WINERY_LICENSE_PERMIT_ALT_STATES" />
+	<renameColumn columnDataType="datetime" newColumnName="CREATED_DATE"
+		oldColumnName="INSERT_TIME" tableName="WINERY_LICENSE_PERMIT_ALT_STATES_FULLFILL" />
+	<renameColumn columnDataType="VARCHAR(100)" newColumnName="CREATED_BY"
+		oldColumnName="INSERTED_BY" tableName="WINERY_LICENSE_PERMIT_ALT_STATES_FULLFILL" />
+	<renameColumn columnDataType="datetime" newColumnName="UPDATED_DATE"
+		oldColumnName="UPDATE_TIME" tableName="WINERY_LICENSE_PERMIT_ALT_STATES_FULLFILL" />
+</changeSet>
+
+	<changeSet failOnError="true" author="Abhishek" id="122">
+		<modifyDataType tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL"
+			columnName="WA_WILL_FULLFILL" newDataType="TINYINT(1) NULL" />
+		<modifyDataType tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL"
+			columnName="WINERY_STORAGE_CONTRACT" newDataType="TINYINT(1) NULL" />
+		<modifyDataType tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL"
+			columnName="WA_PLATFORM_CONTRACT" newDataType="TINYINT(1) NULL" />
+		<modifyDataType tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL"
+			columnName="ESCROW_CONTRACT" newDataType="TINYINT(1) NULL" />
+	</changeSet>
+	
+	<changeSet failOnError="true" author="Abhishek" id="123">
+    <addUniqueConstraint   columnNames="WINE_ID" constraintName="uniq_wineid_permit_fulfill"
+            deferrable="false" initiallyDeferred="false" 
+            tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL"/>
+			
+			<addUniqueConstraint   columnNames="WINERY_ID" constraintName="uniq_wineryid_permit_fulfill"
+            deferrable="false" initiallyDeferred="false" 
+            tableName="WINERY_LICENSE_PERMIT_ALT_STATES_FULLFILL"/>
+	</changeSet>
+
+	<changeSet failOnError="true" author="Abhishek" id="dev_abhishek_124">
+	<renameColumn columnDataType="TINYINT(1)" newColumnName="WA_PLATFORM_CONTRACT"
+		oldColumnName="WA_PALTE_CONTRACT" tableName="WINERY_LICENSE_PERMIT_ALT_STATES_FULLFILL" />
+		<modifyDataType tableName="WINERY_LICENSE_PERMIT_ALT_STATES_FULLFILL"
+			columnName="WA_WILL_FULLFILL" newDataType="TINYINT(1) NULL" />
+		<modifyDataType tableName="WINERY_LICENSE_PERMIT_ALT_STATES_FULLFILL"
+			columnName="WINERY_STORAGE_CONTRACT" newDataType="TINYINT(1) NULL" />
+		<modifyDataType tableName="WINERY_LICENSE_PERMIT_ALT_STATES_FULLFILL"
+			columnName="WA_PLATFORM_CONTRACT" newDataType="TINYINT(1) NULL" />
+		<modifyDataType tableName="WINERY_LICENSE_PERMIT_ALT_STATES_FULLFILL"
+			columnName="ESCROW_CONTRACT" newDataType="TINYINT(1) NULL" />
+		<modifyDataType tableName="WINERY_LICENSE_PERMIT_ALT_STATES"
+		columnName="WINERY_PERMIT" newDataType="BIGINT(20) UNSIGNED NOT NULL" />
+
+	<modifyDataType tableName="WINERY_LICENSE_PERMIT_ALT_STATES"
+		columnName="DTC_PERMIT_NUMBER" newDataType="VARCHAR(250) NULL" />
+
+	<modifyDataType tableName="WINERY_LICENSE_PERMIT_ALT_STATES"
+		columnName="DTC_PERMISSION_DURATION" newDataType="INT(1) NULL" />
+
+	<modifyDataType tableName="WINERY_LICENSE_PERMIT_ALT_STATES"
+		columnName="DTC_PERMIT_START_DATE" newDataType="datetime NULL" />
+
+	<modifyDataType tableName="WINERY_LICENSE_PERMIT_ALT_STATES"
+		columnName="DTC_PERMIT_END_DATE" newDataType="datetime NULL" />
+	
+	<addForeignKeyConstraint baseColumnNames="WINERY_PERMIT"
+		baseTableName="WINERY_LICENSE_PERMIT_ALT_STATES" constraintName="fk_permit_alt_states_winery"
+		deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+		onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA" />	
+	<addForeignKeyConstraint baseColumnNames="WINERY_ID"
+		baseTableName="WINERY_LICENSE_PERMIT_ALT_STATES" constraintName="fk_licence_permit_winery"
+		deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+		onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINERY" />		
+		
+		<addForeignKeyConstraint baseColumnNames="WINE_ID"
+		baseTableName="WINE_LICENSE_PERMIT_ALT_STATES" constraintName="fk_licence_permit_wine"
+		deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+		onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINE" />	
+	</changeSet>
+
+
+
+
+	
+	<changeSet failOnError="true" author="Jyoti" id="J_D_123">
+		<addColumn tableName="IMPORTER">
+			<column name="WINERY_COUNT" type="BIGINT(20) UNSIGNED NOT NULL" defaultValue="0" />
+		</addColumn>
+	</changeSet>
+
+	<changeSet failOnError="true" author="Rohit" id="dev_rohit_124">	
+
+		<modifyDataType tableName="WINE_LICENSE_DETAIL" columnName="CA_LICENSE_TYPE" newDataType="BIGINT(20) UNSIGNED NULL" />				
+		<modifyDataType tableName="WINE_LICENSE_DETAIL" columnName="SHIP_ESCROW_NO" newDataType="VARCHAR(100) NULL" />				
+	</changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="dev_rohit_125">
+		<addForeignKeyConstraint baseColumnNames="CA_LICENSE_TYPE" baseTableName="WINE_LICENSE_DETAIL" constraintName="fk_ca_license_type_wine" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>		
+    </changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="dev_rohit_126">			
+		<modifyDataType tableName="WINE_LICENSE_DETAIL" columnName="CONTRACT_EXECUTED" newDataType="TINYINT(1) NOT NULL" />		
+		<modifyDataType tableName="WINE_LICENSE_DETAIL" columnName="SHIP_COMPLIANT" newDataType="TINYINT(1) NOT NULL" />		
+		<modifyDataType tableName="WINE_LICENSE_DETAIL" columnName="COLA_NUMBER" newDataType="VARCHAR(100) NULL" />		
+		<modifyDataType tableName="WINE_LICENSE_DETAIL" columnName="SC_3T_PRICE_TO_RETAILER" newDataType="DECIMAL(5, 2) NULL" />		
+	</changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="dev_rohit_127">	
+		<renameColumn columnDataType="datetime" newColumnName="CREATED_DATE" oldColumnName="INSERT_TIME" tableName="WINE_LICENSE_DETAIL"/>
+		<renameColumn columnDataType="datetime" newColumnName="UPDATED_DATE" oldColumnName="UPDATE_TIME" tableName="WINE_LICENSE_DETAIL"/>
+		<renameColumn columnDataType="BIGINT(20) UNSIGNED NOT NULL" newColumnName="CREATED_BY" oldColumnName="INSERTED_BY" tableName="WINE_LICENSE_DETAIL"/>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="dev_rohit_128">
+        <addUniqueConstraint columnNames="WINE_ID" constraintName="uk_wine_id" deferrable="false" disabled="false" initiallyDeferred="false" tableName="WINE_LICENSE_DETAIL"/>
+    </changeSet>
+	
+	<changeSet failOnError="false" id="dev_abhishek_128" author="Abhishek">
+    	<addColumn tableName="WINE_LICENSE_PERMIT_ALT_STATES">
+    		<column name="IS_SELECTED" type="TINYINT(1) NULL" />   		
+    	</addColumn>
+		<addColumn tableName="WINERY_LICENSE_PERMIT_ALT_STATES">
+    		<column name="IS_SELECTED" type="TINYINT(1) NULL" />   		
+    	</addColumn>
+		<addColumn tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL">
+    		<column name="IS_SELECTED" type="TINYINT(1) NULL" />   		
+    	</addColumn>
+		<addColumn tableName="WINERY_LICENSE_PERMIT_ALT_STATES_FULLFILL">
+    		<column name="IS_SELECTED" type="TINYINT(1) NULL" />   		
+    	</addColumn>
+    </changeSet>
+	
+	 <changeSet author="jyoti.yadav (generated)" id="DEV_JYOTI_130">
+        <createTable tableName="PO_LINE_ITEMS">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="PO_MASTER_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WINE_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="QUANTITY_PER_CASE" type="INT(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="QUANTITY_IN_BOTTLE" type="INT(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="QUANTITY_BOTTLE" type="INT(10)">
+                <constraints nullable="false"/>
+            </column>
+			<column name="QUANTITY_BOXES" type="INT(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UNIT_PRICE" type="DECIMAL(10, 4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NOTES" type="LONGTEXT"/>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+        </createTable>
+    </changeSet>
+	
+    <changeSet author="jyoti.yadav (generated)" id="DEV_JYOTI-129">
+        <createTable tableName="PO_MASTER">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+			<column name="WINERY_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="true"/>
+            </column>
+            <column name="PO_DATE" type="datetime">
+                <constraints nullable="true"/>
+            </column>
+			<column name="STATUS" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PO_TYPE" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+			<column name="WINES_COUNT" type="INT(10)">
+                <constraints nullable="false"/>
+            </column>
+			<column name="QUANTITY_BOTTOLES_COUNT" type="INT(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EXP_PICKUP_DATE" type="datetime">
+                <constraints nullable="true"/>
+            </column>
+            <column name="ACTUAL_PICKUP_DATE" type="datetime"/>
+            <column name="EXP_ARRIVAL_DATE" type="datetime">
+                <constraints nullable="true"/>
+            </column>
+            <column name="ACTUAL_ARRIVAL_DATE" type="datetime"/>
+            <column name="EXP_SHIPPING_DATE" type="datetime">
+                <constraints nullable="true"/>
+            </column>
+            <column name="ACTUAL_SHIPPING_DATE" type="datetime"/>
+            <column name="NOTES" type="LONGTEXT"/>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+        </createTable>
+    </changeSet>
+	
+	<changeSet failOnError="true" author="Jyoti" id="dev_jyoti_131">
+		<addForeignKeyConstraint baseColumnNames="PO_MASTER_ID" baseTableName="PO_LINE_ITEMS" constraintName="fk_po_lineitems_po_mater_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="PO_MASTER"/>		
+    </changeSet>
+	
+	<changeSet failOnError="true" author="Jyoti" id="dev_jyoti_132">
+		<addForeignKeyConstraint baseColumnNames="WINE_ID" baseTableName="PO_LINE_ITEMS" constraintName="fk_po_lineitems_wine_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINE"/>		
+    </changeSet>
+	
+	<changeSet failOnError="true" author="Jyoti" id="dev_jyoti_133">
+		<addForeignKeyConstraint baseColumnNames="WINERY_ID" baseTableName="PO_MASTER" constraintName="fk_po_winery_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINERY"/>		
+    </changeSet>
+	<changeSet author="jyoti.yadav (generated)" id="dev_jyoti_134">
+        <createTable tableName="WAREHOUSE">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="ADDRESS_LINE1" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ADDRESS_LINE2" type="VARCHAR(255)"/>
+            <column name="CITY_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATE_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ZIPCODE" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PHONE" type="VARCHAR(45)"/>
+			<column name="IS_DELETED" type="TINYINT(1) NOT NULL"/>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+        </createTable>
+    </changeSet>
+	<changeSet failOnError="false" id="dev_arpit_135" author="arpit.vijayvargiya">
+    	<addColumn tableName="WINERY">
+    		<column name="WAREHOUSE_ID" type="BIGINT(20) UNSIGNED after `IS_DELETED`" />   		
+    	</addColumn>
+    </changeSet>
+	<changeSet failOnError="false" author="arpit.vijayvargiya" id="dev_arpit_136">
+        <addForeignKeyConstraint baseColumnNames="WAREHOUSE_ID" baseTableName="WINERY" constraintName="fk_winery_warehouse" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WAREHOUSE"/>
+    </changeSet>
+	<changeSet failOnError="false" author="arpit.vijayvargiya" id="dev_arpit_137">
+        <addForeignKeyConstraint baseColumnNames="CITY_ID" baseTableName="WAREHOUSE" constraintName="fk_warehouse_city" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="CITY"/>
+		<addForeignKeyConstraint baseColumnNames="STATE_ID" baseTableName="WAREHOUSE" constraintName="fk_warehouse_state" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="STATE"/>
+		<addForeignKeyConstraint baseColumnNames="COUNTRY_ID" baseTableName="WAREHOUSE" constraintName="fk_warehouse_country" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="COUNTRY"/>
+    </changeSet>
+	<changeSet failOnError="false" author="arpit.vijayvargiya" id="dev_arpit_138">
+        <addUniqueConstraint columnNames="NAME" constraintName="NAME" deferrable="false" disabled="false" initiallyDeferred="false" tableName="WAREHOUSE"/>
+    </changeSet>
+	<changeSet failOnError="false" author="Gaurav" id="dev_gaurav_139">
+        <dropNotNullConstraint columnName="WINES_COUNT" columnDataType="INT(10)" tableName="PO_MASTER"/>
+		<dropNotNullConstraint columnName="QUANTITY_BOTTOLES_COUNT" columnDataType="INT(10)" tableName="PO_MASTER"/>
+    </changeSet>	<changeSet failOnError="true" author="rohit" id="dev_rohit_134">
+		<renameTable newTableName="PRODUCT_ITEM_MAPPING" oldTableName="PRODUCT"/>  
+	</changeSet>	<changeSet failOnError="true" author="Rohit" id="dev_rohit_135">
+		<addForeignKeyConstraint baseColumnNames="PRODUCT_ID" baseTableName="PRODUCT_ITEM_MAPPING" constraintName="fk_product_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>		
+	</changeSet>
+
+	<changeSet failOnError="true" author="Rohit" id="dev_rohit_136">			
+			<renameColumn columnDataType="BIGINT(20) UNSIGNED NOT NULL" newColumnName="ITEM_ID" oldColumnName="WINE_ID" tableName="PRODUCT_ITEM_MAPPING"/>
+	</changeSet>
+		
+	<changeSet failOnError="true" author="Rohit" id="dev_rohit_137">	
+		<renameColumn columnDataType="datetime" newColumnName="CREATED_DATE" oldColumnName="INSERT_TIME" tableName="PRODUCT_ITEM_MAPPING"/>
+		<renameColumn columnDataType="datetime" newColumnName="UPDATED_DATE" oldColumnName="UPDATE_TIME" tableName="PRODUCT_ITEM_MAPPING"/>
+		<renameColumn columnDataType="BIGINT(20) UNSIGNED NOT NULL" newColumnName="CREATED_BY" oldColumnName="INSERTED_BY" tableName="PRODUCT_ITEM_MAPPING"/>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="dev_rohit_138">			
+		<modifyDataType tableName="PRODUCT_ITEM_MAPPING" columnName="CREATED_DATE" newDataType="datetime NOT NULL" />		
+	</changeSet>
+	
+	<changeSet failOnError="true" id="dev_rohit_139" author="Rohit">
+    	<addColumn tableName="PO_LINE_ITEMS">
+    		<column name="IS_WAREHOUSE_ADDRESS" type="TINYINT(1) NOT NULL" />   		
+    	</addColumn>
+    </changeSet>
+	
+	<changeSet failOnError="true" author="Rohit" id="dev_rohit_140">
+		<addColumn tableName="WINE">
+			<column name="IS_ENABLED" type="TINYINT(1) NOT NULL"/>
+		</addColumn>
+	</changeSet>
+	<changeSet failOnError="true" author="Gaurav" id="dev_gaurav_141">
+		<renameColumn columnDataType="TINYINT(1) NOT NULL" newColumnName="IS_ENABLED" oldColumnName="STATUS" tableName="WINERY"/>
+	</changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="dev_arpit_139">
+		<addColumn tableName="WINE">
+			<column name="PRODUCT_ITEM_ID" type="BIGINT(20) UNSIGNED"/>
+		</addColumn>
+	</changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="dev_arpit_140">
+		<addForeignKeyConstraint baseColumnNames="PRODUCT_ITEM_ID" baseTableName="WINE" constraintName="fk_product_item_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="PRODUCT_ITEM_MAPPING"/>		
+	</changeSet>
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_141">
+		<addNotNullConstraint columnDataType="VARCHAR(45)" columnName="PHONE" tableName="WAREHOUSE"/>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_142">
+	 <dropColumn columnName="STATUS" tableName="WINE"/>
+	</changeSet>		
+	
+	<changeSet failOnError="false" author="arpit.vijayvargiya" id="dev_arpit_141">
+		<addNotNullConstraint columnDataType="BIGINT(20) UNSIGNED" columnName="PRODUCT_ITEM_ID" tableName="WINE"/>
+	</changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="dev_arpit_142">
+		<addNotNullConstraint columnDataType="VARCHAR(255)" columnName="NAME" tableName="WAREHOUSE"/>
+	</changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="dev_arpit_143">
+		<addColumn tableName="WAREHOUSE">
+			<column name="EMAIL_ID" type="VARCHAR(255) NOT NULL" />   		
+			<column name="FAX_NUMBER" type="VARCHAR(50) NULL"/>
+			<column name="FIRST_NAME" type="VARCHAR(255) NOT NULL"/>
+			<column name="LAST_NAME" type="VARCHAR(255) NOT NULL"/>
+		</addColumn>
+	</changeSet>	<changeSet failOnError="true" author="rohit" id="dev_rohit_143">
+		<dropUniqueConstraint constraintName="uk_wine_name" tableName="WINE" />
+	</changeSet>
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_144">
+    <addUniqueConstraint 
+            columnNames="VINTAGE,WINE_NAME, WINERY_ID,BOTTLE_IN_ML"
+            constraintName="uk_wine"
+            deferrable="true"
+            disabled="true"
+            initiallyDeferred="true"            
+            tableName="WINE"/>
+	</changeSet>
+	<changeSet failOnError="true" author="Anurag" id="dev_anurag_129">	
+		<update tableName="USER_ADDRESS">
+            <column name="IS_DEFAULT" value="0" />
+            <where></where>
+        </update>
+        <rollback>
+        </rollback>		
+		<modifyDataType tableName="USER_ADDRESS" columnName="IS_DEFAULT" newDataType="TINYINT(1) NULL" />		
+		
+	</changeSet>
+
+	<changeSet failOnError="true" author="Anurag" id="dev_anurag_130">	
+		<update tableName="WINERY">
+            <column name="Revenue" value="0.0" />
+            <where></where>
+        </update>
+        <rollback>
+        </rollback>		
+				
+		
+	</changeSet>
+
+	<changeSet failOnError="true" author="Anurag" id="dev_anurag_131">	
+		<modifyDataType tableName="NEWS_LETTER" columnName="TITLE" newDataType="VARCHAR(50) NULL" />		
+				
+	</changeSet>
+	<changeSet failOnError="true" author="Rohit" id="dev_rohit_145">			
+		<modifyDataType tableName="WINE" columnName="PRODUCT_ITEM_ID" newDataType="BIGINT(20) UNSIGNED NULL" />		
+	</changeSet>
+	<changeSet failOnError="true" author="Gaurav" id="dev_gaurav_146">
+        <createTable tableName="FULFILLER_SHIPPING_LOCATION">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="FIRST_NAME" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="LAST_NAME" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+            <column name="ADDRESS_LINE1" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ADDRESS_LINE2" type="VARCHAR(255)"/>
+            <column name="CITY_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATE_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+			<column name="SHIPPING_TYPE" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ZIPCODE" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PHONE" type="VARCHAR(45)" >
+				<constraints nullable="false"/>
+			</column>
+			<column name="EMAIL_ID" type="VARCHAR(255)" >
+				<constraints nullable="false"/>
+			</column>
+			<column name="FAX_NUMBER" type="VARCHAR(50)"/>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+		</createTable>
+			<addForeignKeyConstraint baseColumnNames="CITY_ID" baseTableName="FULFILLER_SHIPPING_LOCATION" constraintName="fk_fulfiller_shipping_location_city" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="CITY"/>
+			<addForeignKeyConstraint baseColumnNames="STATE_ID" baseTableName="FULFILLER_SHIPPING_LOCATION" constraintName="fk_fulfiller_shipping_location_state" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="STATE"/>
+			<addForeignKeyConstraint baseColumnNames="SHIPPING_TYPE" baseTableName="FULFILLER_SHIPPING_LOCATION" constraintName="fk_fulfiller_shipping_location_shipping" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+        
+    </changeSet>
+
+	<changeSet failOnError="true"  author="abhishek.sharma" id="dev_abhishek_147">
+		<renameColumn columnDataType="TINYINT(1) NOT NULL" newColumnName="WA_WILL_NOT_FULLFILL" oldColumnName="WA_WILL_FULLFILL" tableName="WINERY_LICENSE_PERMIT_ALT_STATES_FULLFILL"/>
+	</changeSet>
+
+	<changeSet  failOnError="true" author="abhishek.sharma" id="dev_abhishek_148">
+		<renameColumn columnDataType="INT(10) NOT NULL" newColumnName="BOTTLE_PER_BOX" oldColumnName="QUANTITY_PER_CASE" tableName="PO_LINE_ITEMS"/>
+		<renameColumn columnDataType="INT(10) NOT NULL" newColumnName="QUANTITY_OF_BOTTLES" oldColumnName="QUANTITY_BOTTLE" tableName="PO_LINE_ITEMS"/>
+		<renameColumn columnDataType="INT(10) NOT NULL" newColumnName="BOTTLE_IN_ML" oldColumnName="QUANTITY_IN_BOTTLE" tableName="PO_LINE_ITEMS"/>	
+		<modifyDataType tableName="PO_LINE_ITEMS" columnName="BOTTLE_PER_BOX" newDataType="BIGINT(20) UNSIGNED NOT NULL" />
+		<modifyDataType tableName="WINE" columnName="BOTTLE_PER_BOX" newDataType="BIGINT(20) UNSIGNED NOT NULL" />	
+	</changeSet>
+
+	<changeSet  failOnError="true" author="abhishek.sharma" id="dev_abhishek_149">
+		<addForeignKeyConstraint baseColumnNames="BOTTLE_PER_BOX" baseTableName="PO_LINE_ITEMS" constraintName="fk_bottle_per_box_po" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+		
+		
+		<addForeignKeyConstraint baseColumnNames="BOTTLE_PER_BOX" baseTableName="WINE" constraintName="fk_bottle_per_box" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+	</changeSet>
+<changeSet failOnError="true" author="rohit" id="dev_rohit_148">
+		<addColumn tableName="WINE">
+			<column name="ADDRESS_TYPE" type="BIGINT(20) UNSIGNED" />   		
+			<column name="WAREHOUSE_ADDRESS_ID" type="BIGINT(20) UNSIGNED NULL"/>
+			<column name="WINERY_ADDRESS_ID_OF_WH_TYPE" type="BIGINT(20) UNSIGNED NULL"/>			
+		</addColumn>
+	</changeSet>
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_149">
+		<addForeignKeyConstraint baseColumnNames="WAREHOUSE_ADDRESS_ID" baseTableName="WINE" constraintName="fk_warehouse_address_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WAREHOUSE"/>	
+		
+		<addForeignKeyConstraint baseColumnNames="WINERY_ADDRESS_ID_OF_WH_TYPE" baseTableName="WINE" constraintName="fk_winery_address_id_of_wh_type" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINERY_IMPORTER_ADDRESS"/>			
+	</changeSet>
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_150">
+		<dropTable tableName="PRODUCT_MASTER"/>
+	</changeSet>
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_151">
+		<modifyDataType tableName="WINE" columnName="BOTTLE_PER_BOX" newDataType="BIGINT(20) UNSIGNED NULL" />
+	</changeSet>	
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_151">
+		<addColumn tableName="FULFILLER_SHIPPING_LOCATION">
+			<column name="IS_DELETED" type="TINYINT(1) NOT NULL" />   				
+		</addColumn>
+	</changeSet>
+	<changeSet failOnError="true"  author="gaurav" id="dev_gaurav_152">
+		<dropNotNullConstraint columnDataType="BIGINT(20) UNSIGNED" columnName="SHIPPING_TYPE" tableName="FULFILLER_SHIPPING_LOCATION"/>
+	</changeSet>
+	<changeSet failOnError="true"  author="gaurav" id="dev_gaurav_153">
+		<dropForeignKeyConstraint baseTableName="FULFILLER_SHIPPING_LOCATION" constraintName="fk_fulfiller_shipping_location_shipping"/>
+	</changeSet>
+	<changeSet failOnError="true"  author="gaurav" id="dev_gaurav_154">
+		<renameColumn columnDataType="BIGINT(20) UNSIGNED" newColumnName="LOCATION_ID" oldColumnName="SHIPPING_TYPE" tableName="FULFILLER_SHIPPING_LOCATION"/>
+	</changeSet>
+	<changeSet failOnError="true"  author="gaurav" id="dev_gaurav_155">
+		<addNotNullConstraint columnDataType="BIGINT(20) UNSIGNED" columnName="LOCATION_ID" tableName="FULFILLER_SHIPPING_LOCATION"/>
+	</changeSet>
+	<changeSet failOnError="true"  author="gaurav" id="dev_gaurav_156">
+		<addForeignKeyConstraint baseColumnNames="LOCATION_ID" baseTableName="FULFILLER_SHIPPING_LOCATION" constraintName="fk_fulfiller_shipping_location_shipping" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+	</changeSet>
+	<changeSet failOnError="true"  author="gaurav" id="dev_gaurav_157">
+		<addColumn tableName="FULFILLER_SHIPPING_LOCATION">
+			<column name="UNIQUE_ADDRESS_HASH" type="VARCHAR(255) NOT NULL" />   				
+		</addColumn>
+	</changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="dev_arpit_144">
+		<addColumn tableName="WAREHOUSE">
+    		<column name="UNIQUE_ADDRESS_HASH" type="VARCHAR(255) NOT NULL" />   		
+    	</addColumn>
+	</changeSet>
+	<changeSet failOnError="true"  author="gaurav" id="dev_gaurav_158">
+		<dropNotNullConstraint columnDataType="VARCHAR(255)" columnName="FIRST_NAME" tableName="FULFILLER_SHIPPING_LOCATION"/>
+		<dropNotNullConstraint columnDataType="VARCHAR(255)" columnName="LAST_NAME" tableName="FULFILLER_SHIPPING_LOCATION"/>
+	</changeSet>
+
+
+	<changeSet failOnError="true" author="abhishek.sharma" id="dev_abhishek_158">
+		<dropForeignKeyConstraint baseTableName="PO_LINE_ITEMS"
+			constraintName="fk_bottle_per_box_po" />
+	</changeSet>
+	
+	<changeSet failOnError="true" author="abhishek.sharma" id="dev_abhishek_159">
+		<modifyDataType tableName="PO_LINE_ITEMS" columnName="BOTTLE_PER_BOX"
+			newDataType="BIGINT(20) UNSIGNED NULL" />
+	</changeSet>
+	
+	<changeSet failOnError="true" author="abhishek.sharma" id="dev_abhishek_160">
+		<modifyDataType tableName="PO_LINE_ITEMS" columnName="BOTTLE_IN_ML"
+			newDataType="INT(10) NULL" />
+	</changeSet>
+	
+	<changeSet failOnError="true" author="abhishek.sharma" id="dev_abhishek_161">
+		<modifyDataType tableName="PO_LINE_ITEMS" columnName="BOTTLE_PER_BOX"
+			newDataType="BIGINT(20) UNSIGNED NOT NULL" />
+	</changeSet>
+	<changeSet failOnError="true"  author="gaurav" id="dev_gaurav_161">
+		<renameTable newTableName="PERFORMANCE_CENTRE_LOCATION" oldTableName="FULFILLER_SHIPPING_LOCATION"/>
+	</changeSet>	
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_161">
+		<addColumn tableName="PO_MASTER">
+			<column name="ADDRESS_TYPE" type="BIGINT(20) UNSIGNED" />   		
+			<column name="WAREHOUSE_ADDRESS_ID" type="BIGINT(20) UNSIGNED NULL"/>
+			<column name="WINERY_ADDRESS_ID_OF_WH_TYPE" type="BIGINT(20) UNSIGNED NULL"/>			
+		</addColumn>
+	</changeSet>
+		<changeSet  failOnError="true" author="abhishek.sharma" id="dev_abhishek_162">
+		<addForeignKeyConstraint baseColumnNames="BOTTLE_PER_BOX" baseTableName="PO_LINE_ITEMS" constraintName="fk_bottle_per_box_po" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+		</changeSet>
+
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_162">
+		<addForeignKeyConstraint baseColumnNames="WAREHOUSE_ADDRESS_ID" baseTableName="PO_MASTER" constraintName="fk_wh_add_id_po_master" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WAREHOUSE"/>	
+		
+		<addForeignKeyConstraint baseColumnNames="WINERY_ADDRESS_ID_OF_WH_TYPE" baseTableName="PO_MASTER" constraintName="fk_winery_add_id_of_wh_type_po_master" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINERY_IMPORTER_ADDRESS"/>			
+	</changeSet>
+		
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_163">
+		<modifyDataType tableName="PO_MASTER" columnName="ADDRESS_TYPE"
+			newDataType="BIGINT(20) UNSIGNED NOT NULL" />
+	</changeSet>
+
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="dev_arpit_145">
+		<addColumn tableName="WAREHOUSE">
+			<column name="FREIGHT_REGION" type="BIGINT(20) UNSIGNED NULL" />   			
+		</addColumn>
+	</changeSet>
+	<changeSet failOnError="false" author="arpit.vijayvargiya" id="dev_arpit_164">
+		<addNotNullConstraint columnDataType="BIGINT(20) UNSIGNED" columnName="FREIGHT_REGION" tableName="WAREHOUSE"/>
+	</changeSet>
+	<changeSet failOnError="true" id="dev_abhishek_164" author="abhishek.sharma">
+    	<addColumn tableName="PO_LINE_ITEMS">
+    		<column name="COST_PER_BOX" type="INT(10) NOT NULL after `UNIT_PRICE`" />   		
+    	</addColumn>
+    </changeSet>
+	
+	<changeSet failOnError="true" id="dev_abhishek_165" author="abhishek.sharma">
+    	<modifyDataType tableName="PO_LINE_ITEMS" columnName="BOTTLE_IN_ML"
+			newDataType="INT(10) NOT NULL" />
+    </changeSet>
+
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_164">
+		<addColumn tableName="PO_MASTER">					
+			<column name="PERFORMANCE_CENTER_ADDRESS_ID" type="BIGINT(20) UNSIGNED NULL"/>			
+		</addColumn>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_165">
+		<addForeignKeyConstraint baseColumnNames="PERFORMANCE_CENTER_ADDRESS_ID" baseTableName="PO_MASTER" constraintName="fk_performance_center_address_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="PERFORMANCE_CENTRE_LOCATION"/>		
+	</changeSet>
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_166">
+		<addColumn tableName="PO_MASTER">					
+			<column name="REQUISITION_ID" type="VARCHAR(50) NOT NULL"/>			
+		</addColumn>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_167">
+		<modifyDataType tableName="PO_MASTER" columnName="REQUISITION_ID"
+			newDataType="VARCHAR(50) NULL" />
+	</changeSet>
+	<changeSet failOnError="true" author="abishek" id="dev_abhishek_168">
+	 <dropColumn columnName="IS_WAREHOUSE_ADDRESS" tableName="PO_LINE_ITEMS"/>
+	</changeSet>	
+    <changeSet failOnError="true" author="anurag.jain3" id="dev_anurag_132">
+		<modifyDataType tableName="IMPORTER" columnName="ACCOUNTING_CUSTOMER_NUMBER" newDataType="VARCHAR(50) NULL" />		
+	</changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="dev_arpit_169">
+		<dropNotNullConstraint columnDataType="VARCHAR(255)" columnName="EMAIL_ID" tableName="WAREHOUSE"/>
+		<dropNotNullConstraint columnDataType="VARCHAR(255)" columnName="FIRST_NAME" tableName="WAREHOUSE"/>
+		<dropNotNullConstraint columnDataType="VARCHAR(255)" columnName="LAST_NAME" tableName="WAREHOUSE"/>
+		<dropNotNullConstraint columnDataType="VARCHAR(45)" columnName="PHONE" tableName="WAREHOUSE"/>
+	</changeSet>		
+	<changeSet failOnError="true"  author="gaurav" id="dev_gaurav_169">
+		<renameTable newTableName="DISTRIBUTION_CENTRE" oldTableName="PERFORMANCE_CENTRE_LOCATION"/>
+	</changeSet>
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_170">
+		<addUniqueConstraint columnNames="LOCATION_ID" constraintName="uk_location" deferrable="true" disabled="true" initiallyDeferred="true" tableName="DISTRIBUTION_CENTRE"/>
+	</changeSet>
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_171">
+    	<createTable tableName="SAMPLER">
+			<column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+    		<column name="SAMPLER_ID" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)" >
+				<constraints nullable="false"/>
+            </column>
+			<column name="ACTIVE_OFFER" type="BIGINT(20) UNSIGNED" />
+            <column name="LAST_OFFER_DATE" type="DATETIME" />
+			<column defaultValueNumeric="0.00" name="TOTAL_REVENUE" type="DECIMAL(10,2)" />
+			<column defaultValueNumeric="0.00" name="TOTAL_SRP" type="DECIMAL(10,2)" />
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="DATETIME"/>
+    	</createTable>
+    </changeSet>
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_172">
+    	<createTable tableName="WINE_SAMPLER">
+			<column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+    		<column name="WINE_ID" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+			<column name="SAMPLER_ID" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0.00" name="SRP_PRICE" type="DECIMAL(10,2)" />
+			<column name="NO_OF_BOTTLES" type="INT(10)" />
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="DATETIME"/>
+    	</createTable>
+    </changeSet>
+<changeSet failOnError="true" author="gaurav" id="dev_gaurav_173">
+		<addColumn tableName="SAMPLER">					
+			<column name="IS_ENABLED" type="TINYINT(1) NOT NULL"/>			
+		</addColumn>
+	</changeSet>
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_174">
+		<modifyDataType tableName="WINE_SAMPLER" columnName="WINE_ID" newDataType="BIGINT(20) UNSIGNED" />
+	</changeSet>
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_175">
+		<addUniqueConstraint columnNames="SAMPLER_ID" constraintName="uk_sampler" deferrable="true" disabled="true" initiallyDeferred="true" tableName="SAMPLER"/>
+	</changeSet>
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_176">
+		<addForeignKeyConstraint baseColumnNames="WINE_ID" baseTableName="WINE_SAMPLER" constraintName="fk_wine_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINE"/>
+		<addForeignKeyConstraint baseColumnNames="SAMPLER_ID" baseTableName="WINE_SAMPLER" constraintName="fk_sampler_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="SAMPLER_ID" referencedTableName="SAMPLER"/>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="abhishek.sharma" id="dev_abhishek_171">
+    <addUniqueConstraint 
+            columnNames="WINERY_ID, DTC_PERMIT_NUMBER"
+            constraintName="uk_licence_permit_master_data"
+            deferrable="true"
+            disabled="true"
+            initiallyDeferred="true"            
+            tableName="WINERY_LICENSE_PERMIT_ALT_STATES"/>
+	</changeSet>	<changeSet failOnError="true"  author="rohit" id="dev_rohit_173">
+		<dropForeignKeyConstraint baseTableName="PO_MASTER" constraintName="fk_performance_center_address_id"/>
+	</changeSet>
+	
+	<changeSet failOnError="true"  author="rohit" id="dev_rohit_174">
+		<renameColumn columnDataType="BIGINT(20) UNSIGNED NULL" newColumnName="DISTRIBUTION_CENTRE_ADDRESS_ID" oldColumnName="PERFORMANCE_CENTER_ADDRESS_ID" tableName="PO_MASTER"/>		
+	</changeSet>
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_175">
+		<addForeignKeyConstraint baseColumnNames="DISTRIBUTION_CENTRE_ADDRESS_ID" baseTableName="PO_MASTER" constraintName="fk_distribution_centre_address_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="DISTRIBUTION_CENTRE"/>		
+	</changeSet>
+
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_177">
+		<dropForeignKeyConstraint baseTableName="WINE_SAMPLER" constraintName="fk_sampler_id"/>		
+	</changeSet>
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_178">
+		<dropColumn columnName="SAMPLER_ID" tableName="SAMPLER" />					
+	</changeSet>
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_179">
+		<modifyDataType tableName="WINE_SAMPLER" columnName="SAMPLER_ID" newDataType="BIGINT(20) UNSIGNED" />		
+	</changeSet>
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_180">
+		<addForeignKeyConstraint baseColumnNames="SAMPLER_ID" baseTableName="WINE_SAMPLER" constraintName="fk_sampler_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="SAMPLER"/>
+	</changeSet>
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_181">
+		<addUniqueConstraint columnNames="WINE_ID, SAMPLER_ID" constraintName="uk_wine_sampler" deferrable="true" disabled="true" initiallyDeferred="true" tableName="WINE_SAMPLER"/>
+	</changeSet>
+
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_176">
+    	<addColumn tableName="PO_MASTER">
+    		<column name="TOTAL_PRICE" type="DECIMAL(10, 2)" />   		    	
+    		<column name="ESTIMATED_FREIGHT" type="DECIMAL(10, 2)" />   		
+    	</addColumn>
+    </changeSet>
+		
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_177">
+		<addDefaultValue columnDataType="DECIMAL(10, 2)" columnName="TOTAL_PRICE" defaultValueNumeric="0.00" tableName="PO_MASTER"/>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_178">
+		<addDefaultValue columnDataType="DECIMAL(10, 2)" columnName="ESTIMATED_FREIGHT" defaultValueNumeric="0.00" tableName="PO_MASTER"/>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_179">
+		<addDefaultValue columnDataType="DECIMAL(10, 2) NOT NULL" columnName="TOTAL_PRICE" defaultValueNumeric="0.00" tableName="PO_MASTER"/>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_180">
+		<addDefaultValue columnDataType="DECIMAL(10, 2) NOT NULL" columnName="ESTIMATED_FREIGHT" defaultValueNumeric="0.00" tableName="PO_MASTER"/>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_181">
+		<dropColumn columnName="TOTAL_PRICE" tableName="PO_MASTER" />
+		<dropColumn columnName="ESTIMATED_FREIGHT" tableName="PO_MASTER" />
+	</changeSet>
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_182">
+    	<addColumn tableName="PO_MASTER">
+    		<column name="TOTAL_PRICE" type="DECIMAL(10, 2)" defaultValueNumeric="0.00"/>   		    	
+    		<column name="ESTIMATED_FREIGHT" type="DECIMAL(10, 2)" defaultValueNumeric="0.00"/>   		
+    	</addColumn>
+    </changeSet>
+	
+	<changeSet failOnError="true" author="abhishek.sharma" id="dev_abhshek_183">
+        <createTable tableName="WINE_LICENSE_NO_PERMIT">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+			<column name="PRODUCT_ID" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WINERY_NO_PERMIT" type="VARCHAR(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PRICE_FILED" type="datetime">
+                <constraints nullable="true"/>
+            </column>
+            <column name="3T_STATUS" type="VARCHAR(250)">
+                <constraints nullable="true"/>
+            </column>
+			<column name="IS_SELECTED" type="TINYINT(1) NULL" />  			
+             <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="true"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+        </createTable>
+    </changeSet>
+
+	
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_182">
+		<dropForeignKeyConstraint baseTableName="WINE_SAMPLER" constraintName="fk_wine_id"/>
+		<dropForeignKeyConstraint baseTableName="WINE_SAMPLER" constraintName="fk_sampler_id"/>
+    </changeSet>
+	
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_183">
+    	<dropUniqueConstraint tableName="WINE_SAMPLER" constraintName="uk_wine_sampler"/>
+    </changeSet>
+	
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_184">
+    	<renameTable newTableName="PRODUCT_SAMPLER" oldTableName="WINE_SAMPLER"/>
+    </changeSet>
+	
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_185">
+    	<renameColumn columnDataType="BIGINT(20) UNSIGNED" newColumnName="PRODUCT_ID" oldColumnName="WINE_ID" tableName="PRODUCT_SAMPLER"/>
+		<renameColumn columnDataType="INT(10)" newColumnName="QUANTITY" oldColumnName="NO_OF_BOTTLES" tableName="PRODUCT_SAMPLER"/>
+    </changeSet>
+	
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_186">
+    	<addForeignKeyConstraint baseColumnNames="PRODUCT_ID" baseTableName="PRODUCT_SAMPLER" constraintName="fk_product" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="PRODUCT_ITEM_MAPPING"/>
+		<addForeignKeyConstraint baseColumnNames="SAMPLER_ID" baseTableName="PRODUCT_SAMPLER" constraintName="fk_sampler_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="SAMPLER"/>
+    </changeSet>
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_187">
+		<addUniqueConstraint columnNames="PRODUCT_ID, SAMPLER_ID" constraintName="uk_product_sampler" deferrable="true" disabled="true" initiallyDeferred="true" tableName="PRODUCT_SAMPLER"/>
+    </changeSet>
+	<changeSet failOnError="true"  author="abhishek.sharma" id="dev_abhishek_188">
+		<renameColumn columnDataType="TINYINT(1) NOT NULL" newColumnName="WA_WILL_NOT_FULLFILL" oldColumnName="WA_WILL_FULLFILL" tableName="WINE_LICENSE_PERMIT_ALT_STATES_FULLFILL"/>
+	</changeSet>
+	<changeSet failOnError="true" author="abhishek.sharma" id="dev_abhishek_189">
+    <addUniqueConstraint 
+            columnNames="WINE_ID, DTC_PERMIT_NUMBER"
+            constraintName="uk_licence_permit_master_data_wine"
+            deferrable="true"
+            disabled="true"
+            initiallyDeferred="true"            
+            tableName="WINE_LICENSE_PERMIT_ALT_STATES"/>
+	</changeSet>
+	<changeSet failOnError="true" author="abhishek.sharma" id="dev_abhishek_190">
+	<addForeignKeyConstraint baseColumnNames="PRODUCT_ID"
+		baseTableName="WINE_LICENSE_NO_PERMIT" constraintName="fk_licence_no_permit_winery"
+		deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+		onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINE" />	
+	</changeSet>
+	<changeSet failOnError="true" author="Gaurav" id="dev_gaurav_191">
+		<renameColumn columnDataType="TINYINT(1) UNSIGNED NOT NULL" newColumnName="IS_ENABLED" oldColumnName="IS_ACTIVE" tableName="IMPORTER"/>
+	</changeSet>
+	<changeSet failOnError="true"  author="gaurav" id="dev_gaurav_192">
+		<dropForeignKeyConstraint baseTableName="DISTRIBUTION_CENTRE" constraintName="fk_fulfiller_shipping_location_shipping" />
+	</changeSet>
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_193">
+		<dropUniqueConstraint tableName="DISTRIBUTION_CENTRE" constraintName="uk_location" />
+	</changeSet>
+	<changeSet failOnError="true" author="gaurav" id="dev_gaurav_194">
+		<dropColumn columnName="LOCATION_ID" tableName="DISTRIBUTION_CENTRE" />
+	</changeSet>	<changeSet failOnError="true" id="dev_rohit_192" author="rohit.lohiya">
+    	<addColumn tableName="IMPORTER">
+    		<column name="WAREHOUSE_ID" type="BIGINT(20) UNSIGNED"/>   		
+    	</addColumn>
+    </changeSet>
+	<changeSet failOnError="true" id="dev_rohit_193" author="rohit.lohiya">
+        <addForeignKeyConstraint baseColumnNames="WAREHOUSE_ID" baseTableName="IMPORTER" constraintName="fk_importer_warehouse" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WAREHOUSE"/>
+    </changeSet>
+		<changeSet failOnError="true" author="anurag.jain3" id="dev_anurag_133">
+		<addUniqueConstraint columnNames="EMAIL" constraintName="uk_user_email" deferrable="true" disabled="true" initiallyDeferred="true" tableName="USERS"/>
+	</changeSet>
+	<changeSet failOnError="true" author="anurag" id="dev_anurag_134">
+		<renameColumn columnDataType="TINYINT(1) UNSIGNED NOT NULL" newColumnName="IS_ACTIVE" oldColumnName="IS_ENABLED" tableName="IMPORTER"/>
+	</changeSet>
+	<changeSet failOnError="true" author="anurag" id="dev_anurag_135">
+		<addColumn tableName="IMPORTER">
+    		<column name="IS_ENABLED" type="TINYINT(1) UNSIGNED NOT NULL"/>   		    	
+    		
+    	</addColumn>
+	</changeSet>
+	<changeSet failOnError="true" author="arpit.vijayvargiya" id="dev_arpit_194">
+		<addColumn tableName="WAREHOUSE">
+    		<column name="IS_WINE_SHIPPING_ADDRESS" type="TINYINT(1)"/>   				
+    	</addColumn>
+	</changeSet>	<changeSet failOnError="true" author="rohit" id="dev_rohit_194">	
+	
+		<dropForeignKeyConstraint baseTableName="WINE" constraintName="fk_warehouse_address_id" />	
+		<dropForeignKeyConstraint baseTableName="WINE" constraintName="fk_winery_address_id_of_wh_type" />	
+		<dropForeignKeyConstraint baseTableName="WINE" constraintName="wine_address" />	
+	
+		<dropColumn columnName="ADDRESS_TYPE" tableName="WINE" />
+		<dropColumn columnName="WAREHOUSE_ADDRESS_ID" tableName="WINE" />
+		<dropColumn columnName="WINERY_ADDRESS_ID_OF_WH_TYPE" tableName="WINE" />
+		
+		<addColumn tableName="WINE">			
+			<column name="WAREHOUSE_ID" type="BIGINT(20) UNSIGNED"/>				
+		</addColumn>
+	</changeSet>
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_195">
+		<addForeignKeyConstraint baseColumnNames="WAREHOUSE_ID" baseTableName="WINE" constraintName="fk_wine_warehouse_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WAREHOUSE"/>		
+	</changeSet>
+	
+	<changeSet failOnError="true" author="abhishek" id="dev_abhishek_210">
+    <dropForeignKeyConstraint baseTableName="PO_MASTER" constraintName="fk_po_winery_id"/>
+</changeSet>
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_196">
+    <dropForeignKeyConstraint baseTableName="PO_MASTER" constraintName="fk_wh_add_id_po_master"/>
+</changeSet>
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_197">
+    <dropForeignKeyConstraint baseTableName="PO_MASTER" constraintName="fk_distribution_centre_address_id"/>
+</changeSet>
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_198">
+    <dropForeignKeyConstraint baseTableName="PO_MASTER" constraintName="fk_winery_add_id_of_wh_type_po_master"/>
+</changeSet>
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_199">
+    <dropForeignKeyConstraint baseTableName="PO_LINE_ITEMS" constraintName="fk_po_lineitems_po_mater_id"/>
+</changeSet>
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_200">
+    <dropForeignKeyConstraint baseTableName="PO_LINE_ITEMS" constraintName="fk_bottle_per_box_po"/>
+</changeSet>
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_201">
+    <dropForeignKeyConstraint baseTableName="PO_LINE_ITEMS" constraintName="fk_po_lineitems_wine_id"/>
+</changeSet>
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_202">
+    <renameTable newTableName="REQ_MASTER" oldTableName="PO_MASTER"/>
+</changeSet>
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_203">
+    <renameTable newTableName="REQ_LINE_ITEMS" oldTableName="PO_LINE_ITEMS"/>
+</changeSet>
+
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_204">
+    <renameColumn 
+            columnDataType="BIGINT(20) UNSIGNED"
+            newColumnName="REQ_MASTER_ID"
+            oldColumnName="PO_MASTER_ID"
+            tableName="REQ_LINE_ITEMS"/>
+</changeSet>
+
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_205">
+    <renameColumn 
+            columnDataType="datetime"
+            newColumnName="REQ_DATE"
+            oldColumnName="PO_DATE"
+            tableName="REQ_MASTER"/>
+</changeSet>
+
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_206">
+    <renameColumn 
+            columnDataType="VARCHAR(50)"
+            newColumnName="REQ_TYPE"
+            oldColumnName="PO_TYPE"
+            tableName="REQ_MASTER"/>
+</changeSet>
+
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_207">
+    <dropColumn columnName="WINERY_ADDRESS_ID_OF_WH_TYPE"
+		tableName="REQ_MASTER" />
+</changeSet>
+
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_208">
+    <renameColumn 
+            columnDataType="BIGINT(20) UNSIGNED NULL"
+            newColumnName="SOURCE_ADDRESS_ID"
+            oldColumnName="WAREHOUSE_ADDRESS_ID"
+            tableName="REQ_MASTER"/>
+</changeSet>
+
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_209">
+    	<addColumn tableName="REQ_MASTER">
+    		<column name="REVISION" type="INT(10) NOT NULL after `STATUS`" />   		
+    	</addColumn>
+    </changeSet>
+	
+	<changeSet failOnError="true" author="abhishek" id="dev_abhishek_211">
+		<addForeignKeyConstraint baseColumnNames="WINERY_ID" baseTableName="REQ_MASTER" constraintName="fk_po_winery_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINERY"/>		
+    </changeSet>
+	<changeSet failOnError="true" author="abhishek" id="dev_abhishek_212">
+    <renameColumn 
+            columnDataType="BIGINT(20) UNSIGNED NULL"
+            newColumnName="DESTINATION_DC_ID"
+            oldColumnName="DISTRIBUTION_CENTRE_ADDRESS_ID"
+            tableName="REQ_MASTER"/>
+</changeSet>
+<changeSet failOnError="true" author="abhishek" id="dev_abhishek_213">
+        <modifyDataType tableName="REQ_MASTER" columnName="DESTINATION_DC_ID" newDataType="BIGINT(20) UNSIGNED NOT NULL" />
+    </changeSet>
+	<changeSet failOnError="true" author="abhishek" id="dev_abhishek_214">
+		<addForeignKeyConstraint baseColumnNames="DESTINATION_DC_ID" baseTableName="REQ_MASTER" constraintName="fk_distribution_centre_address_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="DISTRIBUTION_CENTRE"/>		
+	</changeSet>
+	<changeSet failOnError="true" author="abhishek" id="dev_abhishek_215">
+		<addForeignKeyConstraint baseColumnNames="REQ_MASTER_ID" baseTableName="REQ_LINE_ITEMS" constraintName="fk_po_lineitems_po_mater_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="REQ_MASTER"/>		
+    </changeSet>
+	<changeSet failOnError="true" author="abhishek" id="dev_abhishek_216">
+		<addForeignKeyConstraint baseColumnNames="WINE_ID" baseTableName="REQ_LINE_ITEMS" constraintName="fk_po_lineitems_wine_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINE"/>		
+    </changeSet>
+	<changeSet  failOnError="true" author="abhishek.sharma" id="dev_abhishek_217">
+		<addForeignKeyConstraint baseColumnNames="BOTTLE_PER_BOX" baseTableName="REQ_LINE_ITEMS" constraintName="fk_bottle_per_box_po" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>
+     </changeSet>
+  	<changeSet  failOnError="true" author="gaurav.agarwal" id="dev_gaurav_218">
+		<renameColumn columnDataType="BIGINT(20) UNSIGNED NULL" newColumnName="SOURCE_WH_ADDRESS_ID" oldColumnName="SOURCE_ADDRESS_ID" tableName="REQ_MASTER"/>
+     </changeSet>
+	 <changeSet failOnError="true" author="gaurav.agarwal" id="dev_gaurav_219">
+		<addColumn tableName="REQ_MASTER">
+    		<column name="SOURCE_DC_ADDRESS_ID" type="BIGINT(20) UNSIGNED NULL" />		
+    	</addColumn>
+	 </changeSet>
+	 <changeSet failOnError="true" author="gaurav.agarwal" id="dev_gaurav_220">
+		<addForeignKeyConstraint baseColumnNames="SOURCE_DC_ADDRESS_ID" baseTableName="REQ_MASTER" constraintName="fk_source_dc_address_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="DISTRIBUTION_CENTRE"/>
+		<addForeignKeyConstraint baseColumnNames="SOURCE_WH_ADDRESS_ID" baseTableName="REQ_MASTER" constraintName="fk_source_wh_address_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WAREHOUSE"/>
+	 </changeSet>
+	  <changeSet failOnError="true" author="gaurav.agarwal" id="dev_gaurav_221">
+		<renameColumn columnDataType="datetime" newColumnName="SUBMITTED_DATE" oldColumnName="REQ_DATE" tableName="REQ_MASTER"/>
+	 </changeSet>
+	 <changeSet failOnError="true" author="gaurav.agarwal" id="dev_gaurav_222">
+		<dropColumn columnName="REQUISITION_ID" tableName="REQ_MASTER" />
+	 </changeSet>	 
+	 
+	 
+	 <changeSet failOnError="true" author="rohit" id="dev_rohit_223">
+    	<addColumn tableName="REQ_MASTER">
+    		<column name="SOURCE_REQUISITION" type="VARCHAR(50)" />   		
+			<column name="INBOUND_TRANSPORT_ID" type="BIGINT(20) UNSIGNED NULL" />   					
+    	</addColumn>
+    </changeSet>
+	
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_224">
+		<addForeignKeyConstraint baseColumnNames="INBOUND_TRANSPORT_ID" baseTableName="REQ_MASTER" constraintName="fk_inbound_transport" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>		
+	 </changeSet>
+	 <changeSet failOnError="true" author="abhishek" id="dev_abhishek_223">
+		<addColumn tableName="WINE">
+    		<column name="MAPPED_WINERY_ID_WITH_PERMIT" type="BIGINT(20) UNSIGNED" />   		
+    	</addColumn>
+
+	 </changeSet>
+	  <changeSet author="abhishek" id="dev_abhishek_224">
+        <addForeignKeyConstraint baseColumnNames="MAPPED_WINERY_ID_WITH_PERMIT" baseTableName="WINE" constraintName="winery_id_for_permit" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINERY"/>
+    </changeSet>
+	 
+	 <changeSet failOnError="true" author="rohit" id="dev_rohit_225">		
+			<dropColumn columnName="ADDRESS_TYPE" tableName="REQ_MASTER" />
+	</changeSet>
+	
+	<changeSet author="abhishek" id="master_abhishek_235">
+    <addDefaultValue  columnDataType="TINYINT(1) NOT NULL"
+            columnName="IS_WINE_SHIPPING_ADDRESS"
+            defaultValueNumeric="0"
+            tableName="WAREHOUSE"/>
+</changeSet>
+
+	<changeSet failOnError="true" author="rohit" id="dev_gaurav_226">
+		<renameColumn columnDataType="TINYINT(1) NOT NULL" newColumnName="IS_NON_WS_TRANSPORT_CARRIER" oldColumnName="IS_WINE_SHIPPING_ADDRESS" tableName="WAREHOUSE"/>
+		
+		<addColumn tableName="WAREHOUSE">			
+			<column name="CARRIER" type="BIGINT(20) UNSIGNED"/>				
+		</addColumn>
+	 </changeSet>
+	 
+	 <changeSet failOnError="true" author="rohit" id="dev_rohit_227">
+		<addForeignKeyConstraint baseColumnNames="CARRIER" baseTableName="WAREHOUSE" constraintName="fk_carrier" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>		
+	 </changeSet>
+
+	 <changeSet failOnError="true" author="arpit.vijayvargiya" id="dev_arpit_228">
+		<addColumn tableName="REQ_MASTER">
+    		<column name="IS_DELETED" type="TINYINT(1) NOT NULL" />   		
+    	</addColumn>
+	 </changeSet>
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_228">
+		<renameColumn columnDataType="DECIMAL(10, 4) NOT NULL" newColumnName="BOTTLE_PRICE" oldColumnName="UNIT_PRICE" tableName="REQ_LINE_ITEMS"/>
+		
+		<dropColumn columnName="NOTES" tableName="REQ_LINE_ITEMS" />
+	 </changeSet>
+	 
+	 <changeSet failOnError="true" author="rohit" id="dev_rohit_229">
+		<addColumn tableName="WINE">
+			<column name="IS_KACHINA" type="TINYINT(1) NULL" />   				
+			<column name="IS_WINERY_TRANSFER" type="TINYINT(1) NULL" />   				
+		</addColumn>
+	</changeSet>
+	
+	<changeSet failOnError="true" id="dev_rohit_230" author="rohit">
+    	<modifyDataType tableName="REQ_LINE_ITEMS" columnName="BOTTLE_IN_ML"
+			newDataType="BIGINT(20) UNSIGNED NOT NULL" />
+    </changeSet>
+	
+	 <changeSet failOnError="true" author="rohit" id="dev_rohit_231">
+		<addForeignKeyConstraint baseColumnNames="BOTTLE_IN_ML" baseTableName="REQ_LINE_ITEMS" constraintName="fk_req_bottle_in_ml" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="MASTER_DATA"/>		
+	 </changeSet>
+	 
+	 
+	<changeSet failOnError="true" id="dev_rohit_232" author="rohit">
+    	<modifyDataType tableName="REQ_LINE_ITEMS" columnName="COST_PER_BOX"
+			newDataType="DECIMAL(10, 4) NOT NULL" />
+    </changeSet>
+	 
+	<changeSet failOnError="true" author="rohit" id="dev_rohit_233">
+        <createTable tableName="INVENTORY">
+            <column autoIncrement="true" name="ID" type="BIGINT(20) UNSIGNED">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CREATED_BY" type="BIGINT(20) UNSIGNED">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATED_BY" type="BIGINT(20) UNSIGNED"/>
+            <column name="UPDATED_DATE" type="datetime"/>
+			
+            <column name="WINE_ID" type="BIGINT(20) UNSIGNED"/>
+            <column name="PHYSICAL_INVENTORY" type="INT(10) NOT NULL"/>           
+        </createTable>
+    </changeSet>
+	
+	 <changeSet failOnError="true" author="rohit" id="dev_rohit_234">
+		<addForeignKeyConstraint baseColumnNames="WINE_ID" baseTableName="INVENTORY" constraintName="fk_inventory_wine_id" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="ID" referencedTableName="WINE"/>		
+	 </changeSet>
+	  <changeSet author="arpit" id="dev_arpit_225">
+        <modifyDataType tableName="WINE" columnName="WINE_SHORT_NAME" newDataType="VARCHAR(255) NULL" />
+    </changeSet>
+</databaseChangeLog>

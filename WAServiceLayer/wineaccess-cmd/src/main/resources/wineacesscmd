@@ -1,0 +1,34 @@
+#!/bin/bash
+# wineacesscmd
+#
+#
+# if [ $# == 0 ]
+# then
+# else
+# fi
+
+ECHO=false
+# ECHO=echo
+
+${ECHO} all arguements: $*
+WINEACCESSCMD_CLASS=com.wineaccess.cmd.WACmd
+WINEACCESSCMD_NAME=$0
+WINEACCESSCMD_HOME=`dirname $0`
+# WINEACCESSCMD_HOME=/export/home/jboss/cig-cmd
+${ECHO} WINEACCESSCMD_NAME: ${WINEACCESSCMD_NAME}
+${ECHO} WINEACCESSCMD_HOME: ${WINEACCESSCMD_HOME}
+export WINEACCESSCMD_HOME
+
+JAVACMD=java
+
+CLASSPATH=${WINEACCESSCMD_HOME}
+for f in ${WINEACCESSCMD_HOME}/../lib/*.jar
+do
+	CLASSPATH=${CLASSPATH}:$f
+done
+${ECHO} CLASSPATH: ${CLASSPATH}
+export CLASSPATH
+
+# fire actual command
+${JAVACMD} ${WINEACCESSCMD_CLASS} $*
+

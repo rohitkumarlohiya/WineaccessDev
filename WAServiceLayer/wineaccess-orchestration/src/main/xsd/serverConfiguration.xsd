@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:orch="http://globallogic.com/orch" targetNamespace="http://globallogic.com/orch" elementFormDefault="unqualified">
+	<xs:element name="server-configuration">
+		<xs:annotation>
+			<xs:documentation>Properties to configure server</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="orch:properties" minOccurs="0"/>
+				<xs:element ref="orch:component" minOccurs="0" maxOccurs="unbounded"/>  
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="prop">
+		<xs:annotation>
+			<xs:documentation>configuration propertiess for the components/server </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string"/>
+				<xs:element name="value" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="properties">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="orch:prop" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="component">
+		<xs:complexType>
+			<xs:sequence>
+			   <xs:element ref="orch:properties" minOccurs="0"/>
+				<xs:element ref="orch:component" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

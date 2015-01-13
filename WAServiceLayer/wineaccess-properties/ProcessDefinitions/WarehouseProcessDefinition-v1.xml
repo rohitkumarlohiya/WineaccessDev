@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="WarehouseProcessDefinition" version="v1" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="WarehouseTaskTransition" to="WarehouseAdapter" />		
+	</start-state>
+	
+	<task name="WarehouseAdapter">					
+		<action class="com.wineaccess.warehouse.WarehouseAdapter"/>
+		<orch:transition name="END" to="END-STATE"/>
+	</task>	
+	
+	<end-state name="END-STATE"/>
+</orch:process-definition>

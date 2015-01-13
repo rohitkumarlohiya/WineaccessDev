@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="UserAdvanceSearchDefinition" version="v1" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="UserAdvanceSearchTaskTransition" to="UserAdvanceSearchAdapter" />		
+	</start-state>
+	
+	<task name="UserAdvanceSearchAdapter">					
+		<action class="com.wineaccess.commad.search.users.UserAdavanceSearchAdapter"/>
+		<orch:transition name="END" to="END-STATE"/>
+	</task>	
+	
+	<end-state name="END-STATE"/>
+</orch:process-definition>

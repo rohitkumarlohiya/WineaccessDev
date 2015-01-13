@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="MasterDataTypeProcessDefinition" version="v1" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="MasterDataTypeTaskTransition" to="MasterDataTypeAdapter" />		
+	</start-state>
+	
+	<task name="MasterDataTypeAdapter">					
+		<action class="com.wineaccess.security.masterdatatype.MasterDataTypeAdapter"/>
+		<orch:transition name="END" to="END-STATE"/>
+	</task>	
+	
+	<end-state name="END-STATE"/>
+</orch:process-definition>

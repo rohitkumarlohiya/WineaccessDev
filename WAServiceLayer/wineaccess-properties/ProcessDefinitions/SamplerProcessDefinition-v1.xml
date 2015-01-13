@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orch:process-definition name="SamplerProcessDefinition" version="v1" xmlns:orch="http://globallogic.com/orch">
+	<start-state name="Start Task">
+		<orch:transition name="SamplerTaskTransition" to="SamplerAdapter" />		
+	</start-state>
+	
+	<task name="SamplerAdapter">					
+		<action class="com.wineaccess.sampler.SamplerAdapter"/>
+		<orch:transition name="END" to="END-STATE"/>
+	</task>	
+	
+	<end-state name="END-STATE"/>
+</orch:process-definition>

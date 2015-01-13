@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	
+	<bean id="liquibase" class="liquibase.integration.spring.SpringLiquibase">
+      <property name="dataSource" ref="dataSource" />
+      <property name="changeLog" value="file:///${WINEACCESS_HOME}/Database/wineaccess.db.changelog.xml" />
+      <property name="contexts" value="production" />
+ 	</bean>
+ 	
+	
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+      <property name="dataSource" ref="dataSource" />
+      <property name="persistenceUnitName" value="WineAccessPersistentUnit" />
+      
+      <property name="jpaVendorAdapter">
+         <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+      </property>
+      
+      <property name="jpaPropertyMap">
+        <map>
+			<entry key="hibernate.show_sql" value="${hibernate.show.sql}"/>
+            <entry key="hibernate.search.default.directory_provider" value="filesystem"/>
+            <entry key="hibernate.search.default.indexBase"  value="${hibernate.lucene.index.path}"/>
+            <!-- <entry key="hibernate.hbm2ddl.auto" value="update"/> -->
+        </map>
+     </property>
+     
+   </bean>
+   
+    <bean id="txManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+   <tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="*" propagation="REQUIRED" isolation="DEFAULT"
+				read-only="false" timeout="-1" rollback-for="com.wineaccess.persistence.exception.PersistenceException" />
+		</tx:attributes>
+	</tx:advice>
+	
+	<aop:config> 
+		<aop:pointcut id="txGenericDAOImpl" expression="execution(* com.wineaccess.persistence.dao.impl.JPAGenericDAOImpl.*(..))" />
+		<aop:pointcut id="txUserDAOImpl" expression="execution(* com.wineaccess.commad.search.users.UserDAOImpl.*(..))" />
+		<aop:pointcut id="txMasterDataTypeDAOImpl" expression="execution(* com.wineaccess.commad.search.masterdatatype.MasterDataTypeDAOImpl.*(..))" />
+		<aop:pointcut id="txMasterDataDAOImpl" expression="execution(* com.wineaccess.commad.search.masterdata.MasterDataDAOImpl.*(..))" />
+		<aop:pointcut id="txAPIAccessDAOImpl" expression="execution(* com.wineaccess.command.api.access.code.APIAccessDAOImpl.*(..))" />
+		<aop:pointcut id="txImpoterSearchDAOImpl" expression="execution(* com.wineaccess.command.search.importer.ImporterSearchDAOImpl.*(..))" />
+		<aop:pointcut id="txWinerySearchDAOImpl" expression="execution(* com.wineaccess.command.search.winery.WinerySearchDAOImpl.*(..))" />
+		<aop:pointcut id="txWineSearchDAOImpl" expression="execution(* com.wineaccess.wine.WineSearchDAOImpl.*(..))" />
+		<aop:pointcut id="txWineryPermit" expression="execution(* com.wineaccess.winerypermit.WineryPermitHelper.*(..))" />
+		<aop:pointcut id="txWinePermit" expression="execution(* com.wineaccess.winepermit.WinePermitHelper.*(..))" />
+		<aop:pointcut id="txPOSearchDAOImpl" expression="execution(* com.wineaccess.command.search.po.POSearchDAOImpl.*(..))" />
+		<aop:pointcut id="txSamplerSearchDAOImpl" expression="execution(* com.wineaccess.command.search.sampler.SamplerSearchDAOImpl.*(..))" />
+	    <aop:pointcut id="txCityList" expression="execution(* com.wineaccess.util.command.CityListAdapterHelper.*(..))" />
+		<aop:pointcut id="txWineRequisition" expression="execution(* com.wineaccess.orders.requisition.RequisitionHelper.*(..))" />
+		
+		
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txGenericDAOImpl" order="20" /> 
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txUserDAOImpl" order="20" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txMasterDataTypeDAOImpl" order="20" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txMasterDataDAOImpl" order="20" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txAPIAccessDAOImpl" order="20" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txImpoterSearchDAOImpl" order="20" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txWinerySearchDAOImpl" order="20" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txWineSearchDAOImpl" order="20" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txWineryPermit" order="20" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txWinePermit" order="20" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPOSearchDAOImpl" order="20" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txSamplerSearchDAOImpl" order="20" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txWineRequisition" order="20" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txCityList" order="20" />
+		
+	</aop:config>
+</beans>
